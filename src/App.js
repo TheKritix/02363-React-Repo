@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello 02363 class
         </p>
         <a
           className="App-link"
@@ -17,9 +19,25 @@ function App() {
         >
           Learn React
         </a>
+        <Counter />
       </header>
     </div>
   );
 }
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div className="Counter">
+      <p>
+        Count: {count}
+      </p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me, bitch!
+      </button>
+    </div>
+  )
+}
+
 
 export default App;
