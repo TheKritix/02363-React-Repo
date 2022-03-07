@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
+import Book from "./components/Book"
+
 
 function App() {
 
@@ -35,6 +37,7 @@ function Counter() {
       <button onClick={() => setCount(count + 1)}>
         Click me, bitch!
       </button>
+      <Book />
     </div>
   )
 }
