@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './book.css'
+import { BookItems } from './BookItem.js';
+
 
 
 export const Book = () => {
   return (
-    <div>book</div>
+    <div className='BookItem'>
+      book</div>
   )
 }
 
