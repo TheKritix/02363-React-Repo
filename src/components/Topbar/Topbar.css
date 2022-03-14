@@ -1,0 +1,26 @@
+
+.TopbarItems{
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+
+
+}
+
+.topbar-menu {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    list-style: none;
+    grid-gap: 10px;
+}
+
+.topbar-links {
+    color: black;
+    text-decoration: none;
+}
+
+.brand {
+    position: absolute;
+    top:0;
+    left: 10px;
+}

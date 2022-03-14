@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {MenuItems} from "./MenuItems";
 import './Navbar.css'
 
-// using class instead of function because we will  be using state. 
+// using class instead of function because I might use state. 
 class Navbar extends Component {
 
     render(){
