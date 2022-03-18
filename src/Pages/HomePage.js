@@ -11,9 +11,9 @@ function HomePage() {
         <Topbar></Topbar>
         <Navbar></Navbar>
         <div>
-            <span style={{margin: '0 10px'}}>
+            <button>
                 <Link to="/productpage">Product Page</Link>
-            </span>
+            </button>
         </div>
         </>
     )
