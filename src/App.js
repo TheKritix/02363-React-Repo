@@ -1,13 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import Book from "./components/Book"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './HomePage.js';
+import LoginPage from './LoginPage.js';
 
 
 function App() {
-
   return (
-    <div className="App">
+  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="loginpage" element={<LoginPage/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+
+    /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -38,9 +49,8 @@ function Counter() {
         Click me, bitch!
       </button>
       <Book />
-    </div>
-  )
-}
+    </div>*/
+ 
 
 
 export default App;

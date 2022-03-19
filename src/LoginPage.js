@@ -2,14 +2,14 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Topbar from './components/Topbar/Topbar';
-import Login from './components/Login/Login';
+import Login  from './components/Login/Login';
 
 function LoginPage() {
     return (
         <>
-        <Navbar></Navbar>
         <Topbar></Topbar>
-        
+        <Navbar></Navbar>
+        <Login></Login>  
         </>
     )
   }
