@@ -1,0 +1,32 @@
+.SideMenu {
+    width: 9rem;
+    border: 0.1rem solid black;
+    padding: 20px;
+    margin: 10px;
+    background-color: grey;
+    grid-area: SideMenu;
+}
+
+
+.BookItem {
+    margin: 2rem;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+    height: 200;
+    grid-template-areas: "SideMenu a a";
+}
+
+.ItemBox {
+    overflow: hidden;
+    box-shadow: 0 2px 20px gray;
+}
+
+.Book {
+    grid-area: a;
+}
+
+.invisBox {
+    width: 9rem;
+}
