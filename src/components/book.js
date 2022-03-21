@@ -1,9 +1,12 @@
 import React from 'react'
 
 
-export const Book = () => {
-  return (
-    <div>book</div>
+export const Book = ({bookFilter}) => {
+  return bookFilter.maps((bookItem) => (
+    <p key={bookItem.id}>
+
+    </p>
+  )
   )
 }
 

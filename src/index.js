@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './HomePage' 
+import AddBook from "./AddBook"
 
 ReactDOM.render(
   <React.StrictMode>
     <HomePage />
+    <AddBook/>
   </React.StrictMode>,
   document.getElementById('root')
 );
