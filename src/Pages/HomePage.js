@@ -12,7 +12,7 @@ function HomePage() {
         <Navbar></Navbar>
         <div>
             <button>
-                <Link to="/productpage">Product Page</Link>
+                <Link to="/profilePage">Profile Page</Link>
             </button>
         </div>
         </>
