@@ -14,19 +14,18 @@ class Login extends Component{
                 <h1 id='headlineLogin'>Sign in</h1>
                 <form> 
                     <input type="email" name="email" placeholder='Email'></input>
-                   
-
-                    <br></br>
+                    <br/>
                     <input type="password" name="passWord" placeholder='Password'/>
                 </form>
+
                 <button className='loginBtn'>Login</button>
                 <div>
-                    <h3 id='forgotPassword'>Forgot Password</h3>
+                    <h3 id='forgotPassword'>Forgot Password?</h3>
                 </div>
             
                 <h4 id='lineText'>or</h4>
+
                 <button className='fbBtn'> <FaFacebook className='fbIcon' size={20}/> Continue with Facebook</button>
-            
                 <br/>
                 <button className='googleBtn'> <FaGoogle className='googleIcon' size={18}/> Continue with Google</button>        
                 
