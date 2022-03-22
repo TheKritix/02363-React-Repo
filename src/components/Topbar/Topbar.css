@@ -1,9 +1,9 @@
 .logo {
-    color: white;
+    color: black;
 }
 
 .Topbar{
-    background-color: rgb(45, 133, 204);
+    background-color: white;
     height: 80px;
     display: flex;
     align-items: center;
@@ -24,6 +24,8 @@ container {
     justify-content: end;
     text-align: center;
     margin-right: 2rem;
+    color: black;
+    text-decoration: none;
 }
 
 .topbar-links {
@@ -31,3 +33,16 @@ container {
     text-decoration: none;
 }
 
+.iconImg {
+    height: 30px;
+    width: 30px;
+}
+
+.icon {
+    position: relative;
+
+}
+
+#favorit{
+    color: rgb(244, 116,44, 100%);
+}

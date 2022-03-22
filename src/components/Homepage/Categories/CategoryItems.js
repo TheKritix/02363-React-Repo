@@ -47,4 +47,5 @@ export const CategoryItems = [
         cName: 'categoryClass'
     
     }
-]
+];
+

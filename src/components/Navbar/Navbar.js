@@ -8,6 +8,7 @@ class Navbar extends Component {
     render(){
         return (
             <>
+            <div className='spacer'> </div>
             <nav className="NavbarItems">
                     <ul className='nav-menu'>
                         {MenuItems.map((item, index) => {

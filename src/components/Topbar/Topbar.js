@@ -1,11 +1,12 @@
 import { TextField } from '@mui/material';
 import React, { Component } from 'react';
 import './Topbar.css';
-import { TopbarItems } from './TopbarItems';
 import logo from './logoStoodle.png'
 import MenuIcon from '@mui/icons-material/Menu';
-
-
+import { Icon } from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import { Favorite } from '@mui/icons-material';
 
 class Topbar extends Component {
     render() {
@@ -16,16 +17,13 @@ class Topbar extends Component {
                 </div>
                 <container>
                 <MenuIcon>
-                    {MenuIcon}
                 </MenuIcon>
                 <TextField  className='search' size='small'></TextField>
                 </container>
                 <ul className='topbar-menu'>
-                    {TopbarItems.map((item,index)=>{
-                        return (
-                            <li><a className={item.cName} href={item.url} >  {item.icon} {item.title}</a></li>
-                        )
-                    })}
+                    <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon>Notifications</a>
+                    <a className='topbar-links' href='#'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
+                    <a className='topbar-links'  href='#'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
                 </ul>
             </nav>
         )
