@@ -4,7 +4,7 @@
     border: 0.1rem solid black;
     padding: 20px;
     margin: 10px;
-    background-color: grey;
+    background-color: rgb(219, 219, 219);
     grid-area: SideMenu;
 }
 
