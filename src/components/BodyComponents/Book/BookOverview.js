@@ -12,7 +12,7 @@ export const BookOverview = () => {
     const [priceMin, setPriceMin] = useState('0 BROKEN')
     const [priceMax, setPriceMax] = useState('1000 BROKEN')
     const [title, setTitle] = useState('')
-    //const [university, setUniversity] = useState('')
+    const [university, setUniversity] = useState('THIS DOES NOTHING')
     const [author, setAuthor] = useState('')
     const [year, setYear] = useState('')
 
@@ -23,18 +23,18 @@ export const BookOverview = () => {
             <Topbar></Topbar>
             <Navbar></Navbar>
             <div className="SideMenu">
-                <p id="priceMin">Min. price: </p>
-                <input value={priceMin} onChange={(e) => setPriceMin(e.target.value)} />
-                <p id="priceMax">Max. price: </p>
-                <input value={priceMax} onChange={(e) => setPriceMax(e.target.value)} />
+                <p id="priceMin">Price: </p>
+                <input id="pMin" value={priceMin} onChange={(e) => setPriceMin(e.target.value)} />
+                <p id="priceMax"></p>
+                <input id="pMax" value={priceMax} onChange={(e) => setPriceMax(e.target.value)} />
                 <p id="title">Title: </p>
-                <input value={title} onChange={(e) => setTitle(e.target.value)} />
-                {/* <p id="university">University: </p>
-                <input value={university} onChange={(e) => setUniversity(e.target.value)} /> */}
+                <input id="titleInput" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <p id="university">University: </p>
+                <input id="universityInput" value={university} onChange={(e) => setUniversity(e.target.value)} />
                 <p id="author">Author: </p>
-                <input value={author} onChange={(e) => setAuthor(e.target.value)} />
+                <input id="authorInput" value={author} onChange={(e) => setAuthor(e.target.value)} />
                 <p id="year">Year: </p>
-                <input value={year} onChange={(e) => setYear(e.target.value)} />
+                <input id="yearInput" value={year} onChange={(e) => setYear(e.target.value)} />
             </div>
             <div className="gridBox">
                 <Grid

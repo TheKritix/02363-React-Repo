@@ -1,17 +1,25 @@
 #bookImage {
-    height: 16rem;
-    width: 100%;
-    object-fit: cover;
+   width: 10rem;
+   height: 15rem;
+   object-fit: contain;
 }
 
 #bookTitle {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+height: 24px;
+top: 300px;
 
+/* UI / UI Text 14 Reg */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
 
+/* identical to box height, or 171% */
+letter-spacing: -0.006em;
+
+/* Dark Gray / Dark Gray 2 */
+color: #252C32;
 }
 
 #price {
@@ -24,4 +32,3 @@
     font-family: 'Inter';
 
 }
-

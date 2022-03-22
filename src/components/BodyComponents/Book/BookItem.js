@@ -99,17 +99,7 @@ export const BookItem = [
         city: 'Horsens',
         country: 'Denmark'
     },
-    {
-        title: 'Parallel Programming and you',
-        description: 'Programming in a parallel world',
-        author: 'Horseman Jack',
-        year: '2008',
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/41gr4XJnUjL._SX321_BO1,204,203,200_.jpg',
-        price: '250,00 kr',
-        city: 'Horsens',
-        country: 'Denmark'
-    },
-    {
+        {
         title: 'Parallel Programming and you',
         description: 'Programming in a parallel world',
         author: 'Horseman Jack',

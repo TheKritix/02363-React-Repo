@@ -13,7 +13,6 @@ function ProductPage() {
             <ItemImage/>
         </div>
         <div className='rowB'>
-    
             <ItemDescription/>
         </div>
         </>

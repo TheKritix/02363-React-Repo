@@ -1,11 +1,11 @@
 .SideMenu {
     position: absolute;
-    width: 9rem;
-    border: 0.1rem solid black;
-    padding: 20px;
-    margin: 10px;
-    background-color: rgb(219, 219, 219);
-    grid-area: SideMenu;
+    width: 18.8rem;
+    height: 25rem;
+    margin: 20px;
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
 }
 
 .gridBox {
@@ -13,21 +13,225 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 50rem;
+    width: 70rem;
     z-index: -100;
-    border: 0.1rem solid black;
 }
 
 .indiGrid {
-    padding: 15px;
+    
 }
 
 .ItemBox {
     overflow: hidden;
-    box-shadow: 0 2px 10px gray;
+    width: 20rem;
+    height: 25;
+    border: 0.01px solid #E5E9EB;
 }
 
 .invisBox {
     width: 9rem;
     grid-area: SideMenu;
+}
+
+#priceMin {
+    position: absolute;
+    width: 100px;
+    height: 24px;
+    left: 10px;
+    top: -10px;
+
+    /* UI / UI Text 14 Semi Bold */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* identical to box height, or 171% */
+    letter-spacing: -0.006em;
+
+    /* Dark Gray / Dark Gray 2 */
+    color: #252C32;
+}
+
+#pMin {
+    position: absolute;
+    width: 132px;
+    height: 32px;
+    left: 10px;
+    top: 28px;
+
+    /* Black & White / White */
+    background: #FFFFFF;
+
+    /* Light Gray / Light Gray 2 */
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+#pMax {
+    position: absolute;
+    width: 132px;
+    height: 32px;
+    left: 154px;
+    top: 28px;
+
+    /* Black & White / White */
+    background: #FFFFFF;
+
+    /* Light Gray / Light Gray 2 */
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+#title {
+
+    position: absolute;
+    width: 75px;
+    height: 24px;
+    left: 10px;
+    top: 67px;
+
+    /* UI / UI Text 14 Semi Bold */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* identical to box height, or 171% */
+    letter-spacing: -0.006em;
+
+    /* Dark Gray / Dark Gray 2 */
+    color: #252C32;
+}
+
+#titleInput {
+
+    position: absolute;
+    width: 276px;
+    height: 32px;
+    left: 10px;
+    top: 103px;
+
+    /* Black & White / White */
+    background: #FFFFFF;
+
+    /* Light Gray / Light Gray 2 */
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+#university {
+    position: absolute;
+    width: 69px;
+    height: 24px;
+    left: 10px;
+    top: 140px;
+
+    /* UI / UI Text 14 Semi Bold */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* identical to box height, or 171% */
+    letter-spacing: -0.006em;
+
+    /* Dark Gray / Dark Gray 2 */
+    color: #252C32;
+}
+
+#universityInput {
+    position: absolute;
+    width: 276px;
+    height: 32px;
+    left: 10px;
+    top: 178px;
+
+    /* Black & White / White */
+    background: #FFFFFF;
+
+    /* Light Gray / Light Gray 2 */
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+#author {
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 10px;
+    top: 218px;
+
+    /* UI / UI Text 14 Semi Bold */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* identical to box height, or 171% */
+    letter-spacing: -0.006em;
+
+    /* Dark Gray / Dark Gray 2 */
+    color: #252C32;
+}
+
+#authorInput {
+    position: absolute;
+    width: 276px;
+    height: 32px;
+    left: 10px;
+    top: 256px;
+
+    /* Black & White / White */
+    background: #FFFFFF;
+
+    /* Light Gray / Light Gray 2 */
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+#year {
+    position: absolute;
+    width: 31px;
+    height: 24px;
+    left: 10px;
+    top: 295px;
+
+    /* UI / UI Text 14 Semi Bold */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* identical to box height, or 171% */
+    letter-spacing: -0.006em;
+
+    /* Dark Gray / Dark Gray 2 */
+    color: #252C32;
+}
+
+#yearInput {
+    position: absolute;
+    width: 132px;
+    height: 32px;
+    left: 10px;
+    top: 332px;
+
+    /* Black & White / White */
+    background: #FFFFFF;
+
+    /* Light Gray / Light Gray 2 */
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    border-radius: 6px;
 }
