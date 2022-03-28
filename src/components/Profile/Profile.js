@@ -1,23 +1,22 @@
 import React, {Component} from "react";
 import './Profile.css';
-import {FaUserCircle, FaCamera} from 'react-icons/fa';
 import profileImg from './profileIcon.png';
-
+import CameraIcon from '@material-ui/icons/CameraAlt'
+import StarIcon from '@material-ui/icons/StarOutline'
+import PersonIcon from'@material-ui/icons/PersonOutline'
 
 class Profile extends Component {
     render(){
         return(
             
-            <div className="inputProfile">
-                <ul className="profileLayout">
-                <li>
+            <div className="profileLayout">
+
+            <div className="infoContainer">
                 <div className="divIcon">
-                <FaCamera className="cameraIcon" size={30}/>
+                <CameraIcon  className ="cameraIcon" style={{fontSize : 30, left:200}}/>
                 <img src={profileImg} alt="profileImg" width={180} height={180}></img> 
                 </div>
-                </li>
-
-              <li>  
+            
            <div className="profileInfo">
                <span>Name </span>
                <br/>
@@ -25,15 +24,27 @@ class Profile extends Component {
                <br/>
                <span>Phone number</span>
            </div>
-           </li>
+           </div>
+           
 
-           <li>
+        <div className="container">
            <div className="buttons">
                <button className="postBtn">Add new post</button>
                <button className="editBtn">Edit profile</button>
            </div>
-           </li>
-           </ul>
+
+           <br/>
+
+           <div className="raiting">
+               <StarIcon></StarIcon>
+               <StarIcon></StarIcon>
+               <StarIcon></StarIcon>
+               <StarIcon></StarIcon>
+               <StarIcon></StarIcon>
+               <PersonIcon></PersonIcon>
+           </div>
+           </div>
+           
             </div>
 
 
