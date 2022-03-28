@@ -24,6 +24,7 @@ class Navbar extends Component {
                 <div className='spacer'> </div>
             </>
         )
+
     }
 }
 

@@ -4,22 +4,20 @@ import './HomePage.css';
 import Navbar from '../components/Navbar/Navbar';
 import Topbar from '../components/Topbar/Topbar';
 import { Link } from 'react-router-dom';
+import Categories from '../components/Homepage/Categories/Categories';
+import About from '../components/Homepage/About';
 
 function HomePage() {
     return (
         <>
-        <Topbar></Topbar>
-        <Navbar></Navbar>
         <div>
-            <button>
-                <Link to="/productpage">Product Page</Link>
-            </button>
+            <Topbar></Topbar>
+            <Navbar></Navbar>
         </div>
-
+        <Categories></Categories>
         <div>
-            <button>
-                <Link to="/buy">BookOverview</Link>
-            </button>
+        <div className='homePageDivider'></div>
+        <About></About>
         </div>
         </>
     )

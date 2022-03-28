@@ -1,29 +1,29 @@
+import { TextField } from '@mui/material';
 import React, { Component } from 'react';
-import './Topbar.css'
-import { TopbarItems } from './TopbarItems';
-
+import './Topbar.css';
+import logo from './logoStoodle.png'
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import { Favorite } from '@mui/icons-material';
 
 class Topbar extends Component {
     render() {
-
         return(
-            <nav className='TopbarItems'>
-                <h1 className='brand'> Stoodle</h1>
-                <div className='logo'>
-                    
-                    </div>
+            <nav className='Topbar'>
+                <div className='divLogo'>
+                <h1 className='logo'> <img src={logo} height="40px"/>Stoodle</h1>
+                </div>
+                <container>
+                <MenuIcon>
+                </MenuIcon>
+                <TextField  className='search' size='small'></TextField>
+                </container>
                 <ul className='topbar-menu'>
-                    {TopbarItems.map((item,index)=> {
-
-                        return (
-                            <li key={index}>
-                                 <a className={item.cName} href={item.url}>
-                                  {item.title}
-                                 </a>
-                            </li>
-                             )
-                    })}
-                    </ul>
+                    <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon>Notifications</a>
+                    <a className='topbar-links' href='#'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
+                    <a className='topbar-links'  href='#'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
+                </ul>
             </nav>
         )
     }

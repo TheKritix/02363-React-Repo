@@ -1,17 +1,31 @@
+.logo {
+    color: black;
+}
 
-.TopbarItems{
+.Topbar{
+    background-color: white;
+    height: 80px;
     display: flex;
-    justify-content: right;
-    padding-right: 30px;
-
+    align-items: center;
+    justify-content: space-between;
 
 }
+
+container {
+    align-items: flex;
+}
+
 
 .topbar-menu {
     display: grid;
     grid-template-columns: repeat(3,auto);
     list-style: none;
     grid-gap: 10px;
+    justify-content: end;
+    text-align: center;
+    margin-right: 2rem;
+    color: black;
+    text-decoration: none;
 }
 
 .topbar-links {
@@ -19,8 +33,16 @@
     text-decoration: none;
 }
 
-.brand {
-    position: absolute;
-    top:0;
-    left: 10px;
+.iconImg {
+    height: 30px;
+    width: 30px;
+}
+
+.icon {
+    position: relative;
+
+}
+
+#favorit{
+    color: rgb(244, 116,44, 100%);
 }
