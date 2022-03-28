@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import './Profile.css';
 import profileImg from './profileIcon.png';
-import CameraIcon from '@material-ui/icons/CameraAlt'
-import StarIcon from '@material-ui/icons/StarOutline'
-import PersonIcon from'@material-ui/icons/PersonOutline'
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 class Profile extends Component {
     render(){
@@ -13,7 +13,7 @@ class Profile extends Component {
 
             <div className="infoContainer">
                 <div className="divIcon">
-                <CameraIcon  className ="cameraIcon" style={{fontSize : 30, left:200}}/>
+                <CameraAltIcon className ="cameraIcon" style={{fontSize : 30, left:200}} ></CameraAltIcon>
                 <img src={profileImg} alt="profileImg" width={180} height={180}></img> 
                 </div>
             
@@ -36,12 +36,12 @@ class Profile extends Component {
            <br/>
 
            <div className="raiting">
-               <StarIcon></StarIcon>
-               <StarIcon></StarIcon>
-               <StarIcon></StarIcon>
-               <StarIcon></StarIcon>
-               <StarIcon></StarIcon>
-               <PersonIcon></PersonIcon>
+               <StarOutlineIcon></StarOutlineIcon>
+               <StarOutlineIcon></StarOutlineIcon>
+               <StarOutlineIcon></StarOutlineIcon>
+               <StarOutlineIcon></StarOutlineIcon>
+               <StarOutlineIcon></StarOutlineIcon>
+               <PersonOutlineIcon></PersonOutlineIcon>
            </div>
            </div>
            

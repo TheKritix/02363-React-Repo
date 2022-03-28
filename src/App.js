@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';
 import ProductPage from './Pages/ProductPage.js';
-import Book from './components/Book.js';
 import ProfilePage from './Pages/ProfilePage.js';
 
 
