@@ -10,5 +10,4 @@ export const MenuItems = [
         url: '#',
         cName: 'nav-links'
     },
-
 ]

@@ -15,6 +15,12 @@ function HomePage() {
                 <Link to="/productpage">Product Page</Link>
             </button>
         </div>
+
+        <div>
+            <button>
+                <Link to="/buy">BookOverview</Link>
+            </button>
+        </div>
         </>
     )
   }
