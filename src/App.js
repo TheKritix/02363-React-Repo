@@ -2,10 +2,10 @@
 import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './Pages/HomePage.js';
-import ProductPage from './Pages/ProductPage.js';
-import BookOverview from './components/BodyComponents/Book/BookOverview';
-import ProfilePage from './Pages/ProfilePage.js';
+import HomePage from './Pages/HomePage.js';  
+import ProductPage from './Pages/ProductPage.js'; 
+import BookOverview from './components/BodyComponents/Book/BookOverview'; 
+import ProfilePage from './Pages/ProfilePage.js'; 
 
 
 function App() {

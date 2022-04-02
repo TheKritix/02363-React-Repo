@@ -10,21 +10,22 @@ import { Favorite } from '@mui/icons-material';
 class Topbar extends Component {
     render() {
         return(
-            <nav className='Topbar' >
+            <div className='Topbar' >
                 <div className='divLogo'>
-                <h1 className='logo'><img src={logo} height="40px"/>Stoodle</h1>
+                <a id='logoLink' href='/'> <h1 className='logo'><img src={logo} height="40px"/>Stoodle</h1></a>
                 </div>
-                <container>
-                <MenuIcon>
-                </MenuIcon>
+                <div className='search-div'>
+                <MenuIcon> </MenuIcon>
                 <TextField  className='search' size='small'></TextField>
-                </container>
+                </div>
+                <div className='options'>
                 <ul className='topbar-menu'>
-                    <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon>Notifications</a>
+                    <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon><text>Notifications</text></a>
                     <a className='topbar-links' href='#'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
                     <a className='topbar-links'  href='/profilepage'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
                 </ul>
-            </nav>
+                </div>
+            </div>
         )
     }
 }

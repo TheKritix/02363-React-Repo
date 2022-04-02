@@ -2,31 +2,41 @@
     color: black;
 }
 
+.divLogo {
+
+}
+
+.search-div {
+    display: flex;
+}
+
+.search {
+    width: 300px;
+}
+
 .Topbar{
     background-color: white;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    width: 100%;
 }
 
-container {
-    align-items: flex;
+#logoLink {
+ text-decoration: none;
 }
-
 
 .topbar-menu {
     display: grid;
     grid-template-columns: repeat(3,auto);
     list-style: none;
     grid-gap: 10px;
-    justify-content: end;
-    text-align: center;
     margin-right: 2rem;
     color: black;
-    text-decoration: none;
+    text-decoration: none; 
 }
+
 
 .topbar-links {
     color: black;
@@ -38,10 +48,6 @@ container {
     width: 30px;
 }
 
-.icon {
-    position: relative;
-
-}
 
 #favorit{
     color: rgb(244, 116,44, 100%);

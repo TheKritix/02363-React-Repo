@@ -3,7 +3,6 @@ import React from 'react';
 import './HomePage.css';
 import Navbar from '../components/Navbar/Navbar';
 import Topbar from '../components/Topbar/Topbar';
-import { Link } from 'react-router-dom';
 import Categories from '../components/Homepage/Categories/Categories';
 import About from '../components/Homepage/About';
 
