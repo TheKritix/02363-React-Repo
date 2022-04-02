@@ -11,6 +11,5 @@ export const Book = ({ item }) => {
     </div>
   )
 }
-
 export default Book
 

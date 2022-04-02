@@ -10,9 +10,9 @@ import { Favorite } from '@mui/icons-material';
 class Topbar extends Component {
     render() {
         return(
-            <nav className='Topbar'>
+            <nav className='Topbar' >
                 <div className='divLogo'>
-                <h1 className='logo'> <img src={logo} height="40px"/>Stoodle</h1>
+                <h1 className='logo'><img src={logo} height="40px"/>Stoodle</h1>
                 </div>
                 <container>
                 <MenuIcon>
@@ -22,7 +22,7 @@ class Topbar extends Component {
                 <ul className='topbar-menu'>
                     <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon>Notifications</a>
                     <a className='topbar-links' href='#'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
-                    <a className='topbar-links'  href='#'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
+                    <a className='topbar-links'  href='/profilepage'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
                 </ul>
             </nav>
         )
