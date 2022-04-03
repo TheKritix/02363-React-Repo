@@ -12,7 +12,7 @@ class Topbar extends Component {
         return(
             <div className='Topbar' >
                 <div className='divLogo'>
-                <a id='logoLink' href='/'> <h1 className='logo'><img src={logo} height="40px"/>Stoodle</h1></a>
+                <a id='logoLink' href='/'> <h1 className='logo'><img src={logo} height="40px"/>St<span className='oo'>oo</span>dle</h1></a>
                 </div>
                 <div className='search-div'>
                 <MenuIcon> </MenuIcon>
