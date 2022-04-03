@@ -11,7 +11,7 @@ export const CategoryItems = [
         cName: 'categoryClass'
     },
     {
-        title: 'Data Science',
+        title: 'DataScience',
         image: require('./datascience.png'),
         cName: 'categoryClass'
     },
@@ -27,23 +27,23 @@ export const CategoryItems = [
     },
     {
         title: 'Architecture',
-        image: require('./math.png'),
+        image: require('./achitecture.png'),
         cName: 'categoryClass'
     },
     {
         title: 'Arts',
-        image: require('./math.png'),
+        image: require('./art.png'),
         cName: 'categoryClass'
     },
     {
         title: 'Psychology',
-        image: require('./math.png'),
+        image: require('./physcology.png'),
         cName: 'categoryClass'
     
     },
     {
         title: 'Languages',
-        image: require('./math.png'),
+        image: require('./languages.png'),
         cName: 'categoryClass'
     
     }
