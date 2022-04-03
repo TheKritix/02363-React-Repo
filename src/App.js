@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';  
 import ProductPage from './Pages/ProductPage.js'; 
 import BookOverview from './components/BodyComponents/Book/BookOverview'; 
+import AddBook from './components/BodyComponents/Book/AddBook'; 
 import ProfilePage from './Pages/ProfilePage.js'; 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="productpage" element={<ProductPage />}/>
+        <Route path="sell" element={<AddBook/>}/>
         <Route path="buy" element={<BookOverview/>}/>
         <Route path="profilepage" element={<ProfilePage/>}/>
       </Routes>
