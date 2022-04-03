@@ -1,0 +1,9 @@
+.favorit-container {
+    padding-top: 30px;
+    border: solid, 1px, black;
+}
+
+.favoritBtn {
+    color: rgb(244, 116,44, 100%);
+    align-self: flex-end;
+}
