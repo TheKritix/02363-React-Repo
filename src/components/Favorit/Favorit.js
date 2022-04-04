@@ -10,28 +10,25 @@ class Favorit extends Component {
         return(
             <div>
            <Container className='favorit-container'>
-                <Grid container spacing = {5}>
+                <Grid container spacing = {0}>
                     {BookItem.map ((item,index) => {
                         return(
                             <Grid item xs={5} md={3} key={index}>
-                                <Card>
-                                    <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        image={item.imageUrl}
-                                        alt ="bog"
-                                        height={200}
-                                    ></CardMedia>
-                                    <CardContent className='card-content'>
-                                        <h3>{item.title}</h3>
-                                        <h4>{item.price}</h4>
-                                        <h5>{item.city}, {item.country}</h5>
-                                    </CardContent>
-                                    </CardActionArea>
-                                    <IconButton>
-                                    <Favorite className='favoritBtn'></Favorite>
-                                    </IconButton>
-                                </Card>
+                                <div className='card-item'>
+                                    <div className='icon-div'>
+                                        <IconButton>
+                                            <Favorite className='favoriteBtn'></Favorite>
+                                        </IconButton>
+                                    </div>
+                                    <div className='img-div'>
+                                        <img className='item-image' src={item.imageUrl}></img>
+                                    </div> 
+                                    <div className='content'>
+                                        <h5>{item.title}</h5>
+                                        <h6>{item.price}</h6>
+                                        <h6>{item.city}, {item.country}</h6>
+                                    </div>
+                                </div>
                             </Grid>
                         )
                     })}

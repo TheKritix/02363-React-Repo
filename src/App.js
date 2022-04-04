@@ -6,7 +6,7 @@ import HomePage from './Pages/HomePage.js';
 import ProductPage from './Pages/ProductPage.js'; 
 import BookOverview from './components/BodyComponents/Book/BookOverview'; 
 import ProfilePage from './Pages/ProfilePage.js'; 
-import FavoritPage from './Pages/FavoritPage.js';
+import FavoritPage from './Pages/FavoritePage';
 
 
 function App() {

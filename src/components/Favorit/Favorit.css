@@ -1,22 +1,29 @@
 
-.favorit-container {
-    padding-top: 30px;
-
-}
-.button1 {
-    position: relative;
-}
-
-.favoritBtn {
-    color: rgb(244, 116,44, 100%);
-    position: absolut;
-    right: 0;
-    ;
-
-}
-
-.card-content {
-    margin-bottom: -20px;
-}
-
-
+ .card-item {
+     border: 1px solid;
+     border-color: hsl(212, 92%, 61%, 25%);
+ 
+ }
+ 
+ .favoriteBtn {
+     color: rgb(244, 116,44, 100%);
+ 
+ }
+ .item-image {
+     height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 
+ }
+ 
+ .content {
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+ 
+ .icon-div{
+     display: flex;
+     position: relative;
+     justify-content: right;
+ }
