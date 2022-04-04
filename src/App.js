@@ -10,7 +10,6 @@ import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
@@ -22,10 +21,10 @@ function App() {
         <Route path="mypostpage" element={<MyPostPage/>}/>
         </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-  /*
+/*
   return (
     <div className="App">
       <header className="App-header">
@@ -61,6 +60,5 @@ function Counter() {
     </div>
   )
 }*/
-
 
 export default App;

@@ -1,31 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
-import './Navbar.css'
+import "./Navbar.css";
 
-// using class instead of function because I might use state. 
+// using class instead of function because I might use state.
 class Navbar extends Component {
-
-    render() {
-        return (
-            <>
-                <nav className="NavbarItems">
-                    <ul className='nav-menu'>
-                        {MenuItems.map((item, index) => {
-                            return (
-                                <li key={index}>
-                                    <a className={item.cName} href={item.url}>
-                                        {item.title}
-                                    </a>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </nav>
-                <div className='spacer'> </div>
-            </>
-        )
-
-    }
+  render() {
+    return (
+      <>
+        <nav className="NavbarItems">
+          <ul className="nav-menu">
+            {MenuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <a className={item.cName} href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+        <div className="spacer"> </div>
+      </>
+    );
+  }
 }
 
 export default Navbar;
