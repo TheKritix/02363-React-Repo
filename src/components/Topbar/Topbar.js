@@ -20,7 +20,7 @@ class Topbar extends Component {
                 </div>
                 <div className='options'>
                 <ul className='topbar-menu'>
-                    <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon><text>Notifications</text></a>
+                    <a className='topbar-links' href='/mypostpage'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon><text>Notifications</text></a>
                     <a className='topbar-links' href='/favoritpage'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
                     <a className='topbar-links'  href='/profilepage'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
                 </ul>

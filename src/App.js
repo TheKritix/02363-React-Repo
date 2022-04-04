@@ -7,7 +7,7 @@ import ProductPage from './Pages/ProductPage.js';
 import BookOverview from './components/BodyComponents/Book/BookOverview'; 
 import ProfilePage from './Pages/ProfilePage.js'; 
 import FavoritPage from './Pages/FavoritePage';
-
+import MyPostPage from './Pages/MyPostPage';
 
 function App() {
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="buy" element={<BookOverview/>}/>
         <Route path="profilepage" element={<ProfilePage/>}/>
         <Route path="favoritpage" element={<FavoritPage/>}/>
+        <Route path="mypostpage" element={<MyPostPage/>}/>
         </Routes>
     </BrowserRouter>
   )

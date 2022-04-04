@@ -3,7 +3,7 @@
 export const ProfileMenuList = [
     {
     name: 'My posts',
-    url: '#',
+    url: '/mypostpage',
     cname: 'profile-links'
 },
 {
