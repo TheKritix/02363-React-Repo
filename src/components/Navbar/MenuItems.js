@@ -7,7 +7,7 @@ export const MenuItems = [
     },
     {
         title: 'Buy',
-        url: '#',
+        url: '/buy',
         cName: 'nav-links'
     },
 ]

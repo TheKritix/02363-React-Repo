@@ -1,30 +1,31 @@
+import { TextField } from '@mui/material';
 import React, { Component } from 'react';
-import './Topbar.css'
-import { TopbarItems } from './TopbarItems';
-
+import './Topbar.css';
+import logo from './logoStoodle.png'
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import { Favorite } from '@mui/icons-material';
 
 class Topbar extends Component {
     render() {
-
         return(
-            <nav className='TopbarItems'>
-                <h1 className='brand'> Stoodle</h1>
-                <div className='logo'>
-                    
-                    </div>
+            <div className='Topbar' >
+                <div className='divLogo'>
+                <a id='logoLink' href='/'> <h1 className='logo'><img src={logo} height="40px"/>St<span className='oo'>oo</span>dle</h1></a>
+                </div>
+                <div className='search-div'>
+                <MenuIcon> </MenuIcon>
+                <TextField  className='search' size='small'></TextField>
+                </div>
+                <div className='options'>
                 <ul className='topbar-menu'>
-                    {TopbarItems.map((item,index)=> {
-
-                        return (
-                            <li key={index}>
-                                 <a className={item.cName} href={item.url}>
-                                  {item.title}
-                                 </a>
-                            </li>
-                             )
-                    })}
-                    </ul>
-            </nav>
+                    <a className='topbar-links' href='/mypostpage'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon><text>Notifications</text></a>
+                    <a className='topbar-links' href='/favoritpage'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
+                    <a className='topbar-links'  href='/profilepage'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
+                </ul>
+                </div>
+            </div>
         )
     }
 }

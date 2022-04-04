@@ -1,0 +1,29 @@
+.profileMenuDiv {
+    display: flex;
+    justify-content: left;
+    font-family: Inter;
+    border-bottom: 1px solid;
+    border-color: hsl(212, 92%, 61%, 25%);
+    margin: 30px;
+
+
+
+}
+
+
+.profil-menu {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    list-style: none;
+    grid-gap: 50px;
+}
+
+.profile-links {
+color: grey;
+text-decoration: none;
+}
+
+ .profile-links:hover {
+    text-decoration: underline;
+    color:  rgb(45, 133, 204)
+}
