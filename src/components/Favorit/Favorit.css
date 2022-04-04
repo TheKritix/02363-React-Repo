@@ -1,9 +1,22 @@
+
 .favorit-container {
     padding-top: 30px;
-    border: solid, 1px, black;
+
+}
+.button1 {
+    position: relative;
 }
 
 .favoritBtn {
     color: rgb(244, 116,44, 100%);
-    align-self: flex-end;
+    position: absolut;
+    right: 0;
+    ;
+
 }
+
+.card-content {
+    margin-bottom: -20px;
+}
+
+

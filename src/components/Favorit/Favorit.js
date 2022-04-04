@@ -8,9 +8,9 @@ import { Favorite, FavoriteBorderTwoTone } from '@mui/icons-material';
 class Favorit extends Component {
     render() {
         return(
-            <>
-            <Container className='favorit-container'>
-                <Grid container spacing = {10}>
+            <div>
+           <Container className='favorit-container'>
+                <Grid container spacing = {5}>
                     {BookItem.map ((item,index) => {
                         return(
                             <Grid item xs={5} md={3} key={index}>
@@ -22,7 +22,7 @@ class Favorit extends Component {
                                         alt ="bog"
                                         height={200}
                                     ></CardMedia>
-                                    <CardContent>
+                                    <CardContent className='card-content'>
                                         <h3>{item.title}</h3>
                                         <h4>{item.price}</h4>
                                         <h5>{item.city}, {item.country}</h5>
@@ -31,8 +31,6 @@ class Favorit extends Component {
                                     <IconButton>
                                     <Favorite className='favoritBtn'></Favorite>
                                     </IconButton>
-                       
-
                                 </Card>
                             </Grid>
                         )
@@ -40,8 +38,7 @@ class Favorit extends Component {
 
                 </Grid>
             </Container>
-
-            </>
+            </div>
         );
     }
 }
