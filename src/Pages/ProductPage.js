@@ -12,11 +12,13 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import IconButton from "@material-ui/core/IconButton";
-import { Favorite } from '@mui/icons-material';
+
+
+
 
 function ProductPage() {
 
-    const [isFavClicked, setFavClicked] = useState(false);
+    const [favIcon, setFavIcon] = useState(0);
 
     return (
         <>
@@ -24,10 +26,10 @@ function ProductPage() {
         <Navbar></Navbar>
         <div className='rowA' style={{display: 'flex'}}>
             <div>
-                <Card style={{
+                <Card className='card' style={{
                     width: 600,
                     height: 800, 
-                    backgroundColor: "lightgray",
+                    backgroundColor: "rgb(45, 133, 204, .3)",
                     margin: 10,             
                 }}>
                     <CardContent>
@@ -35,14 +37,10 @@ function ProductPage() {
                             <ArrowBackRoundedIcon/>
                         </IconButton>
 
-                        {isFavClicked === false
-                        ? <IconButton onClick={() => setFavClicked === true} style={{float: 'right'}}>
+                        <IconButton style={{float: 'right'}}>
                             <FavoriteBorder/>
                         </IconButton>
-                        : <IconButton onClick={() => setFavClicked === false} style={{float: 'right'}}>
-                            <FavoriteIcon/>
-                        </IconButton>
-                        }
+                        
                         <div style={{display: 'flex', justifyContent: 'Center'}}>
                             <ItemImage/>
                         </div>
