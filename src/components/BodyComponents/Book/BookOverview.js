@@ -7,6 +7,7 @@ import { Grid } from "@mui/material";
 import Navbar from "../../Navbar/Navbar";
 import Topbar from "../../Topbar/Topbar";
 
+
 export const BookOverview = () => {
   const [priceMin, setPriceMin] = useState("0 BROKEN");
   const [priceMax, setPriceMax] = useState("1000 BROKEN");
@@ -16,6 +17,11 @@ export const BookOverview = () => {
   const [year, setYear] = useState("");
 
   console.log(Number(priceMax));
+
+  const handleClickBookItem = (e) => {
+    const item = e.target;
+    //needs to pass BookItem to destination
+  }
 
   return (
     <div>
