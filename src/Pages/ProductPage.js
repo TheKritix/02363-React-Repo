@@ -2,9 +2,9 @@ import React from 'react';
 import { useState } from 'react'
 import Navbar from '../components/Navbar/Navbar.js';
 import Topbar from '../components/Topbar/Topbar.js';
-import { ItemImage } from '../components/ProductPageComponents/ItemImage.js';
-import ItemTitle  from '../components/ProductPageComponents/ItemTitle.js';
-import ItemDescription from '../components/ProductPageComponents/ItemDescription.js';
+import { ItemImage } from '../components/Productpage/ItemImage.js';
+import ItemTitle  from '../components/Productpage/ItemTitle.js';
+import ItemDescription from '../components/Productpage/ItemDescription.js';
 import Card from "@material-ui/core/Card";
 import { CardContent } from '@mui/material';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
@@ -12,7 +12,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import IconButton from "@material-ui/core/IconButton";
-import { Favorite } from '@mui/icons-material';
+
 
 function ProductPage() {
 
