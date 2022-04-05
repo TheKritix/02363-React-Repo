@@ -9,19 +9,17 @@ function FavoriteButton({ isFavClicked, handleFavClick }) {
       <>
         {isFavClicked
         ? (
-          <IconButton 
-            className="FavInactive" 
+          <IconButton  
             style={{float: 'right'}}
             onClick={() => handleFavClick()}>
-              <FavoriteBorder/>
+              <FavoriteIcon className="FavActive"/>
           </IconButton>
         )
         : (
-          <IconButton 
-            className="FavActive" 
+          <IconButton  
             style={{float: 'right'}}
             onClick={() => handleFavClick()}>
-              <FavoriteIcon/>
+              <FavoriteBorder className="FavInactive"/>
           </IconButton>
         ) 
         }
