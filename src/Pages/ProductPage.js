@@ -7,16 +7,20 @@ import ItemTitle  from '../components/Productpage/ItemTitle.js';
 import ItemDescription from '../components/Productpage/ItemDescription.js';
 import Card from "@material-ui/core/Card";
 import { CardContent } from '@mui/material';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import IconButton from "@material-ui/core/IconButton";
+import FavoriteButton from '../components/Productpage/FavoriteButton.js';
+import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
 
 
 function ProductPage() {
 
     const [isFavClicked, setFavClicked] = useState(false);
+
+    const handleFavClick = () => {
+        setFavClicked((isFavClicked) => {
+            return !isFavClicked;
+        });
+    };
 
     return (
         <>
@@ -31,18 +35,8 @@ function ProductPage() {
                     margin: 10,             
                 }}>
                     <CardContent>
-                        <IconButton onClick={event => window.location.href='/buy'}>
-                            <ArrowBackRoundedIcon/>
-                        </IconButton>
-
-                        {isFavClicked === false
-                        ? <IconButton onClick={() => setFavClicked === true} style={{float: 'right'}}>
-                            <FavoriteBorder/>
-                        </IconButton>
-                        : <IconButton onClick={() => setFavClicked === false} style={{float: 'right'}}>
-                            <FavoriteIcon/>
-                        </IconButton>
-                        }
+                        <ArrowBackButton/>
+                        <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
                         <div style={{display: 'flex', justifyContent: 'Center'}}>
                             <ItemImage/>
                         </div>
