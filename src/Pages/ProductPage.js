@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import Navbar from '../components/Navbar/Navbar.js';
 import Topbar from '../components/Topbar/Topbar.js';
@@ -10,6 +10,8 @@ import { CardContent } from '@mui/material';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import FavoriteButton from '../components/Productpage/FavoriteButton.js';
 import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
+import { useParams } from 'react-router-dom';
+import { BookItem } from '../components/BodyComponents/Book/BookItem.js';
 
 
 function ProductPage() {
@@ -20,7 +22,17 @@ function ProductPage() {
         setFavClicked((isFavClicked) => {
             return !isFavClicked;
         });
-    };
+    }
+    
+    //useParams to find id by url
+    const { bookId } = useParams();
+    console.log(bookId);
+
+    //filter BookItems array for id matching id found by useParams
+    //selectedbook is an array
+    const selectedBook = BookItem.filter(book => book.bookId === bookId)
+    console.log(selectedBook)
+    
 
     return (
         <>
@@ -38,21 +50,22 @@ function ProductPage() {
                         <ArrowBackButton/>
                         <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
                         <div style={{display: 'flex', justifyContent: 'Center'}}>
-                            <ItemImage/>
+                            <ItemImage item={selectedBook[0]}/>
                         </div>
-                        <h3>Book with text in it</h3> 
-                        <h3 id='price'>999 kr</h3>
-                        <h3 id='city'><LocationOnOutlinedIcon/> Rødovre</h3>                                               
+                        <h3>{selectedBook[0].title}</h3> 
+                        <h3 id='price'>{selectedBook[0].price}</h3>
+                        <h3 id='city'><LocationOnOutlinedIcon/>{selectedBook[0].city}</h3>                                               
                     </CardContent>
                 </Card>
                 
             </div>
             <div className='rowC'>
-                <ItemTitle/>
+                <ItemTitle />
                 <ItemDescription/>
             </div>
         </div>
         </>
     )
   }
+
   export default ProductPage;

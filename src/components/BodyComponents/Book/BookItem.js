@@ -1,5 +1,6 @@
 export const BookItem = [
   {
+    bookId: "1",
     title: "How to create a Java Application",
     description: "This book will teach you about Java",
     author: "Foo Man the third",
@@ -10,6 +11,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "2",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -21,6 +23,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "3",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -32,6 +35,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "4",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -43,6 +47,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "5",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -54,6 +59,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "6",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -65,6 +71,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "7",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -76,6 +83,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "8",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -87,6 +95,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "9",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -98,6 +107,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "10",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -109,6 +119,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "11",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",

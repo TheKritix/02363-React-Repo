@@ -9,17 +9,18 @@ import ProfilePage from './Pages/ProfilePage.js';
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
 
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="productpage" element={<ProductPage />}/>
+        <Route path="/productpage/:bookId" element={<ProductPage/>}/>
         <Route path="buy" element={<BookOverview/>}/>
         <Route path="profilepage" element={<ProfilePage/>}/>
         <Route path="favoritpage" element={<FavoritPage/>}/>
         <Route path="mypostpage" element={<MyPostPage/>}/>
-        </Routes>
+      </Routes>
     </BrowserRouter>
   );
 }

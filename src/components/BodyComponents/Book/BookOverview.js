@@ -18,11 +18,6 @@ export const BookOverview = () => {
 
   console.log(Number(priceMax));
 
-  const handleClickBookItem = (e) => {
-    const item = e.target;
-    //needs to pass BookItem to destination
-  }
-
   return (
     <div>
       <Topbar></Topbar>
@@ -84,7 +79,7 @@ export const BookOverview = () => {
             return (
               <div className="indiGrid">
                 <Grid container item xs={12} sm={3} md={12} key={index}>
-                  <Book className="Book" item={item} />
+                  <Book className="Book" item={item}/>
                 </Grid>
               </div>
             );

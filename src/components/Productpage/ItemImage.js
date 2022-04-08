@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../../logo.svg";
 
-export const ItemImage = () => {
+export const ItemImage = ({item}) => {
 
   return (
     <img 
-    src='https://m.media-amazon.com/images/I/51eS3MxQ1YL.jpg'
+    src={item.imageUrl}
     className="itemImage" 
-    width='70%' 
+    height='560px'
+    width='70%'
     ></img>
   )
 }
