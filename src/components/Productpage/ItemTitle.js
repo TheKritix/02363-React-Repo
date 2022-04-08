@@ -1,9 +1,8 @@
 import React from 'react';
 
-
-export const ItemTitle = () => {
+export const ItemTitle = ({item}) => {
   return (
-      <h1>Product Title Here</h1>
+      <h1>{item.title}</h1>
   )
 }
 

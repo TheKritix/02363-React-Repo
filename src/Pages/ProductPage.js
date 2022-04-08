@@ -60,8 +60,8 @@ function ProductPage() {
                 
             </div>
             <div className='rowC'>
-                <ItemTitle />
-                <ItemDescription/>
+                <ItemTitle item={selectedBook[0]}/>
+                <ItemDescription item={selectedBook[0]}/>
             </div>
         </div>
         </>
