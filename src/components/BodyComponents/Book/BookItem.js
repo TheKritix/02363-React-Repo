@@ -49,7 +49,7 @@ export const BookItem = [
   {
     bookId: "5",
     title: "Parallel Programming and you",
-    description: "Programming in a parallel world",
+    description: "Dette er en bog, forstår du?",
     author: "Horseman Jack",
     year: "2008",
     imageUrl:
