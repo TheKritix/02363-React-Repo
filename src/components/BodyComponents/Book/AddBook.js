@@ -1,3 +1,4 @@
+import { Details } from "@mui/icons-material";
 import React, { useState } from "react";
 //import { BookItem } from './BookItem.js';
 import Navbar from "../../Navbar/Navbar";
@@ -7,110 +8,82 @@ import Topbar from "../../Topbar/Topbar";
 export const AddBook = () => {
   const [bookLib, setBookLib] = useState([
     {
-      Book_Id: 0,
-      Title: "Physics 101",
-      Publisher: "Waterloo",
-      Author: "James Jameson",
-      Price: "200 DKK",
-      Description: "A great book for physics",
-      University: "Starbucks",
-      Cond: "Great",
-      Course: "10020",
-      Lang: "English",
-      Topic: "Physics",
-      Image: null,
+      title: "",
+      publisher: "",
+      author: "",
+      price: "",
+      description: "",
+      university: "",
+      cond: "",
+      course: "",
+      lang: "",
+      topic: "",
+      image: ""
     },
-    {
-      Book_Id: 1,
-      Title: "Physics 102",
-      Publisher: "NotAloo",
-      Author: "John Johnson",
-      Price: "200 DKK",
-      Description: "A great book for physics",
-      University: "Starbucks",
-      Cond: "Great",
-      Course: "10020",
-      Lang: "English",
-      Topic: "Physics",
-      Image: null,
-    }
   ])
-  /*const [books, setBooks] = useState([
-    {
-      Book_Id: 0,
-      Title: "Physics 101",
-      Publisher: "Waterloo",
-      Author: "James Jameson",
-      Price: "200 DKK",
-      Description: "A great book for physics",
-      University: "Starbucks",
-      Cond: "Great",
-      Course: "10020",
-      Lang: "English",
-      Topic: "Physics",
-      Image: null,
-    },
-    {
-      Book_Id: 1,
-      Title: "Physics 102",
-      Publisher: "NotAloo",
-      Author: "John Johnson",
-      Price: "200 DKK",
-      Description: "A great book for physics",
-      University: "Starbucks",
-      Cond: "Great",
-      Course: "10020",
-      Lang: "English",
-      Topic: "Physics",
-      Image: null,
-    }
-  ]);*/
 
-  const findBookID = (arr, bookID) =>{
+  const [bookTest, setBookTest] = useState([
+    {
+      title: "",
+      publisher: "",
+      author: "",
+      price: "",
+      description: "",
+      university: "",
+      cond: "",
+      course: "",
+      lang: "",
+      topic: "",
+      image: ""
+    },
+  ])
+
+  const findBookID = (arr, bookID) => {
     return arr.find((element) => {
-      return element.Book_Id === bookID;
+      return element.book_Id === bookID;
     })
   }
 
-  const handleChange = (e) => {
+  const handChaBookLib = (e) => {
     setBookLib({
       ...bookLib,
       [e.target.name]: e.target.value,
     });
-    console.log(e.target.name)
   };
+
 
   const addBook = (e) => {
     e.preventDefault()
-    console.log("What is this: ", bookLib.Title)
     const bookObject = {
-      Book_Id: 2,
-      Title: bookLib.Title,
-      Author: bookLib.Author,
-      Price: 123,
-      Publisher: "Test",
-      Description: "Test",
-      University: "Test",
-      Cond: "Perfect",
-      Course: "Test",
-      Lang: "Test",
-      Topic: "Test",
-      Image: null,
+      title: bookLib.title,
+      author: bookLib.author,
+      price: 123,
+      publisher: "Test",
+      description: "Test",
+      university: "Test",
+      cond: "Perfect",
+      course: "Test",
+      lang: "Test",
+      topic: "Test",
+      image: null,
     };
-    setBookLib((bookLib) => [...bookLib, bookObject])
+    setBookLib([...bookLib, bookObject])
+    //setBookLib(bookLib.concat(bookObject))
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://stoodle.bhsi.xyz:3000/api/stoodle", {
-      method: "POST",
-      // We convert the React state to JSON and send it as the POST body
-      body: JSON.stringify(...bookLib),
-    }).then(function (response) {
-      console.log(response);
-      return response.json();
-    });
+    console.log(bookLib.title, " ", bookLib.author);
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'x-www-form-urlencoded' },
+      body: JSON.stringify({ title: 'React POST Request Example' })
+    };
+    fetch('http://stoodle.bhsi.xyz:3000/', requestOptions)
+      .then(response => response.json())
+      .then(data => setBookTest({ title: data.title }));
   };
+
 
   return (
     <div>
@@ -118,44 +91,48 @@ export const AddBook = () => {
       <Navbar></Navbar>
       <h1>Books</h1>
       <h2>Add book:</h2>
-      <form className="AddBook">
+      <form className="AddBook" onSubmit={handleSubmit}>
         <div>
           <label id="bookTitle"> Title: </label>
-          <input
-            name="Title"
-            type="text"
-            value={bookLib.Title}
-            onChange={handleChange}
-          />
-           <label id="bookAuth"> Author: </label>
-          <input
-            name="Author"
-            type="text"
-            value={bookLib.Author}
-            onChange={handleChange}
-          />
-
-          <button type="submit" onClick={addBook}>
-            Submit {bookLib.Title}
+          <input name="title" type="text" value={bookLib.title} onChange={handChaBookLib} />
+          <label id="bookPub">Publisher: </label>
+          <input id="bookPubInput" name="publisher" type="text" value={bookLib.publisher} onChange={handChaBookLib} />
+          <label id="bookAuth"> Author: </label>
+          <input name="author" type="text" value={bookLib.author} onChange={handChaBookLib} />
+          <label id="bookPrice">Price: </label>
+          <input id="bookPriceInput" name="price" type="number" value={bookLib.price} onChange={handChaBookLib} />
+          <label id="bookDesc">Description: </label>
+          <input id="descInput" name="description" type="text" value={bookLib.description} onChange={handChaBookLib} />
+          <label id="bookUni">University: </label>
+          <input id="bookUniInput" name="university" type="text" value={bookLib.university} onChange={handChaBookLib} />
+          <label id="bookCon">Condition: </label>
+          <select id="bookConInput" name="condition" type="text" value={bookLib.condition} onChange={handChaBookLib} >
+            <option value="perfect">Perfect</option>
+            <option value="great">Great</option>
+            <option value="Poor">Poor</option>
+          </select>
+          <label id="bookLang">Language: </label>
+          <select id="bookCourseInput" name="course" type="number" value={bookLib.course} onChange={handChaBookLib}>
+            <option value="danish">Danish</option>
+            <option value="english">English</option>
+          </select>
+          <label id="bookTopic">Topic: </label>
+          <input id="bookTopicInput" name="topic" type="text" value={bookLib.topic} onChange={handChaBookLib} />
+          <label id="bookImage">Image: </label>
+          <input id="bookImageInput" name="image" type="image" value={bookLib.image} onChange={handChaBookLib} />
+          <button id="bookSubmit" type="submit" >
+            Submit
           </button>
+          <div>
+            {bookTest.map(book => {
+              <Details key={book.id} p={book} />
+            }
+            )}
+            <p>test</p>
+          </div>
         </div>
       </form>
-      <h2>Book list:</h2>
-      <div>
-      {bookLib.map((item)=>(
-          <>
-          <p key={item.id}> {item.Author}, {item.Title}</p>
-          </>
-        ))}
-      </div>
     </div>
   );
 };
-/*
-                {books.map((item) => (
-                    <>
-                        <p key={item.id}> {item.title}, {item.price}</p>
-                    </>
-                ))}
-*/
 export default AddBook;
