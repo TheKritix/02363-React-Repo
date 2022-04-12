@@ -79,7 +79,7 @@ export const AddBook = () => {
       headers: { 'Content-Type': 'x-www-form-urlencoded' },
       body: JSON.stringify({ title: 'React POST Request Example' })
     };
-    fetch('http://stoodle.bhsi.xyz:3000/', requestOptions)
+    fetch('http://stoodle.bhsi.xyz:3000/api/books', requestOptions)
       .then(response => response.json())
       .then(data => setBookTest({ title: data.title }));
   };
