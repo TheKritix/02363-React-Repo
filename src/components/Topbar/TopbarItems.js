@@ -8,7 +8,7 @@ export const TopbarItems = [
     },
     {
         title: 'Favorits',
-        url:'#',
+        url:'/favoritpage',
         cName: 'topbar-links',
         icon: require('./profil.png'),
     },

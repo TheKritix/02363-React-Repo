@@ -7,24 +7,27 @@ import ProductPage from './Pages/ProductPage.js';
 import BookOverview from './components/BodyComponents/Book/BookOverview'; 
 import AddBook from './components/BodyComponents/Book/AddBook'; 
 import ProfilePage from './Pages/ProfilePage.js'; 
+import FavoritPage from './Pages/FavoritePage';
+import MyPostPage from './Pages/MyPostPage';
 
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="productpage" element={<ProductPage />}/>
         <Route path="sell" element={<AddBook/>}/>
+        <Route path="/productpage/:bookId" element={<ProductPage/>}/>
         <Route path="buy" element={<BookOverview/>}/>
         <Route path="profilepage" element={<ProfilePage/>}/>
+        <Route path="favoritpage" element={<FavoritPage/>}/>
+        <Route path="mypostpage" element={<MyPostPage/>}/>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-  /*
+/*
   return (
     <div className="App">
       <header className="App-header">
@@ -60,6 +63,5 @@ function Counter() {
     </div>
   )
 }*/
-
 
 export default App;

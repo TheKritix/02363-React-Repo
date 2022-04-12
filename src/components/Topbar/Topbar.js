@@ -12,7 +12,7 @@ class Topbar extends Component {
         return(
             <div className='Topbar' >
                 <div className='divLogo'>
-                <a id='logoLink' href='/'> <h1 className='logo'><img src={logo} height="40px"/>Stoodle</h1></a>
+                <a id='logoLink' href='/'> <h1 className='logo'><img src={logo} height="40px"/>St<span className='oo'>oo</span>dle</h1></a>
                 </div>
                 <div className='search-div'>
                 <MenuIcon> </MenuIcon>
@@ -20,8 +20,8 @@ class Topbar extends Component {
                 </div>
                 <div className='options'>
                 <ul className='topbar-menu'>
-                    <a className='topbar-links' href='#'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon><text>Notifications</text></a>
-                    <a className='topbar-links' href='#'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
+                    <a className='topbar-links' href='/mypostpage'> <NotificationsNoneIcon className='icon'></NotificationsNoneIcon><text>Notifications</text></a>
+                    <a className='topbar-links' href='/favoritpage'> <Favorite id="favorit"className='icon'></Favorite> Favorits</a>
                     <a className='topbar-links'  href='/profilepage'><AccountCircleIcon className='icon'></AccountCircleIcon>Profil</a>
                 </ul>
                 </div>

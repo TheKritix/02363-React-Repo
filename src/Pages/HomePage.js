@@ -1,24 +1,24 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import './HomePage.css';
-import Navbar from '../components/Navbar/Navbar';
-import Topbar from '../components/Topbar/Topbar';
-import Categories from '../components/Homepage/Categories/Categories';
-import About from '../components/Homepage/About';
+import { render } from "@testing-library/react";
+import React from "react";
+import "./HomePage.css";
+import Navbar from "../components/Navbar/Navbar";
+import Topbar from "../components/Topbar/Topbar";
+import Categories from "../components/Homepage/Categories/Categories";
+import About from "../components/Homepage/About";
 
 function HomePage() {
-    return (
-        <>
-        <div>
-            <Topbar></Topbar>
-            <Navbar></Navbar>
-        </div>
-        <Categories></Categories>
-        <div>
-        <div className='homePageDivider'></div>
+  return (
+    <>
+      <div>
+        <Topbar></Topbar>
+        <Navbar></Navbar>
+      </div>
+      <Categories></Categories>
+      <div>
+        <div className="homePageDivider"></div>
         <About></About>
-        </div>
-        </>
-    )
-  }
-  export default HomePage;
+      </div>
+    </>
+  );
+}
+export default HomePage;

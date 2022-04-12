@@ -2,10 +2,6 @@
     color: black;
 }
 
-.divLogo {
-
-}
-
 .search-div {
     display: flex;
 }
@@ -21,6 +17,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    
 }
 
 #logoLink {
