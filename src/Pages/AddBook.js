@@ -1,8 +1,8 @@
 import { Details } from "@mui/icons-material";
 import React, { useState } from "react";
 //import { BookItem } from './BookItem.js';
-import Navbar from "../../Navbar/Navbar";
-import Topbar from "../../Topbar/Topbar";
+import Navbar from "../components/Navbar/Navbar";
+import Topbar from "../components/Topbar/Topbar";
 
 
 export const AddBook = () => {
@@ -77,7 +77,18 @@ export const AddBook = () => {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'x-www-form-urlencoded' },
-      body: JSON.stringify({ title: 'React POST Request Example' })
+      body: JSON.stringify({
+        title: bookLib.Title,
+        publisher: bookLib.publisher,
+        author: bookLib.Author,
+        price: bookLib.price,
+        description: bookLib.description,
+        university: bookLib.university,
+        cond: bookLib.cond,
+        lang: bookLib.lang,
+        topic: bookLib.topic,
+        image: bookLib.image
+      })
     };
     fetch('http://stoodle.bhsi.xyz:3000/api/books', requestOptions)
       .then(response => response.json())

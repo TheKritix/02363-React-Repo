@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';  
 import ProductPage from './Pages/ProductPage.js'; 
 import BookOverview from './components/BodyComponents/Book/BookOverview'; 
-import AddBook from './components/BodyComponents/Book/AddBook'; 
+import AddBook from './Pages/AddBook'; 
 import ProfilePage from './Pages/ProfilePage.js'; 
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
