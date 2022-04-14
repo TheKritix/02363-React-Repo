@@ -11,6 +11,7 @@ import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
 
 function App() {
+  document.title = "Stoodle";
   return (
     
     <BrowserRouter>
