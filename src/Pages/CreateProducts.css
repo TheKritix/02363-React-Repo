@@ -1,5 +1,13 @@
-.AddBook{
-    background-color: #1561f8;
+.topTest {
+  background-color: #1561f8;
+  min-height: 100vh;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.createProducts {
+  background-color: #7a1759;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -9,6 +17,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
 #bkTitle {
 }
 #bkTitleInput {

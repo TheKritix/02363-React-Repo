@@ -1,0 +1,102 @@
+import React, { useState } from "react";
+import "./CreateProducts.css";
+
+
+export const CreateProducts = () => {
+  const [products, setProducts] = useState([
+    {
+      title: "",
+      publisher: "",
+      author: "",
+      price: "",
+      description: "",
+      university: "",
+      cond: "",
+      course: "",
+      lang: "",
+      topic: "",
+      image: ""
+    },
+  ])
+
+  const handleChangeProducts = (e) => {
+    setProducts({
+      ...products,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const submitProduct = (e) => {
+    e.preventDefault();
+    const productObject = {
+      Title: products.title,
+      Publisher: products.publisher,
+      Author: products.author,
+      Price: products.price,
+      Description: products.description,
+      University: products.university,
+      Cond: products.cond,
+      Lang: products.lang,
+      Topic: products.topic,
+      Image: "products.image"
+    };
+    console.log(productObject)
+    fetch("http://stoodle.bhsi.xyz:3000/api/books/", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: JSON.stringify(productObject)
+    })
+  }
+  /*
+.then(response => response.json())
+      .then(result => {
+        console.log("Success: ", result);
+      }).catch(error => {
+        console.log("Error: ", error);
+      });
+  */
+  return (
+    <div>
+      <form className="topTest" onSubmit={submitProduct}>
+        <h1>Create post</h1>
+        <div className="createProducts">
+          <label id="bkTitle"> Title: </label>
+          <input id="bkTitleInput" name="title" type="text" value={products.title} onChange={handleChangeProducts} />
+          <label id="bkPub">Publisher: </label>
+          <input id="bkPubInput" name="publisher" type="text" value={products.publisher} onChange={handleChangeProducts} />
+          <label id="bkAuth"> Author: </label>
+          <input id="bkAuthInput" name="author" type="text" value={products.author} onChange={handleChangeProducts} />
+          <label id="bkPrice">Price: </label>
+          <input id="bkPriceInput" name="price" type="number" value={products.price} onChange={handleChangeProducts} />
+          <label id="bkDesc">Description: </label>
+          <input id="bkDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} />
+          <label id="bkUni">University: </label>
+          <input id="bkUniInput" name="university" type="text" value={products.university} onChange={handleChangeProducts} />
+          <label id="bkCon">Condition: </label>
+          <select id="bkConInput" name="cond" type="text" value={products.cond} onChange={handleChangeProducts} >
+            <option value="select">Select condition</option>
+            <option value="perfect">Perfect</option>
+            <option value="great">Great</option>
+            <option value="poor">Poor</option>
+          </select>
+          <label id="bkLang">Language: </label>
+          <select id="bkLangInput" name="lang" type="number" value={products.lang} onChange={handleChangeProducts}>
+            <option value="select">Select language</option>
+            <option value="danish">Danish</option>
+            <option value="english">English</option>
+          </select>
+          <label id="bkTopic">Topic: </label>
+          <input id="bkTopicInput" name="topic" type="text" value={products.topic} onChange={handleChangeProducts} />
+          <label id="bkImage">Image: </label>
+          <input id="bkImageInput" name="image" type="image" value={products.image} onChange={handleChangeProducts} />
+          <button id="bkSubmit" type="submit" >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+export default CreateProducts;
