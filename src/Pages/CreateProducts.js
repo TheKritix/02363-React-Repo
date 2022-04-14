@@ -43,7 +43,7 @@ export const CreateProducts = () => {
     };
     console.log(productObject)
     if (!(productObject.Cond == "" && productObject.Lang == "")) {
-      fetch("http://localhost:3001/api/books/", {
+      fetch("http://stoodle.bhsi.xyz:3000/api/books", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
