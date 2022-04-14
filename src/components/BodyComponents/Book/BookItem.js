@@ -1,5 +1,6 @@
 export const BookItem = [
   {
+    bookId: "1",
     title: "How to create a Java Application",
     description: "This book will teach you about Java",
     author: "Foo Man the third",
@@ -10,6 +11,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "2",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -21,6 +23,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "3",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -32,6 +35,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "4",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -43,6 +47,19 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "5",
+    title: "Parallel Programming and you",
+    description: "Dette er en bog, forstår du?",
+    author: "Horseman Jack",
+    year: "2008",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/I/41gr4XJnUjL._SX321_BO1,204,203,200_.jpg",
+    price: "250,00 kr",
+    city: "Horsens",
+    country: "Denmark",
+  },
+  {
+    bookId: "6",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -54,6 +71,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "7",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -65,6 +83,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "8",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -76,6 +95,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "9",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -87,6 +107,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
+    bookId: "10",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",
@@ -98,17 +119,7 @@ export const BookItem = [
     country: "Denmark",
   },
   {
-    title: "Parallel Programming and you",
-    description: "Programming in a parallel world",
-    author: "Horseman Jack",
-    year: "2008",
-    imageUrl:
-      "https://images-na.ssl-images-amazon.com/images/I/41gr4XJnUjL._SX321_BO1,204,203,200_.jpg",
-    price: "250,00 kr",
-    city: "Horsens",
-    country: "Denmark",
-  },
-  {
+    bookId: "11",
     title: "Parallel Programming and you",
     description: "Programming in a parallel world",
     author: "Horseman Jack",

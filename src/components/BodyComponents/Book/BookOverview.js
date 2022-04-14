@@ -7,6 +7,7 @@ import { Grid } from "@mui/material";
 import Navbar from "../../Navbar/Navbar";
 import Topbar from "../../Topbar/Topbar";
 
+
 export const BookOverview = () => {
   const [priceMin, setPriceMin] = useState("0 BROKEN");
   const [priceMax, setPriceMax] = useState("1000 BROKEN");
@@ -19,8 +20,6 @@ export const BookOverview = () => {
 
   return (
     <div>
-      <Topbar></Topbar>
-      <Navbar></Navbar>
       <div className="SideMenu">
         <p id="priceMin">Price: </p>
         <input
@@ -78,7 +77,7 @@ export const BookOverview = () => {
             return (
               <div className="indiGrid">
                 <Grid container item xs={12} sm={3} md={12} key={index}>
-                  <Book className="Book" item={item} />
+                  <Book className="Book" item={item}/>
                 </Grid>
               </div>
             );
