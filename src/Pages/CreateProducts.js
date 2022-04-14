@@ -1,3 +1,4 @@
+import { Alert } from "bootstrap";
 import React, { useState } from "react";
 import "./CreateProducts.css";
 
@@ -41,14 +42,21 @@ export const CreateProducts = () => {
       Image: "products.image"
     };
     console.log(productObject)
-    fetch("http://stoodle.bhsi.xyz:3000/api/books/", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-      },
-      body: JSON.stringify(productObject)
-    })
+    if (!(productObject.Cond == "" && productObject.Lang == "")) {
+      fetch("http://stoodle.bhsi.xyz:3000/api/books/", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: JSON.stringify(productObject)
+      }).then(()=>{
+        console.log("Product added")
+      })
+    } else {
+      alert.show("Please fill out the required fields")
+    }
   }
+
   /*
 .then(response => response.json())
       .then(result => {
@@ -62,33 +70,34 @@ export const CreateProducts = () => {
       <form className="topTest" onSubmit={submitProduct}>
         <h1>Create post</h1>
         <div className="createProducts">
-          <label id="bkTitle"> Title: </label>
-          <input id="bkTitleInput" name="title" type="text" value={products.title} onChange={handleChangeProducts} />
+        <p className="requireMark">*Please fill out all required fields</p>
+          <label id="bkTitle"> Title<span className="requireMark">*</span>: </label>
+          <input id="bkTitleInput" name="title" type="text" value={products.title} required onChange={handleChangeProducts} />
           <label id="bkPub">Publisher: </label>
           <input id="bkPubInput" name="publisher" type="text" value={products.publisher} onChange={handleChangeProducts} />
           <label id="bkAuth"> Author: </label>
           <input id="bkAuthInput" name="author" type="text" value={products.author} onChange={handleChangeProducts} />
-          <label id="bkPrice">Price: </label>
-          <input id="bkPriceInput" name="price" type="number" value={products.price} onChange={handleChangeProducts} />
+          <label id="bkPrice">Price<span className="requireMark">*</span>: </label>
+          <input id="bkPriceInput" name="price" type="number" value={products.price} required onChange={handleChangeProducts} />
           <label id="bkDesc">Description: </label>
           <input id="bkDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} />
-          <label id="bkUni">University: </label>
-          <input id="bkUniInput" name="university" type="text" value={products.university} onChange={handleChangeProducts} />
-          <label id="bkCon">Condition: </label>
-          <select id="bkConInput" name="cond" type="text" value={products.cond} onChange={handleChangeProducts} >
-            <option value="select">Select condition</option>
+          <label id="bkUni">University<span className="requireMark">*</span>: </label>
+          <input id="bkUniInput" name="university" type="text" value={products.university} required onChange={handleChangeProducts} />
+          <label id="bkCon">Condition<span className="requireMark">*</span>: </label>
+          <select id="bkConInput" name="cond" type="text" value={products.cond} required onChange={handleChangeProducts} >
+            <option value="">Select condition</option>
             <option value="perfect">Perfect</option>
             <option value="great">Great</option>
             <option value="poor">Poor</option>
           </select>
-          <label id="bkLang">Language: </label>
-          <select id="bkLangInput" name="lang" type="number" value={products.lang} onChange={handleChangeProducts}>
-            <option value="select">Select language</option>
+          <label id="bkLang">Language<span className="requireMark">*</span>: </label>
+          <select id="bkLangInput" name="lang" type="number" value={products.lang} required onChange={handleChangeProducts}>
+            <option value="">Select language</option>
             <option value="danish">Danish</option>
             <option value="english">English</option>
           </select>
-          <label id="bkTopic">Topic: </label>
-          <input id="bkTopicInput" name="topic" type="text" value={products.topic} onChange={handleChangeProducts} />
+          <label id="bkTopic">Topic<span className="requireMark">*</span>: </label>
+          <input id="bkTopicInput" name="topic" type="text" value={products.topic} required onChange={handleChangeProducts} />
           <label id="bkImage">Image: </label>
           <input id="bkImageInput" name="image" type="image" value={products.image} onChange={handleChangeProducts} />
           <button id="bkSubmit" type="submit" >
