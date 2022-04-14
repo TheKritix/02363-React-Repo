@@ -8,8 +8,6 @@ import Favorit from "../components/Favorit/Favorit";
 function FavoritPage() {
   return (
     <>
-      <Topbar></Topbar>
-      <Navbar></Navbar>
       <Profil></Profil>
       <Menu></Menu>
       <Favorit></Favorit>

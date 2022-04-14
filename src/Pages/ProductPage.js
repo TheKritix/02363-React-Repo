@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react'
-import Navbar from '../components/Navbar/Navbar.js';
 import Topbar from '../components/Topbar/Topbar.js';
 import { ItemImage } from '../components/Productpage/ItemImage.js';
 import ItemTitle  from '../components/Productpage/ItemTitle.js';
@@ -36,8 +35,6 @@ function ProductPage() {
 
     return (
         <>
-        <Topbar></Topbar>
-        <Navbar></Navbar>
         <div className='rowA' style={{display: 'flex'}}>
             <div>
                 <Card style={{

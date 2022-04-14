@@ -7,13 +7,14 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { Favorite } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 class Topbar extends Component {
   render() {
     return (
       <div className="Topbar">
         <div className="divLogo">
-          <a id="logoLink" href="/">
+          <Link id="logoLink" to="/">
             {" "}
             <h1 className="logo">
               <img src={logo} alt="logoImage" id="logoImage" />
@@ -21,7 +22,7 @@ class Topbar extends Component {
                 St<span className="oo">oo</span>dle
               </div>
             </h1>
-          </a>
+          </Link>
         </div>
         <div className="search-div">
           <TextField
@@ -39,20 +40,20 @@ class Topbar extends Component {
           ></TextField>
         </div>
         <div className="options">
-          <ul className="topbar-menu">
-            <a className="topbar-links" href="/mypostpage">
+          <div className="topbar-menu">
+            <Link className="topbar-links" to="/mypostpage">
               {" "}
               <NotificationsNoneIcon className="icon"></NotificationsNoneIcon>
               <text>Notifications</text>
-            </a>
-            <a className="topbar-links" href="/favoritpage">
+            </Link>
+            <Link className="topbar-links" to="/favoritpage">
               {" "}
-              <Favorite id="favorit" className="icon"></Favorite> Favorits
-            </a>
-            <a className="topbar-links" href="/profilepage">
+              <Favorite id="favorit" className="icon"></Favorite> Favorites
+            </Link>
+            <Link className="topbar-links" to="/profilepage">
               <AccountCircleIcon className="icon"></AccountCircleIcon>Profil
-            </a>
-          </ul>
+            </Link>
+          </div>
         </div>
       </div>
     );
