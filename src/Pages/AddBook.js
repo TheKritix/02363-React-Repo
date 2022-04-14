@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import { BookItem } from './BookItem.js';
+import "./AddBook.css";
 import Navbar from "../components/Navbar/Navbar";
 import Topbar from "../components/Topbar/Topbar";
 
@@ -65,38 +65,38 @@ export const AddBook = () => {
       <Navbar></Navbar>
       <h1>Books</h1>
       <h2>Add book:</h2>
-      <form className="AddBook" onSubmit={addBook}>
-        <div>
-          <label id="bookTitle"> Title: </label>
-          <input name="title" type="text" value={bookLib.title} onChange={handChaBookLib} />
-          <label id="bookPub">Publisher: </label>
-          <input id="bookPubInput" name="publisher" type="text" value={bookLib.publisher} onChange={handChaBookLib} />
-          <label id="bookAuth"> Author: </label>
-          <input name="author" type="text" value={bookLib.author} onChange={handChaBookLib} />
-          <label id="bookPrice">Price: </label>
-          <input id="bookPriceInput" name="price" type="number" value={bookLib.price} onChange={handChaBookLib} />
-          <label id="bookDesc">Description: </label>
-          <input id="descInput" name="description" type="text" value={bookLib.description} onChange={handChaBookLib} />
-          <label id="bookUni">University: </label>
-          <input id="bookUniInput" name="university" type="text" value={bookLib.university} onChange={handChaBookLib} />
-          <label id="bookCon">Condition: </label>
-          <select id="bookConInput" name="cond" type="text" value={bookLib.cond} onChange={handChaBookLib} >
+      <form  onSubmit={addBook}>
+        <div className="AddBook">
+          <label id="bkTitle"> Title: </label>
+          <input id="bkTitleInput" name="title" type="text" value={bookLib.title} onChange={handChaBookLib} />
+          <label id="bkPub">Publisher: </label>
+          <input id="bkPubInput" name="publisher" type="text" value={bookLib.publisher} onChange={handChaBookLib} />
+          <label id="bkAuth"> Author: </label>
+          <input id="bkAuthInput" name="author" type="text" value={bookLib.author} onChange={handChaBookLib} />
+          <label id="bkPrice">Price: </label>
+          <input id="bkPriceInput" name="price" type="number" value={bookLib.price} onChange={handChaBookLib} />
+          <label id="bkDesc">Description: </label>
+          <input id="bkDescInput" name="description" type="text" value={bookLib.description} onChange={handChaBookLib} />
+          <label id="bkUni">University: </label>
+          <input id="bkUniInput" name="university" type="text" value={bookLib.university} onChange={handChaBookLib} />
+          <label id="bkCon">Condition: </label>
+          <select id="bkConInput" name="cond" type="text" value={bookLib.cond} onChange={handChaBookLib} >
             <option value="select">Select condition</option>
             <option value="perfect">Perfect</option>
             <option value="great">Great</option>
             <option value="poor">Poor</option>
           </select>
-          <label id="bookLang">Language: </label>
-          <select id="bookLangInput" name="lang" type="number" value={bookLib.lang} onChange={handChaBookLib}>
+          <label id="bkLang">Language: </label>
+          <select id="bkLangInput" name="lang" type="number" value={bookLib.lang} onChange={handChaBookLib}>
             <option value="select">Select language</option>
             <option value="danish">Danish</option>
             <option value="english">English</option>
           </select>
-          <label id="bookTopic">Topic: </label>
-          <input id="bookTopicInput" name="topic" type="text" value={bookLib.topic} onChange={handChaBookLib} />
-          <label id="bookImage">Image: </label>
-          <input id="bookImageInput" name="image" type="image" value={bookLib.image} onChange={handChaBookLib} />
-          <button id="bookSubmit" type="submit" >
+          <label id="bkTopic">Topic: </label>
+          <input id="bkTopicInput" name="topic" type="text" value={bookLib.topic} onChange={handChaBookLib} />
+          <label id="bkImage">Image: </label>
+          <input id="bkImageInput" name="image" type="image" value={bookLib.image} onChange={handChaBookLib} />
+          <button id="bkSubmit" type="submit" >
             Submit
           </button>
         </div>

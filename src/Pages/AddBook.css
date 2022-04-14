@@ -1,0 +1,51 @@
+.AddBook{
+    background-color: #1561f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#bkTitle {
+}
+#bkTitleInput {
+}
+#bkPub {
+}
+#bkPubInput {
+}
+#bkAuth {
+}
+#bkAuthInput {
+}
+#bkPrice {
+}
+#bkPriceInput {
+}
+#bkDesc {
+}
+#bkDescInput {
+}
+#bkUni {
+}
+#bkUniInput {
+}
+#bkCon {
+}
+#bkConInput {
+}
+#bkLang {
+}
+#bkLangInput {
+}
+#bkTopic {
+}
+#bkTopicInput {
+}
+#bkImage {
+}
+#bkImageInput {
+}
