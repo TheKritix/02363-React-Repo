@@ -20,8 +20,6 @@ export const BookOverview = () => {
 
   return (
     <div>
-      <Topbar></Topbar>
-      <Navbar></Navbar>
       <div className="SideMenu">
         <p id="priceMin">Price: </p>
         <input

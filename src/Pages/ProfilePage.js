@@ -8,8 +8,6 @@ import MyPost from "../components/MyPost/MyPost";
 function ProfilePage(){
     return(
         <>
-        <Topbar></Topbar>
-        <Navbar></Navbar>
         <Profile></Profile>
         <Menu></Menu>
         <MyPost></MyPost>

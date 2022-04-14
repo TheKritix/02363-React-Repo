@@ -1,6 +1,5 @@
 
 import './App.css';
-import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';  
 import ProductPage from './Pages/ProductPage.js'; 
@@ -9,11 +8,16 @@ import AddBook from './Pages/AddBook';
 import ProfilePage from './Pages/ProfilePage.js'; 
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
-
+import Topbar from "./components/Topbar/Topbar";
+import Navbar from './components/Navbar/Navbar.js';
 
 function App() {
+  document.title = "Stoodle";
   return (
+    
     <BrowserRouter>
+    <Topbar/>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="sell" element={<AddBook/>}/>
@@ -26,42 +30,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-/*
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello 02363 class
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Counter />
-      </header>
-    </div>
-  );
-}
-
-function Counter() {
-  const [count, setCount] = useState(0);
-  return (
-    <div className="Counter">
-      <p>
-        Count: {count}
-      </p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me, bitch!
-      </button>
-      <Book />
-    </div>
-  )
-}*/
 
 export default App;

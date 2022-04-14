@@ -6,7 +6,7 @@ import Topbar from "./components/Topbar/Topbar";
 import BookOverview from "./components/BodyComponents/Book/BookOverview";
 
 function HomePage() {
-  document.title = "Stoodle";
+  
   return (
     <>
       <Topbar />
