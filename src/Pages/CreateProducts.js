@@ -43,12 +43,23 @@ export const CreateProducts = () => {
     };
     console.log(productObject)
     if (!(productObject.Cond == "" && productObject.Lang == "")) {
-      fetch("http://stoodle.bhsi.xyz:3000/api/books/", {
+      fetch("http://localhost:3001/api/books/", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
         },
-        body: JSON.stringify(productObject)
+        body: new URLSearchParams({
+          'title': `${products.title}`,
+          'publisher': `${products.publisher}`,
+          'author': `${products.author}`,
+          'price': `${products.price}`,
+          'description': `${products.description}`,
+          'university': `${products.university}`,
+          'cond': `${products.cond}`,
+          'lang': `${products.lang}`,
+          'topic': `${products.topic}`,
+          'image': `${products.image}`
+      })
       }).then(()=>{
         console.log("Product added")
       })
