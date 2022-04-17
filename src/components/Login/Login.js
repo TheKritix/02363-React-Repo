@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Login.css'
-import { FaFacebook, FaGoogle } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa';
+import Button from '@mui/material/Button';
+import GoogleIcon from '@mui/icons-material/Google';
 
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle 
 *https://www.freecodecamp.org/news/how-to-use-react-icons/
@@ -25,9 +27,11 @@ class Login extends Component{
             
                 <h4 id='lineText'>or</h4>
 
-                <button className='fbBtn'> <FaFacebook className='fbIcon' size={20}/> Continue with Facebook</button>
+                <button className='regBtn'> Create an account</button>
                 <br/>
-                <button className='googleBtn'> <FaGoogle className='googleIcon' size={18}/> Continue with Google</button>        
+
+                <Button className='googleBtn' variant="outlined" startIcon={<GoogleIcon/>} >Continue with Google</Button>
+                
                 
             </div>
 

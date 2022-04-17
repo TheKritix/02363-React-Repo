@@ -7,9 +7,9 @@ import BookOverview from './components/BodyComponents/Book/BookOverview';
 import ProfilePage from './Pages/ProfilePage.js'; 
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
+import LoginPage from './Pages/LoginPage.js'; 
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
-import LoginPage from './Pages/LoginPage.js';
 
 function App() {
   document.title = "Stoodle";
@@ -25,6 +25,7 @@ function App() {
         <Route path="profilepage" element={<ProfilePage/>}/>
         <Route path="favoritpage" element={<FavoritPage/>}/>
         <Route path="mypostpage" element={<MyPostPage/>}/>
+        <Route path="loginpage" element={<LoginPage/>}/>
       </Routes>
     </BrowserRouter>
   );
