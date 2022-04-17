@@ -9,6 +9,7 @@ import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
+import LoginPage from './Pages/LoginPage.js';
 
 function App() {
   document.title = "Stoodle";
