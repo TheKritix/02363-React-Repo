@@ -1,7 +1,7 @@
 .SideMenu {
     position: absolute;
-    width: 18.8rem;
-    height: 25rem;
+    width: 300px;
+    height: 400px;
     margin: 20px;
     border: 1px solid #bebebe;
     box-sizing: border-box;
@@ -13,25 +13,22 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 70rem;
-    /*z-index: -100;*/
+    width: 60rem;
+    margin-top: 1.3rem;
 }
 
-.indiGrid {
-    
+.item-image {
+    height: 300px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 15px;
+
 }
 
-.ItemBox {
-    overflow: hidden;
-    width: 20rem;
-    height: 25;
-    border: 0.01px solid #E5E9EB;
+.Overview {
+    display: flex;
 }
 
-.invisBox {
-    width: 9rem;
-    grid-area: SideMenu;
-}
 
 #priceMin {
     position: absolute;
