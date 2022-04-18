@@ -50,7 +50,7 @@ function ProductPage() {
                             <div style={{display: 'flex', justifyContent: 'Center'}}>
                                 <ItemImage item={selectedBook[0]}/>
                             </div>
-                            <Divider/>  
+                            <Divider style={{margin: 10,}}/>  
                             <h2>{selectedBook[0].title}</h2> 
                             <h3>Author: {selectedBook[0].author}</h3>
                             <h3 id='city' style={{float: 'right'}}><LocationOnOutlinedIcon/>{selectedBook[0].city}</h3>                                     
