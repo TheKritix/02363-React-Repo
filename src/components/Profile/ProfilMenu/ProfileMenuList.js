@@ -19,7 +19,7 @@ export const ProfileMenuList = [
 
 {
     name: 'Privacy policey',
-    url: '#',
+    url: '/loginpage',
     cname: 'profile-links'
 },
 {

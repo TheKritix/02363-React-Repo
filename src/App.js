@@ -8,6 +8,7 @@ import ProfilePage from './Pages/ProfilePage.js';
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
 import LoginPage from './Pages/LoginPage.js'; 
+import RegisterPage from './Pages/RegisterPage.js';  
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="favoritpage" element={<FavoritPage/>}/>
         <Route path="mypostpage" element={<MyPostPage/>}/>
         <Route path="loginpage" element={<LoginPage/>}/>
+        <Route path="registerpage" element={<RegisterPage/>}/>
       </Routes>
     </BrowserRouter>
   );

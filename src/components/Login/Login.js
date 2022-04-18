@@ -27,10 +27,13 @@ class Login extends Component{
             
                 <h4 id='lineText'>or</h4>
 
-                <button className='regBtn'> Create an account</button>
+                <button className='regBtn'  onClick={event => window.location.href='/registerpage'}> Create an account</button>
+                <br/>
                 <br/>
 
-                <Button className='googleBtn' variant="outlined" startIcon={<GoogleIcon/>} >Continue with Google</Button>
+                <Button className='googleBtn' variant="outlined" 
+                style={{ borderRadius:40, height:44 }}
+                startIcon={<GoogleIcon/>} >Continue with Google</Button>
                 
                 
             </div>
