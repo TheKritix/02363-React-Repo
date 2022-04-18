@@ -6,8 +6,8 @@ export const ItemImage = ({item}) => {
     <img 
     src={item.imageUrl}
     className="itemImage" 
-    height='560px'
-    width='70%'
+    height='50%'
+    width='50%'
     ></img>
   )
 }
