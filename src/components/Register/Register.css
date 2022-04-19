@@ -1,0 +1,44 @@
+/*headline 'Register'*/
+h1#headlineRegister {
+  font-size: 60px;
+  font-weight: 400;
+  
+}
+
+p#description{
+    font-size: 18px;
+    font-weight: 200;
+    
+}
+
+/*component alignment and textfont*/
+.registerInput {
+    text-align: center;
+    font-family: Inter;
+}
+
+input[type="firstname"], input[type="lastname"], input[type="phonenumber"], input[type="university"], input[type="country"], input[type="email"], input[type="password"]{
+    padding: 15px;
+    width: 300px;
+    margin: 12px;
+}
+
+input[type="adress"]{
+    padding: 15px;
+    width: 500px;
+    margin: 12px;
+}
+
+input[type="postcode"]{
+    padding: 15px;
+    width: 150px;
+    margin: 12px;
+}
+
+input[type="city"]{
+    padding: 15px;
+    width: 400px;
+    margin: 12px;
+}
+
+

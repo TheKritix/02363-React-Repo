@@ -15,9 +15,9 @@ class Login extends Component{
             <div className='inputLogin'>
                 <h1 id='headlineLogin'>Sign in</h1>
                 <form> 
-                    <input type="email" name="email" placeholder='Email'></input>
+                    <input type="email" name="email" placeholder='Email' required></input>
                     <br/>
-                    <input type="password" name="passWord" placeholder='Password'/>
+                    <input type="password" name="passWord" placeholder='Password' required></input>
                 </form>
 
                 <button className='loginBtn'>Login</button>
