@@ -33,7 +33,7 @@ const [register, setRegister] = useState([
         };
         console.log(registrationObject);
         if(!(registrationObject.email === "" && registrationObject.password === "")){
-            fetch("" ,{
+            fetch("http://localhost:3001/api/register",{
                 method: "POST",
                 headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
