@@ -1,4 +1,3 @@
-import { Alert } from "bootstrap";
 import React, { useState } from "react";
 import "./CreateProducts.css";
 
@@ -16,9 +15,13 @@ export const CreateProducts = () => {
       course: "",
       lang: "",
       topic: "",
-      image: ""
     },
   ])
+  const [fileImage, setFileImage] = useState();
+
+  const saveFile = (e) => {
+    setFileImage(e.target.files[0])
+  }
 
   const handleChangeProducts = (e) => {
     setProducts({
@@ -39,27 +42,30 @@ export const CreateProducts = () => {
       cond: products.cond,
       lang: products.lang,
       topic: products.topic,
-      image: "products.image"
     };
+
+    const formData = new FormData();
+    formData.append('image', fileImage);
+    formData.append('title', products.title);
+    formData.append('publisher', products.publisher);
+    formData.append('author', products.author);
+    formData.append('price', products.price);
+    formData.append('description', products.description);
+    formData.append('university', products.university);
+    formData.append('cond', products.cond);
+    formData.append('lang', products.lang);
+    formData.append('topic', products.topic);
+
     console.log(productObject)
+    console.log(fileImage)
+    console.log(fileImage.name)
+    console.log(formData)
+
     if (!(productObject.Cond === "" && productObject.Lang === "")) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        body: new URLSearchParams({
-          'title': `${products.title}`,
-          'publisher': `${products.publisher}`,
-          'author': `${products.author}`,
-          'price': `${products.price}`,
-          'description': `${products.description}`,
-          'university': `${products.university}`,
-          'cond': `${products.cond}`,
-          'lang': `${products.lang}`,
-          'topic': `${products.topic}`,
-          'image': `${products.image}`
-      })
+        action: "/",
+      body: formData
       }).then(() => {
         console.log("Product added")
       })
@@ -68,14 +74,6 @@ export const CreateProducts = () => {
     }
   }
 
-  /*
-.then(response => response.json())
-      .then(result => {
-        console.log("Success: ", result);
-      }).catch(error => {
-        console.log("Error: ", error);
-      });
-  */
   return (
     <div>
       <form className="topTest" onSubmit={submitProduct}>
@@ -83,7 +81,7 @@ export const CreateProducts = () => {
         <div className="createProducts">
           <div className="leftCreateProducts">
             <label id="bkImage">Image: </label>
-            <input id="bkImageInput" name="image" type="image" value={products.image} onChange={handleChangeProducts} />
+            <input id="bkImageInput" name="image" type="file" accept='image/*' onChange={saveFile} />
             <label id="bkDesc">Description: </label>
             <input id="bkDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} />
           </div>
@@ -135,17 +133,3 @@ export const CreateProducts = () => {
   );
 };
 export default CreateProducts;
-/*
-new URLSearchParams({
-          'title': `${products.title}`,
-          'publisher': `${products.publisher}`,
-          'author': `${products.author}`,
-          'price': `${products.price}`,
-          'description': `${products.description}`,
-          'university': `${products.university}`,
-          'cond': `${products.cond}`,
-          'lang': `${products.lang}`,
-          'topic': `${products.topic}`,
-          'image': `${products.image}`
-      })
-      */ 
