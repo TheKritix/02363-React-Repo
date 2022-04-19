@@ -8,23 +8,15 @@ class Register extends Component {
                 <h1 id="headlineRegister">Register</h1>
                 <p id="description">Please fill in this form to create an account.</p>
                 <form> 
-                    <input type="firstname" name="firstname" placeholder='Firstname'></input>
-                    <input type="lastname" name="lastname" placeholder='Lastname'/>
+                    <input type="firstname" name="firstname" placeholder='First name' required></input>
                     <br/>
-                    <input type="adress" name="address" placeholder='Adress'/>
+                    <input type="lastname" name="lastname" placeholder='Last name' required/>
                     <br/>
-                    <input type="postcode" name="postcode" placeholder='Postcode'/>
-                    <input type="city" name="city" placeholder='City'/>
+                    <input type="email" name="email" placeholder='Email' required/>
                     <br/>
-                    <input type="phonenumber" name="phonenumber" placeholder='Phonenumber'/>
+                    <input type="password" name="password" placeholder='Password'  minlength="8" required/>
                     <br/>
-
-                    <input type="university" name="university" placeholder='University'/>
-                    <input type="country" name="country" placeholder='Country'/>
-
-                    <br/>
-                    <input type="email" name="email" placeholder='Email'/>
-                    <input type="password" name="password" placeholder='Password'/>
+                    <input type="submit" value="Register"/>
                 </form>
 
             </div>
