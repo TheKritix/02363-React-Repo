@@ -50,7 +50,7 @@ class Topbar extends Component {
               {" "}
               <Favorite id="favorit" className="icon"></Favorite> Favorites
             </Link>
-            <Link className="topbar-links" to="/profilepage">
+            <Link className="topbar-links" to="/loginpage">
               <AccountCircleIcon className="icon"></AccountCircleIcon>Profil
             </Link>
           </div>
