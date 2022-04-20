@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Login.css'
-import { FaGoogle } from 'react-icons/fa';
 import Button from '@mui/material/Button';
 import GoogleIcon from '@mui/icons-material/Google';
 
