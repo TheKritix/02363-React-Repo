@@ -1,5 +1,4 @@
 import React from "react";
-import Book from "./Book";
 import { BookItem } from "./BookItem.js";
 import "./BookOverview.css";
 import { useState } from "react";
