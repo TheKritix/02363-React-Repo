@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react'
-import Topbar from '../components/Topbar/Topbar.js';
 import { ItemImage } from '../components/Productpage/ItemImage.js';
 import ItemTitle  from '../components/Productpage/ItemTitle.js';
 import ItemDescription from '../components/Productpage/ItemDescription.js';
