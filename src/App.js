@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';  
 import ProductPage from './Pages/ProductPage.js'; 
 import BookOverview from './components/BodyComponents/Book/BookOverview'; 
+import CreateProductPage from './Pages/CreateProductPage.js'; 
 import ProfilePage from './Pages/ProfilePage.js'; 
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
@@ -19,6 +20,7 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="sell" element={<CreateProductPage/>}/>
         <Route path="/productpage/:bookId" element={<ProductPage/>}/>
         <Route path="buy" element={<BookOverview/>}/>
         <Route path="profilepage" element={<ProfilePage/>}/>
