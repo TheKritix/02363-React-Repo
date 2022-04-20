@@ -19,7 +19,6 @@ export const Register = () => {
     });
   };
 
-
   const submitRegistration = (e) => {
     e.preventDefault();
     const registrationObject = {
