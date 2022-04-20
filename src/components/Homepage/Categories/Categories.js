@@ -21,7 +21,7 @@ class Categoies extends Component {
                             <li key = {index} >
                                 <div className='imgContainer'>
                                     <h2 className='categeryTitle'> {item.title}</h2>
-                                    <img className='categoryImg' src = {item.image} ></img>
+                                    <img className='categoryImg' alt="item image for book"src = {item.image} ></img>
                                 </div>
                             </li>
                         )

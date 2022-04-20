@@ -23,7 +23,7 @@ class MyPost extends Component {
                                          </IconButton>
                                      </div>
                                      <div className='img-div'>
-                                         <img className='item-image' src={item.imageUrl}></img>
+                                         <img className='item-image' alt ="imageurl" src={item.imageUrl}></img>
                                      </div> 
                                      <div className='content'>
                                          <h5>{item.title}</h5>
