@@ -36,7 +36,7 @@ export const Login = () => {
       )
       {
           fetch("http://localhost:3001/api/login", {
-              method: "GET",
+              method: "POST",
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
               },
