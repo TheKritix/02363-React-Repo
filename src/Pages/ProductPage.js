@@ -10,6 +10,7 @@ import FavoriteButton from '../components/Productpage/FavoriteButton.js';
 import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
 import { useParams } from 'react-router-dom';
 import { BookItem } from '../components/BodyComponents/Book/BookItem.js';
+import Divider from '@mui/material/Divider';
 
 
 function ProductPage() {
@@ -34,32 +35,35 @@ function ProductPage() {
 
     return (
         <>
-        <div className='rowA' style={{display: 'flex'}}>
-            <div>
-                <Card style={{
-                    width: 600,
-                    height: 800, 
-                    backgroundColor: "lightgray",
-                    margin: 10,             
-                }}>
-                    <CardContent>
-                        <ArrowBackButton/>
-                        <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
-                        <div style={{display: 'flex', justifyContent: 'Center'}}>
-                            <ItemImage item={selectedBook[0]}/>
-                        </div>
-                        <h3>{selectedBook[0].title}</h3> 
-                        <h3 id='price'>{selectedBook[0].price}</h3>
-                        <h3 id='city'><LocationOnOutlinedIcon/>{selectedBook[0].city}</h3>                                               
-                    </CardContent>
-                </Card>
-                
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <div>
+                    <Card style={{
+                        width: 550,
+                        height: 660, 
+                        backgroundColor: "lightgray",
+                        margin: 10,             
+                    }}>
+                        <CardContent>
+                            <ArrowBackButton/>
+                            <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
+                            <div style={{display: 'flex', justifyContent: 'Center'}}>
+                                <ItemImage item={selectedBook[0]}/>
+                            </div>
+                            <Divider style={{margin: 10,}}/>  
+                            <h2>{selectedBook[0].title}</h2> 
+                            <h3>Author: {selectedBook[0].author}</h3>
+                            <h3 id='city' style={{float: 'right'}}><LocationOnOutlinedIcon/>{selectedBook[0].city}</h3>                                     
+                        </CardContent>
+                    </Card>
+                </div>
+                <div>
+                    <ItemTitle item={selectedBook[0]}/>
+                    <ItemDescription item={selectedBook[0]}/>
+                    <Divider/>
+                    <h3 id='price'>Pris: {selectedBook[0].price}</h3>
+                    <Divider/>
+                </div>  
             </div>
-            <div className='rowC'>
-                <ItemTitle item={selectedBook[0]}/>
-                <ItemDescription item={selectedBook[0]}/>
-            </div>
-        </div>
         </>
     )
   }
