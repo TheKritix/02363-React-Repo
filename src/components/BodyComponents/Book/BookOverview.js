@@ -1,7 +1,6 @@
 import React from "react";
-import { BookItem } from "./BookItem.js";
 import "./BookOverview.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Grid, Container } from "@mui/material";
 
 export const BookOverview = () => {
@@ -12,7 +11,31 @@ export const BookOverview = () => {
   const [author, setAuthor] = useState("");
   const [year, setYear] = useState("");
 
-  return (
+  //Used general idea from https://stackoverflow.com/questions/49023587/react-fetch-json-data-from-url-and-display-it
+  const [bookData, setBookData] = useState([]);
+  const retrieveBookData = () => {
+    fetch('https://stoodle.bhsi.xyz/api/books',{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+      .then ((response) => {
+        console.log(response)
+        return response.json();
+      })
+      .then((JSON) => {
+        console.log(JSON);
+        setBookData(JSON)
+      }); 
+  }
+
+  useEffect(() => {
+    retrieveBookData()
+  }, [])
+  
+
+    return (
     <div className='Overview'>
       <div className="SideMenu">
         <p id="priceMin">Price (dkk): </p>
@@ -55,27 +78,27 @@ export const BookOverview = () => {
       <div className="gridBox">
       <Container className="bookOverview">
           <Grid container spacing={0}>
-            {BookItem.filter((element) => {
+            {bookData.filter((element) => {
               return (
-                element.title.toLowerCase().includes(title.toLowerCase()) &&
-                element.author.toLowerCase().includes(author.toLowerCase())
+                element.Title.toLowerCase().includes(title.toLowerCase()) &&
+                element.Author.toLowerCase().includes(author.toLowerCase())
               )
               
             })
-            .filter(item => item.price >= priceMin)
-            .filter(item => item.price <= priceMax)
+            .filter(item => item.Price >= priceMin)
+            .filter(item => item.Price <= priceMax)
             .map((item, index) => {
               return (
                 <Grid item xs={5} md={3} key={index}>
                   <div className="card-item">
                     <div className="img-div">
-                      <img className="item-image" alt="bookimage" src={item.imageUrl}></img>
+                      <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
                     </div>
                     <div className="content">
-                      <h5>{item.title}</h5>
-                      <h6>{item.price}</h6>
+                      <h5>{item.Title}</h5>
+                      <h6>{item.Price}</h6>
                       <h6>
-                        {item.city}, {item.country}
+                        {item.Publisher}, {item.Country}
                       </h6>
                     </div>
                   </div>
