@@ -2,6 +2,7 @@ import React from "react";
 import "./BookOverview.css";
 import { useState, useEffect } from "react";
 import { Grid, Container } from "@mui/material";
+import { Book } from "@mui/icons-material";
 
 export const BookOverview = () => {
   const [priceMin, setPriceMin] = useState(0);
@@ -96,6 +97,7 @@ export const BookOverview = () => {
                     </div>
                     <div className="content">
                       <h5>{item.Title}</h5>
+                      <h6>by {item.Author}</h6>
                       <h6>{item.Price}</h6>
                       <h6>
                         {item.Publisher}, {item.Country}
