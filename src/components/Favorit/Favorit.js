@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import {
   Container,
-  Card,
   Grid,
-  CardContent,
-  CardMedia,
-  CardActionArea,
-  Button,
   IconButton,
 } from "@mui/material";
 import { BookItem } from "../BodyComponents/Book/BookItem";

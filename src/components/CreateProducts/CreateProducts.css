@@ -1,0 +1,97 @@
+.topTest {
+  background-color: #1561f8;
+  min-height: 100vh;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.createProducts {
+  background-color: #7a1759;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.requireMark {
+  font-size: calc(6px + 2vmin);
+  color: red;
+}
+.leftCreateProducts {
+  background-color: #2893da;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.rightCreateProducts {
+  background-color: #10f749;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.gridCreateProducts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gridItem {
+  width: 50%; 
+}
+
+#bkTitle {
+}
+#bkTitleInput {
+  width: 40%;
+}
+#bkPub {
+}
+#bkPubInput {
+}
+#bkAuth {
+}
+#bkAuthInput {
+}
+#bkPrice {
+}
+#bkPriceInput {
+}
+#bkDesc {
+  
+}
+#bkDescInput {
+  width: 40% + 10px;
+}
+#bkUni {
+}
+#bkUniInput {
+}
+#bkCon {
+}
+#bkConInput {
+}
+#bkLang {
+}
+#bkLangInput {
+}
+#bkTopic {
+}
+#bkTopicInput {
+}
+#bkImage {
+}
+#bkImageInput {
+}
