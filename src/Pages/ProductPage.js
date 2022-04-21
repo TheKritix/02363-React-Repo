@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react'
-import Topbar from '../components/Topbar/Topbar.js';
 import { ItemImage } from '../components/Productpage/ItemImage.js';
 import ItemTitle  from '../components/Productpage/ItemTitle.js';
 import ItemDescription from '../components/Productpage/ItemDescription.js';
@@ -12,6 +11,7 @@ import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
 import { useParams } from 'react-router-dom';
 import { BookItem } from '../components/BodyComponents/Book/BookItem.js';
 import Divider from '@mui/material/Divider';
+import CommentList from '../components/Productpage/CommentThread/CommentList.js';
 
 
 function ProductPage() {
@@ -63,6 +63,7 @@ function ProductPage() {
                     <Divider/>
                     <h3 id='price'>Pris: {selectedBook[0].price}</h3>
                     <Divider/>
+                    <CommentList/>
                 </div>  
             </div>
         </>
