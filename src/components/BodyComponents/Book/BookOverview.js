@@ -3,6 +3,7 @@ import "./BookOverview.css";
 import { useState, useEffect } from "react";
 import { Grid, Container } from "@mui/material";
 import { Book } from "@mui/icons-material";
+import ButtonBase from '@mui/material/ButtonBase';
 
 export const BookOverview = () => {
   const [priceMin, setPriceMin] = useState(0);
@@ -91,6 +92,7 @@ export const BookOverview = () => {
             .map((item, index) => {
               return (
                 <Grid item xs={5} md={3} key={index}>
+                  <ButtonBase href={`/productpage/${item.Book_Id}`}>
                   <div className="card-item">
                     <div className="img-div">
                       <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
@@ -104,6 +106,7 @@ export const BookOverview = () => {
                       </h6>
                     </div>
                   </div>
+                  </ButtonBase>
                 </Grid>
               );
             })}

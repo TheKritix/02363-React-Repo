@@ -24,12 +24,12 @@ function ProductPage() {
     }
     
     //useParams to find id by url
-    const { bookId } = useParams();
-    console.log(bookId);
+    const { Book_Id } = useParams();
+    console.log(Book_Id);
 
     //filter BookItems array for id matching id found by useParams
     //selectedbook is an array
-    const selectedBook = BookItem.filter(book => book.bookId === bookId)
+    const selectedBook = BookItem.filter(book => book.Book_Id === Book_Id)
     console.log(selectedBook)
     
 
