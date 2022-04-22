@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./Login.css";
 import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -9,8 +10,86 @@ import { First } from "react-bootstrap/esm/PageItem";
  *
  */
 
-export const Login = () => {
-    const [login, setLogin] = useState([
+ async function loginUser(credentials) {
+     return fetch("http://localhost:3001/api/logintoken", {
+         method: 'POST',
+         headers: {
+             'content-type': 'application/json'
+         },
+         body: JSON.stringify(credentials)
+     })
+     .then(data => data.json())
+ }
+
+export default function Login({ setToken }) {
+    const [email,setEmail] = useState();
+    const [password,setPassword] = useState();
+
+    const handleLogin = async e => {
+        e.preventDefault();
+        const token = await loginUser({
+            email, 
+            password
+        });
+      setToken(token);
+    } 
+
+  return (
+    <div className="inputLogin">
+      <h1 id="headlineLogin">Sign in</h1>
+      <form  onSubmit={handleLogin}>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          onChange={e => setEmail(e.target.value)}
+        ></input>
+        <br />
+        <input
+          type="password"
+          name="passWord"
+          placeholder="Password"
+          required
+          onChange={e => setPassword(e.target.value)}
+        ></input>
+        <br />
+        <input type="submit" value="Login"></input>
+      </form>
+      <div>
+        <h3 id="forgotPassword">Forgot Password?</h3>
+      </div>
+
+      <h4 id="lineText">or</h4>
+
+      <button
+        className="regBtn"
+        onClick={(event) => (window.location.href = "/registerpage")}
+      >
+        {" "}
+        Create an account
+      </button>
+      <br />
+      <br />
+
+      <Button
+        className="googleBtn"
+        variant="outlined"
+        style={{ borderRadius: 40, height: 44 }}
+        startIcon={<GoogleIcon />}
+      >
+        Continue with Google
+      </Button>
+    </div>
+  );
+};
+
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired 
+};
+
+
+/*    const [login, setLogin] = useState([
         {
         email: "",
         Password: ""
@@ -48,57 +127,4 @@ export const Login = () => {
               console.log("email and password sendt to API")
           });
       }
-  };
-
-  return (
-    <div className="inputLogin">
-      <h1 id="headlineLogin">Sign in</h1>
-      <form  onSubmit={submitLogin}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-          value={login.email}
-          onChange={handleLogin}
-        ></input>
-        <br />
-        <input
-          type="password"
-          name="passWord"
-          placeholder="Password"
-          required
-          value={login.password}
-          onChange={handleLogin}
-        ></input>
-        <br />
-        <input type="submit" value="Login"></input>
-      </form>
-      <div>
-        <h3 id="forgotPassword">Forgot Password?</h3>
-      </div>
-
-      <h4 id="lineText">or</h4>
-
-      <button
-        className="regBtn"
-        onClick={(event) => (window.location.href = "/registerpage")}
-      >
-        {" "}
-        Create an account
-      </button>
-      <br />
-      <br />
-
-      <Button
-        className="googleBtn"
-        variant="outlined"
-        style={{ borderRadius: 40, height: 44 }}
-        startIcon={<GoogleIcon />}
-      >
-        Continue with Google
-      </Button>
-    </div>
-  );
-};
-export default Login;
+  };*/

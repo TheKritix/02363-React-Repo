@@ -11,11 +11,26 @@ import LoginPage from './Pages/LoginPage.js';
 import RegisterPage from './Pages/RegisterPage.js';  
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
+import { useState } from 'react';
+
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+
+}
+
+function getToken() {
+}
+
 
 function App() {
   document.title = "Stoodle";
-  return (
-    
+
+  const token = getToken();
+
+  if(!token) {
+    return <LoginPage setToken={setToken} />
+  }
+  return (  
     <BrowserRouter>
     <Topbar/>
     <Navbar/>
