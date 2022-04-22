@@ -33,6 +33,23 @@ export const CreateProducts = () => {
     });
   };
 
+  const setDefaultState = () => {
+    setPreviewImage(pic)
+    setFileImage("")
+    setProducts({
+      title: "",
+      publisher: "",
+      author: "",
+      price: 0,
+      description: "",
+      university: "",
+      cond: "",
+      course: "",
+      lang: "",
+      topic: "",
+    })
+  }
+
   const submitProduct = (e) => {
     e.preventDefault();
     const productObject = {
@@ -70,6 +87,7 @@ export const CreateProducts = () => {
         action: "/",
         body: formData
       }).then(() => {
+        setDefaultState()
         console.log("Product added")
       })
     } else {
@@ -83,7 +101,7 @@ export const CreateProducts = () => {
         <div className="createProducts">
           <div className="leftCreateProducts">
               <img className="creaProdPreviewImg" src = {previewImg} ></img>
-              <label id="creaProdUploadImg"> Upload an image </label>
+              <label id="creaProdUploadImg"> Upload an image<span className="requireMark">*</span> </label>
               <input id="creaProdImageInput" name="image" type="file" accept='image/*' onChange={saveFile} />
               <label id="creaProdDesc">Description: </label>
               <textarea id="creaProdDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} rows="5" cols="60" ></textarea>
