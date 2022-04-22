@@ -7,29 +7,23 @@ import BookOverview from './components/BodyComponents/Book/BookOverview';
 import ProfilePage from './Pages/ProfilePage.js'; 
 import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
-import LoginPage from './Pages/LoginPage.js'; 
+import Login from './components/Login/Login';
 import RegisterPage from './Pages/RegisterPage.js';  
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
 import { useState } from 'react';
-
-function setToken(userToken) {
-  sessionStorage.setItem('token', JSON.stringify(userToken));
-
-}
-
-function getToken() {
-}
-
+import LoginPage from './Pages/LoginPage';
+import useToken from './components/Login/useToken';
 
 function App() {
   document.title = "Stoodle";
-
-  const token = getToken();
+  const {token, setToken} = useToken();
 
   if(!token) {
-    return <LoginPage setToken={setToken} />
+    return <Login setToken={setToken}/> 
   }
+
+
   return (  
     <BrowserRouter>
     <Topbar/>
