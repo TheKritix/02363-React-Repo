@@ -64,7 +64,7 @@ export const CreateProducts = () => {
     console.log(fileImage.name)
     console.log(formData)
 
-    if (!(productObject.Cond === "" && productObject.Lang === "")) {
+    if (!(productObject.Cond === "" && productObject.Lang === "" && productObject.price === "" && productObject.topic === "" && productObject.university === "" && productObject.title === "" )) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
         method: 'POST',
         action: "/",
@@ -83,9 +83,11 @@ export const CreateProducts = () => {
         <div className="createProducts">
           <div className="leftCreateProducts">
               <img className="creaProdPreviewImg" src = {previewImg} ></img>
+              <label id="creaProdUploadImg"> Upload an image </label>
               <input id="creaProdImageInput" name="image" type="file" accept='image/*' onChange={saveFile} />
               <label id="creaProdDesc">Description: </label>
-              <input id="creaProdDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} />
+              <textarea id="creaProdDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} rows="5" cols="60" ></textarea>
+
           </div>
           <div className="rightCreateProducts">
             <p className="requireMark">*Please fill out all required fields</p>
@@ -118,18 +120,12 @@ export const CreateProducts = () => {
                 <input id="creaProdTopicInput" name="topic" type="text" value={products.topic} required onChange={handleChangeProducts} />
               </div>
             </div>
-            <div className="gridItem">
             <label id="creaProdUni">University<span className="requireMark">*</span>: </label>
             <input id="creaProdUniInput" name="university" type="text" value={products.university} required onChange={handleChangeProducts} />
-          </div>
-          <div className="gridItem">
             <label id="creaProdPub">Publisher: </label>
             <input id="creaProdPubInput" name="publisher" type="text" value={products.publisher} onChange={handleChangeProducts} />
-          </div>
-          <div className="gridItem">
             <label id="creaProdAuth"> Author: </label>
             <input id="creaProdAuthInput" name="author" type="text" value={products.author} onChange={handleChangeProducts} />
-          </div>
 
           <button id="creaProdSubmit" type="submit" >
             Submit

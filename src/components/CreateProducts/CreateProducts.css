@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(3px + 2vmin);
 }
 .createProducts-input{
   border-color:#4094F7;
@@ -23,20 +23,15 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 .rightCreateProducts {
-  background-color: #10f749;
   width: 80vh;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 .creaProdPreviewImg{
   width:40vh;
@@ -48,30 +43,59 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 40vh;
+  padding-top: 2vh;
 }
 .gridItem {
-  width: 50vh; 
+  width: 20vh; 
+  height: 10;
 }
 
+#creaProdTitleInput {
+  width: 36vh;
+}
+#creaProdUniInput {
+  width:36vh;
+}
+#creaProdPubInput {
+  width: 36vh;
+}
+#creaProdAuthInput {
+  width: 36vh;
+}
+#creaProdDescInput {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40vh;
+  height: 10vh;
+}
 #creaProdImageInput {
   border: 0ch;
   padding: 2vh;
 }
 
-#creaProdDescInput {
-  width: 30vh;
-  height: 10vh;
-}
 
 input{
+  width: 15vh;
   border-color:#4094F7;
   border-width: 3px;
   border-style: solid;
   border-radius: 5px;
 }
 select{
+  width: 15vh;
   border-color:#4094F7;
+  background-color: white;
   border-width: 3px;
   border-style:solid;
   border-radius: 5px;
+}
+label{
+  display: inline-block;
+  padding-top: 2vh;
+  align-self: flex-start;
+}
+button{
+  margin-top: 2vh;
+  margin-left: 14vh;
+  width: calc(2px + 6vh);
 }
