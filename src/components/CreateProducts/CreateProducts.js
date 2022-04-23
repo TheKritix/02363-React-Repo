@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./CreateProducts.css";
 import pic from "../AddBook/Images/CameraImage.svg";
 
+
 export const CreateProducts = () => {
   const [products, setProducts] = useState([
     {
@@ -132,7 +133,7 @@ export const CreateProducts = () => {
             ></textarea>
           </div>
           <div className="rightCreateProducts">
-            <p className="requireMark">*Please fill out all required fields</p>
+            
             <label id="creaProdTitle">
               {" "}
               Title<span className="requireMark">*</span>:{" "}
@@ -239,6 +240,8 @@ export const CreateProducts = () => {
             <button id="creaProdSubmit" type="submit">
               Submit
             </button>
+
+            <p className="requiredFields">*Please fill out all required fields</p>
           </div>
         </div>
       </form>
