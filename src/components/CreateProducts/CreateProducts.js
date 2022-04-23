@@ -114,13 +114,17 @@ export const CreateProducts = () => {
               {" "}
               Upload an image<span className="requireMark">*</span>{" "}
             </label>
+            <label for="fileBtn" className="uploadBtn">
+              <i className="browseBtn"></i>Browse...
+              </label>
             <input
-              id="creaProdImageInput"
+              id="fileBtn"
               name="image"
               type="file"
               accept="image/*"
               onChange={saveFile}
             />
+
             <label id="creaProdDesc">Description: </label>
             <textarea
               id="creaProdDescInput"
@@ -191,7 +195,7 @@ export const CreateProducts = () => {
                   onChange={handleChangeProducts}
                 >
                   <option value="">Select language</option>
-                  <option value="danish">Danish</option>
+                  <option value="danish" >Danish</option>
                   <option value="english">English</option>
                 </select>
               </div>
