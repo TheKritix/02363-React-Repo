@@ -84,7 +84,6 @@ export const BookOverview = () => {
                 element.Title.toLowerCase().includes(title.toLowerCase()) &&
                 element.Author.toLowerCase().includes(author.toLowerCase())
               )
-              
             })
             .filter(item => item.Price >= priceMin)
             .filter(item => item.Price <= priceMax)
@@ -92,19 +91,19 @@ export const BookOverview = () => {
               return (
                 <Grid item xs={5} md={3} key={index}>
                   <Link to={`/productpage/${item.Book_Id}`}>
-                  <div className="card-item">
-                    <div className="img-div">
-                      <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                    <div className="card-item">
+                      <div className="img-div">
+                        <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                      </div>
+                      <div className="content">
+                        <h5>{item.Title}</h5>
+                        <h6>by {item.Author}</h6>
+                        <h6>{item.Price}</h6>
+                        <h6>
+                          {item.Publisher}, {item.Country}
+                        </h6>
+                      </div>
                     </div>
-                    <div className="content">
-                      <h5>{item.Title}</h5>
-                      <h6>by {item.Author}</h6>
-                      <h6>{item.Price}</h6>
-                      <h6>
-                        {item.Publisher}, {item.Country}
-                      </h6>
-                    </div>
-                  </div>
                   </Link>
                 </Grid>
               );
