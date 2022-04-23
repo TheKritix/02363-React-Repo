@@ -19,11 +19,10 @@ function App() {
   document.title = "Stoodle";
   const {token, setToken} = useToken();
 
-  if(!token) {
+if(!token) {
     return <Login setToken={setToken}/> 
-  }
-
-
+  } 
+  
   return (  
     <BrowserRouter>
     <Topbar/>

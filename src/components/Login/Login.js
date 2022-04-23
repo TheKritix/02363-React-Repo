@@ -4,7 +4,6 @@ import "./Login.css";
 import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
-import { First } from "react-bootstrap/esm/PageItem";
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
  *https://www.freecodecamp.org/news/how-to-use-react-icons/
  *
@@ -21,11 +20,12 @@ import { First } from "react-bootstrap/esm/PageItem";
      .then(data => data.json())
  }
 
+
 export default function Login({ setToken }) {
     const [email,setEmail] = useState();
     const [password,setPassword] = useState();
 
-    const handleLogin = async e => {
+    const handleLoginToken = async e => {
         e.preventDefault();
         const token = await loginUser({
             email, 
@@ -34,24 +34,69 @@ export default function Login({ setToken }) {
       setToken(token);
     } 
 
+    const [login, setLogin] = useState([
+      {
+        email: "",
+        password: "",
+      },
+    ]);
+
+
+    const handleLogin = (e) => {
+      setLogin({
+          ...login,
+          [e.target.name]:e.target.value,
+      });
+  };
+
+  const submitLogin = (e) => {
+      e.preventDefault();
+      const loginObject = {
+          email: login.email,
+          password: login.password
+      };
+      console.log(loginObject);
+      if(
+          !(loginObject.email === "" && loginObject.password === "") 
+      )
+      {
+          fetch(`http://localhost:3001/api/login/${login.email}&${login.password}`, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                Accept: "application/json"
+              },
+             
+          }).then(()=> {
+              console.log("email and password sendt to API")
+          });
+      }
+  };
+
+    
+  
+
   return (
     <div className="inputLogin">
       <h1 id="headlineLogin">Sign in</h1>
-      <form  onSubmit={handleLogin}>
+      <form  onSubmit={submitLogin}>
         <input
           type="email"
           name="email"
           placeholder="Email"
           required
-          onChange={e => setEmail(e.target.value)}
+          value = {login.email}
+          onChange={handleLogin}
         ></input>
         <br />
         <input
           type="password"
-          name="passWord"
+          name="password"
           placeholder="Password"
           required
-          onChange={e => setPassword(e.target.value)}
+          value = {login.password}
+          onChange={handleLogin}
+          
         ></input>
         <br />
         <input type="submit" value="Login"></input>
@@ -82,6 +127,7 @@ export default function Login({ setToken }) {
       </Button>
     </div>
   );
+
 };
 
 Login.propTypes = {
@@ -89,42 +135,4 @@ Login.propTypes = {
 };
 
 
-/*    const [login, setLogin] = useState([
-        {
-        email: "",
-        Password: ""
-        }
-    ]);
-
-  const handleLogin = (e) => {
-      setLogin({
-          ...login,
-          [e.target.name]:e.target.value,
-      });
-  };
-
-  const submitLogin = (e) => {
-      e.preventDefault();
-      const loginObject = {
-          email: login.email,
-          password: login.password
-      };
-      console.log(loginObject);
-      if(
-          !(loginObject.email === "" && loginObject.password === "") 
-      )
-      {
-          fetch("http://localhost:3001/api/login", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-              },
-              body: new URLSearchParams ({
-                email: `${login.email}`,
-                password:`${login.password}`
-              }),
-          }).then(()=> {
-              console.log("email and password sendt to API")
-          });
-      }
-  };*/
+  

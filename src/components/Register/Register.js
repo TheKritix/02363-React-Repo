@@ -27,6 +27,7 @@ export const Register = () => {
       email: register.email,
       password: register.password,
     };
+    
     console.log(registrationObject);
     if (
       !(registrationObject.email === "" && registrationObject.password === "")
