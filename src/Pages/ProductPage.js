@@ -56,7 +56,7 @@ function ProductPage() {
         <>
         {selectedBookData.map((book) => {     
                 return (
-                    <div className="container" style={{display: 'flex', justifyContent: 'center'}}>  
+                    <div style={{display: 'flex', justifyContent: 'center'}}>  
                         <div className="left-div">
                             <Card style={{
                                 width: 550,
