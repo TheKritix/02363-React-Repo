@@ -1,27 +1,46 @@
 import React from "react";
-import Book from "./Book";
-import { BookItem } from "./BookItem.js";
 import "./BookOverview.css";
-import { useState } from "react";
-import { Grid } from "@mui/material";
-import Navbar from "../../Navbar/Navbar";
-import Topbar from "../../Topbar/Topbar";
-
+import { useState, useEffect } from "react";
+import { Grid, Container } from "@mui/material";
+import { Book } from "@mui/icons-material";
+import ButtonBase from '@mui/material/ButtonBase';
 
 export const BookOverview = () => {
-  const [priceMin, setPriceMin] = useState("0 BROKEN");
-  const [priceMax, setPriceMax] = useState("1000 BROKEN");
+  const [priceMin, setPriceMin] = useState(0);
+  const [priceMax, setPriceMax] = useState(2000);
   const [title, setTitle] = useState("");
   const [university, setUniversity] = useState("THIS DOES NOTHING");
   const [author, setAuthor] = useState("");
   const [year, setYear] = useState("");
 
-  console.log(Number(priceMax));
+  //Used general idea from https://stackoverflow.com/questions/49023587/react-fetch-json-data-from-url-and-display-it
+  const [bookData, setBookData] = useState([]);
+  const retrieveBookData = () => {
+    fetch('https://stoodle.bhsi.xyz/api/books',{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+      .then ((response) => {
+        console.log(response)
+        return response.json();
+      })
+      .then((JSON) => {
+        console.log(JSON);
+        setBookData(JSON)
+      }); 
+  }
 
-  return (
-    <div>
+  useEffect(() => {
+    retrieveBookData()
+  }, [])
+  
+
+    return (
+    <div className='Overview'>
       <div className="SideMenu">
-        <p id="priceMin">Price: </p>
+        <p id="priceMin">Price (dkk): </p>
         <input
           id="pMin"
           value={priceMin}
@@ -59,30 +78,40 @@ export const BookOverview = () => {
         />
       </div>
       <div className="gridBox">
-        <Grid
-          margin={2}
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-        >
-          {BookItem.filter((element) => {
-            return (
-              element.title.includes(title) &&
-              element.author.includes(author) &&
-              /*&& Number(element.price) <= priceMin*/
-              element.year.includes(year)
-            );
-          }).map((item, index) => {
-            return (
-              <div className="indiGrid">
-                <Grid container item xs={12} sm={3} md={12} key={index}>
-                  <Book className="Book" item={item}/>
+      <Container className="bookOverview">
+          <Grid container spacing={0}>
+            {bookData.filter((element) => {
+              return (
+                element.Title.toLowerCase().includes(title.toLowerCase()) &&
+                element.Author.toLowerCase().includes(author.toLowerCase())
+              )
+              
+            })
+            .filter(item => item.Price >= priceMin)
+            .filter(item => item.Price <= priceMax)
+            .map((item, index) => {
+              return (
+                <Grid item xs={5} md={3} key={index}>
+                  <ButtonBase href={`/productpage/${item.Book_Id}`}>
+                  <div className="card-item">
+                    <div className="img-div">
+                      <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                    </div>
+                    <div className="content">
+                      <h5>{item.Title}</h5>
+                      <h6>by {item.Author}</h6>
+                      <h6>{item.Price}</h6>
+                      <h6>
+                        {item.Publisher}, {item.Country}
+                      </h6>
+                    </div>
+                  </div>
+                  </ButtonBase>
                 </Grid>
-              </div>
-            );
-          })}
-        </Grid>
+              );
+            })}
+          </Grid>
+        </Container>
       </div>
     </div>
   );

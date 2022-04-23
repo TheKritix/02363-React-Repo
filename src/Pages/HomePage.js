@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React from "react";
 import "./HomePage.css";
 import Categories from "../components/Homepage/Categories/Categories";
