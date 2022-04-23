@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from 'react'
+import "./ProductPage.css";
+import { useState, useEffect } from 'react'
 import { ItemImage } from '../components/Productpage/ItemImage.js';
 import ItemTitle  from '../components/Productpage/ItemTitle.js';
 import ItemDescription from '../components/Productpage/ItemDescription.js';
@@ -9,7 +10,6 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import FavoriteButton from '../components/Productpage/FavoriteButton.js';
 import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
 import { useParams } from 'react-router-dom';
-import { BookItem } from '../components/BodyComponents/Book/BookItem.js';
 import Divider from '@mui/material/Divider';
 
 
@@ -22,48 +22,71 @@ function ProductPage() {
             return !isFavClicked;
         });
     }
-    
-    //useParams to find id by url
-    const { Book_Id } = useParams();
-    console.log(Book_Id);
 
-    //filter BookItems array for id matching id found by useParams
-    //selectedbook is an array
-    const selectedBook = BookItem.filter(book => book.Book_Id === Book_Id)
-    console.log(selectedBook)
-    
+    //useParams to find id by url, comes as object, parse into integer to match correctly with api
+    const { Book_Id } = useParams()
+    const b_ID = parseInt(Book_Id);
+    console.log(b_ID);
+
+    //Used same general construction as in BookOverview.js
+    const [selectedBookData, setSelectedBookData] = useState([]);
+    const retrieveSelectedBook = () => {
+    fetch('https://stoodle.bhsi.xyz/api/books',{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+      .then ((response) => {
+        console.log(response)
+        return response.json();
+      })
+      .then((JSON) => {
+        console.log(JSON);
+        setSelectedBookData(JSON.filter(book => book.Book_Id === b_ID))
+        console.log(JSON.filter(book => book.Book_Id === b_ID))
+      });
+    }
+
+    useEffect(() => {
+        retrieveSelectedBook()
+      }, [])
 
     return (
         <>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
-                <div>
-                    <Card style={{
-                        width: 550,
-                        height: 660, 
-                        backgroundColor: "lightgray",
-                        margin: 10,             
-                    }}>
-                        <CardContent>
-                            <ArrowBackButton/>
-                            <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
-                            <div style={{display: 'flex', justifyContent: 'Center'}}>
-                                <ItemImage item={selectedBook[0]}/>
-                            </div>
-                            <Divider style={{margin: 10,}}/>  
-                            <h2>{selectedBook[0].title}</h2> 
-                            <h3>Author: {selectedBook[0].author}</h3>
-                            <h3 id='city' style={{float: 'right'}}><LocationOnOutlinedIcon/>{selectedBook[0].city}</h3>                                     
-                        </CardContent>
-                    </Card>
-                </div>
-                <div>
-                    <ItemTitle item={selectedBook[0]}/>
-                    <ItemDescription item={selectedBook[0]}/>
-                    <Divider/>
-                    <h3 id='price'>Pris: {selectedBook[0].price}</h3>
-                    <Divider/>
-                </div>  
-            </div>
+        {selectedBookData.map((book) => {     
+                return (
+                    <div className="container" style={{display: 'flex', justifyContent: 'center'}}>  
+                        <div className="left-div">
+                            <Card style={{
+                                width: 550,
+                                height: 660, 
+                                backgroundColor: "lightgray",
+                                margin: 10,
+                                }}>
+                                <CardContent>
+                                    <ArrowBackButton/>
+                                    <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
+                                    <div style={{display: 'flex', justifyContent: 'Center'}}>
+                                        <ItemImage book={book}/>
+                                    </div>
+                                    <Divider style={{margin: 10,}}/>  
+                                    <h2>{book.Title}</h2> 
+                                    <h3>Author: {book.Author}</h3>
+                                    <h3 id='University' style={{float: 'right'}}><LocationOnOutlinedIcon/>{book.University}</h3>                                     
+                                </CardContent>
+                            </Card>
+                        </div>
+                        <div className="right-child">
+                            <ItemTitle item={book}/>
+                            <ItemDescription item={book}/>
+                            <Divider/>
+                            <h3 id='price'>Pris: {book.Price}</h3>
+                            <Divider/>
+                        </div>  
+                    </div>
+                );
+            })} 
         </>
     )
   }
