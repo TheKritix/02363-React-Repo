@@ -79,14 +79,14 @@ export default function Login({ setToken }) {
   return (
     <div className="inputLogin">
       <h1 id="headlineLogin">Sign in</h1>
-      <form  onSubmit={submitLogin}>
+      <form  onSubmit={handleLoginToken}>
         <input
           type="email"
           name="email"
           placeholder="Email"
           required
           value = {login.email}
-          onChange={handleLogin}
+          onChange={ e => setEmail(e.target.value)}
         ></input>
         <br />
         <input
@@ -95,7 +95,7 @@ export default function Login({ setToken }) {
           placeholder="Password"
           required
           value = {login.password}
-          onChange={handleLogin}
+          onChange={e => setPassword(e.target.value)}
           
         ></input>
         <br />
