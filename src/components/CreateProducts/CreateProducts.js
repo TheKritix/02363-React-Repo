@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./CreateProducts.css";
+import pic from "../AddBook/Images/CameraImage.svg";
+
 
 export const CreateProducts = () => {
   const [products, setProducts] = useState([
@@ -17,15 +19,34 @@ export const CreateProducts = () => {
     },
   ]);
   const [fileImage, setFileImage] = useState();
+  const [previewImg, setPreviewImage] = useState(pic);
 
   const saveFile = (e) => {
     setFileImage(e.target.files[0]);
+    setPreviewImage(URL.createObjectURL(e.target.files[0]));
   };
 
   const handleChangeProducts = (e) => {
     setProducts({
       ...products,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const setDefaultState = () => {
+    setPreviewImage(pic);
+    setFileImage("");
+    setProducts({
+      title: "",
+      publisher: "",
+      author: "",
+      price: 0,
+      description: "",
+      university: "",
+      cond: "",
+      course: "",
+      lang: "",
+      topic: "",
     });
   };
 
@@ -60,12 +81,22 @@ export const CreateProducts = () => {
     console.log(fileImage.name);
     console.log(formData);
 
-    if (!(productObject.Cond === "" && productObject.Lang === "")) {
+    if (
+      !(
+        productObject.Cond === "" &&
+        productObject.Lang === "" &&
+        productObject.price === "" &&
+        productObject.topic === "" &&
+        productObject.university === "" &&
+        productObject.title === ""
+      )
+    ) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
         method: "POST",
         action: "/",
         body: formData,
       }).then(() => {
+        setDefaultState();
         console.log("Product added");
       });
     } else {
@@ -76,34 +107,43 @@ export const CreateProducts = () => {
   return (
     <div>
       <form className="topTest" onSubmit={submitProduct}>
-        <h1>Create post</h1>
         <div className="createProducts">
           <div className="leftCreateProducts">
-            <label id="bkImage">Image: </label>
+            <img className="creaProdPreviewImg" src={previewImg}></img>
+            <label id="creaProdUploadImg">
+              {" "}
+              Upload an image<span className="requireMark">*</span>{" "}
+            </label>
+            <label for="fileBtn" className="uploadBtn">
+              <i className="browseBtn"></i>Browse...
+              </label>
             <input
-              id="bkImageInput"
+              id="fileBtn"
               name="image"
               type="file"
               accept="image/*"
               onChange={saveFile}
             />
-            <label id="bkDesc">Description: </label>
-            <input
-              id="bkDescInput"
+
+            <label id="creaProdDesc">Description: </label>
+            <textarea
+              id="creaProdDescInput"
               name="description"
               type="text"
               value={products.description}
               onChange={handleChangeProducts}
-            />
+              rows="5"
+              cols="60"
+            ></textarea>
           </div>
           <div className="rightCreateProducts">
-            <p className="requireMark">*Please fill out all required fields</p>
-            <label id="bkTitle">
+            
+            <label id="creaProdTitle">
               {" "}
               Title<span className="requireMark">*</span>:{" "}
             </label>
             <input
-              id="bkTitleInput"
+              id="creaProdTitleInput"
               name="title"
               type="text"
               value={products.title}
@@ -112,11 +152,11 @@ export const CreateProducts = () => {
             />
             <div className="gridCreateProducts">
               <div className="gridItem">
-                <label id="bkPrice">
+                <label id="creaProdPrice">
                   Price<span className="requireMark">*</span>:{" "}
                 </label>
                 <input
-                  id="bkPriceInput"
+                  id="creaProdPriceInput"
                   name="price"
                   type="number"
                   value={products.price}
@@ -125,11 +165,11 @@ export const CreateProducts = () => {
                 />
               </div>
               <div className="gridItem">
-                <label id="bkCon">
+                <label id="creaProdCon">
                   Condition<span className="requireMark">*</span>:{" "}
                 </label>
                 <select
-                  id="bkConInput"
+                  id="creaProdConInput"
                   name="cond"
                   type="text"
                   value={products.cond}
@@ -143,11 +183,11 @@ export const CreateProducts = () => {
                 </select>
               </div>
               <div className="gridItem">
-                <label id="bkLang">
+                <label id="creaProdLang">
                   Language<span className="requireMark">*</span>:{" "}
                 </label>
                 <select
-                  id="bkLangInput"
+                  id="creaProdLangInput"
                   name="lang"
                   type="number"
                   value={products.lang}
@@ -155,16 +195,16 @@ export const CreateProducts = () => {
                   onChange={handleChangeProducts}
                 >
                   <option value="">Select language</option>
-                  <option value="danish">Danish</option>
+                  <option value="danish" >Danish</option>
                   <option value="english">English</option>
                 </select>
               </div>
               <div className="gridItem">
-                <label id="bkTopic">
+                <label id="creaProdTopic">
                   Topic<span className="requireMark">*</span>:{" "}
                 </label>
                 <input
-                  id="bkTopicInput"
+                  id="creaProdTopicInput"
                   name="topic"
                   type="text"
                   value={products.topic}
@@ -173,37 +213,39 @@ export const CreateProducts = () => {
                 />
               </div>
             </div>
-            <label id="bkUni">
+            <label id="creaProdUni">
               University<span className="requireMark">*</span>:{" "}
             </label>
             <input
-              id="bkUniInput"
+              id="creaProdUniInput"
               name="university"
               type="text"
               value={products.university}
               required
               onChange={handleChangeProducts}
             />
-            <label id="bkPub">Publisher: </label>
+            <label id="creaProdPub">Publisher: </label>
             <input
-              id="bkPubInput"
+              id="creaProdPubInput"
               name="publisher"
               type="text"
               value={products.publisher}
               onChange={handleChangeProducts}
             />
-            <label id="bkAuth"> Author: </label>
+            <label id="creaProdAuth"> Author: </label>
             <input
-              id="bkAuthInput"
+              id="creaProdAuthInput"
               name="author"
               type="text"
               value={products.author}
               onChange={handleChangeProducts}
             />
 
-            <button id="bkSubmit" type="submit">
+            <button id="creaProdSubmit" type="submit">
               Submit
             </button>
+
+            <p className="requiredFields">*Please fill out all required fields</p>
           </div>
         </div>
       </form>
