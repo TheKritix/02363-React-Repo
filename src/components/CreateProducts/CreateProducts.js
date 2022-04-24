@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CreateProducts.css";
+import pic from "../AddBook/Images/CameraImage.svg";
 
 
 export const CreateProducts = () => {
@@ -16,17 +17,36 @@ export const CreateProducts = () => {
       lang: "",
       topic: "",
     },
-  ])
+  ]);
   const [fileImage, setFileImage] = useState();
+  const [previewImg, setPreviewImage] = useState(pic);
 
   const saveFile = (e) => {
-    setFileImage(e.target.files[0])
-  }
+    setFileImage(e.target.files[0]);
+    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+  };
 
   const handleChangeProducts = (e) => {
     setProducts({
       ...products,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const setDefaultState = () => {
+    setPreviewImage(pic);
+    setFileImage("");
+    setProducts({
+      title: "",
+      publisher: "",
+      author: "",
+      price: 0,
+      description: "",
+      university: "",
+      cond: "",
+      course: "",
+      lang: "",
+      topic: "",
     });
   };
 
@@ -45,58 +65,117 @@ export const CreateProducts = () => {
     };
 
     const formData = new FormData();
-    formData.append('image', fileImage);
-    formData.append('title', products.title);
-    formData.append('publisher', products.publisher);
-    formData.append('author', products.author);
-    formData.append('price', products.price);
-    formData.append('description', products.description);
-    formData.append('university', products.university);
-    formData.append('cond', products.cond);
-    formData.append('lang', products.lang);
-    formData.append('topic', products.topic);
+    formData.append("image", fileImage);
+    formData.append("title", products.title);
+    formData.append("publisher", products.publisher);
+    formData.append("author", products.author);
+    formData.append("price", products.price);
+    formData.append("description", products.description);
+    formData.append("university", products.university);
+    formData.append("cond", products.cond);
+    formData.append("lang", products.lang);
+    formData.append("topic", products.topic);
 
-    console.log(productObject)
-    console.log(fileImage)
-    console.log(fileImage.name)
-    console.log(formData)
+    console.log(productObject);
+    console.log(fileImage);
+    console.log(fileImage.name);
+    console.log(formData);
 
-    if (!(productObject.Cond === "" && productObject.Lang === "")) {
+    if (
+      !(
+        productObject.Cond === "" &&
+        productObject.Lang === "" &&
+        productObject.price === "" &&
+        productObject.topic === "" &&
+        productObject.university === "" &&
+        productObject.title === ""
+      )
+    ) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
-        method: 'POST',
+        method: "POST",
         action: "/",
-      body: formData
+        body: formData,
       }).then(() => {
-        console.log("Product added")
-      })
+        setDefaultState();
+        console.log("Product added");
+      });
     } else {
-      alert.show("Please fill out the required fields")
+      alert.show("Please fill out the required fields");
     }
-  }
+  };
 
   return (
     <div>
       <form className="topTest" onSubmit={submitProduct}>
-        <h1>Create post</h1>
         <div className="createProducts">
           <div className="leftCreateProducts">
-            <label id="bkImage">Image: </label>
-            <input id="bkImageInput" name="image" type="file" accept='image/*' onChange={saveFile} />
-            <label id="bkDesc">Description: </label>
-            <input id="bkDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} />
+            <img className="creaProdPreviewImg" src={previewImg}></img>
+            <label id="creaProdUploadImg">
+              {" "}
+              Upload an image<span className="requireMark">*</span>{" "}
+            </label>
+            <label for="fileBtn" className="uploadBtn">
+              <i className="browseBtn"></i>Browse...
+              </label>
+            <input
+              id="fileBtn"
+              name="image"
+              type="file"
+              accept="image/*"
+              onChange={saveFile}
+            />
+
+            <label id="creaProdDesc">Description: </label>
+            <textarea
+              id="creaProdDescInput"
+              name="description"
+              type="text"
+              value={products.description}
+              onChange={handleChangeProducts}
+              rows="5"
+              cols="60"
+            ></textarea>
           </div>
           <div className="rightCreateProducts">
-            <p className="requireMark">*Please fill out all required fields</p>
-            <label id="bkTitle"> Title<span className="requireMark">*</span>: </label>
-            <input id="bkTitleInput" name="title" type="text" value={products.title} required onChange={handleChangeProducts} />
+            
+            <label id="creaProdTitle">
+              {" "}
+              Title<span className="requireMark">*</span>:{" "}
+            </label>
+            <input
+              id="creaProdTitleInput"
+              name="title"
+              type="text"
+              value={products.title}
+              required
+              onChange={handleChangeProducts}
+            />
             <div className="gridCreateProducts">
               <div className="gridItem">
-                <label id="bkPrice">Price<span className="requireMark">*</span>: </label>
-                <input id="bkPriceInput" name="price" type="number" value={products.price} required onChange={handleChangeProducts} />
+                <label id="creaProdPrice">
+                  Price<span className="requireMark">*</span>:{" "}
+                </label>
+                <input
+                  id="creaProdPriceInput"
+                  name="price"
+                  type="number"
+                  value={products.price}
+                  required
+                  onChange={handleChangeProducts}
+                />
               </div>
               <div className="gridItem">
-                <label id="bkCon">Condition<span className="requireMark">*</span>: </label>
-                <select id="bkConInput" name="cond" type="text" value={products.cond} required onChange={handleChangeProducts} >
+                <label id="creaProdCon">
+                  Condition<span className="requireMark">*</span>:{" "}
+                </label>
+                <select
+                  id="creaProdConInput"
+                  name="cond"
+                  type="text"
+                  value={products.cond}
+                  required
+                  onChange={handleChangeProducts}
+                >
                   <option value="">Select condition</option>
                   <option value="perfect">Perfect</option>
                   <option value="great">Great</option>
@@ -104,28 +183,69 @@ export const CreateProducts = () => {
                 </select>
               </div>
               <div className="gridItem">
-                <label id="bkLang">Language<span className="requireMark">*</span>: </label>
-                <select id="bkLangInput" name="lang" type="number" value={products.lang} required onChange={handleChangeProducts}>
+                <label id="creaProdLang">
+                  Language<span className="requireMark">*</span>:{" "}
+                </label>
+                <select
+                  id="creaProdLangInput"
+                  name="lang"
+                  type="number"
+                  value={products.lang}
+                  required
+                  onChange={handleChangeProducts}
+                >
                   <option value="">Select language</option>
-                  <option value="danish">Danish</option>
+                  <option value="danish" >Danish</option>
                   <option value="english">English</option>
                 </select>
               </div>
               <div className="gridItem">
-                <label id="bkTopic">Topic<span className="requireMark">*</span>: </label>
-                <input id="bkTopicInput" name="topic" type="text" value={products.topic} required onChange={handleChangeProducts} />
+                <label id="creaProdTopic">
+                  Topic<span className="requireMark">*</span>:{" "}
+                </label>
+                <input
+                  id="creaProdTopicInput"
+                  name="topic"
+                  type="text"
+                  value={products.topic}
+                  required
+                  onChange={handleChangeProducts}
+                />
               </div>
             </div>
-            <label id="bkUni">University<span className="requireMark">*</span>: </label>
-            <input id="bkUniInput" name="university" type="text" value={products.university} required onChange={handleChangeProducts} />
-            <label id="bkPub">Publisher: </label>
-            <input id="bkPubInput" name="publisher" type="text" value={products.publisher} onChange={handleChangeProducts} />
-            <label id="bkAuth"> Author: </label>
-            <input id="bkAuthInput" name="author" type="text" value={products.author} onChange={handleChangeProducts} />
+            <label id="creaProdUni">
+              University<span className="requireMark">*</span>:{" "}
+            </label>
+            <input
+              id="creaProdUniInput"
+              name="university"
+              type="text"
+              value={products.university}
+              required
+              onChange={handleChangeProducts}
+            />
+            <label id="creaProdPub">Publisher: </label>
+            <input
+              id="creaProdPubInput"
+              name="publisher"
+              type="text"
+              value={products.publisher}
+              onChange={handleChangeProducts}
+            />
+            <label id="creaProdAuth"> Author: </label>
+            <input
+              id="creaProdAuthInput"
+              name="author"
+              type="text"
+              value={products.author}
+              onChange={handleChangeProducts}
+            />
 
-            <button id="bkSubmit" type="submit" >
+            <button id="creaProdSubmit" type="submit">
               Submit
             </button>
+
+            <p className="requiredFields">*Please fill out all required fields</p>
           </div>
         </div>
       </form>

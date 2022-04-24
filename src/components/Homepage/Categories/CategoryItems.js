@@ -1,4 +1,3 @@
-
 export const CategoryItems = [
     {
         title: 'Mathematics',
@@ -48,4 +47,3 @@ export const CategoryItems = [
     
     }
 ];
-
