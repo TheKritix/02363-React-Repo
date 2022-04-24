@@ -4,7 +4,7 @@ import "./Login.css";
 import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
-import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
+
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
  *https://www.freecodecamp.org/news/how-to-use-react-icons/
  *

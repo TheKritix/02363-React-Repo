@@ -21,9 +21,6 @@ function App() {
   const {token, setToken} = useToken();
   const {userId, setUserId} = useUserId();
 
-if(!token) {
-    return <Login setToken={setToken} setUserId={setUserId}/> 
-  } 
 
   return (  
     <BrowserRouter>

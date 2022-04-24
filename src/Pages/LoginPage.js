@@ -11,7 +11,6 @@ function LoginPage() {
     if(!token) {
         return <Login setToken={setToken}/> 
       } 
-
     return 
   }
   export default LoginPage;
