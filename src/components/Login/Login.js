@@ -11,7 +11,7 @@ import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
  */
 
  async function loginUser(credentials) {
-     return fetch("http://localhost:3001/api/login", {
+     return fetch("https://stoodle.bhsi.xyz/api/login", {
          method: 'POST',
          headers: {
              'content-type': 'application/json'
