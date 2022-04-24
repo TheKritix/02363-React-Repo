@@ -14,6 +14,7 @@ import LoginPage from './Pages/LoginPage';
 import useToken from './components/Login/useToken';
 import useUserId from './components/Login/useUserId';
 import Login from './components/Login/Login';
+import RegisterPage from './components/Login/Login';
 
 function App() {
   document.title = "Stoodle";
@@ -36,6 +37,8 @@ function App() {
           <Route path="profilepage" element={<ProfilePage/>}/>
           <Route path="favoritpage" element={<FavoritPage/>}/>
           <Route path="mypostpage" element={<MyPostPage/>}/>
+          <Route path="loginpage" element={<LoginPage/>}/>
+          <Route path="registerpage" element={<RegisterPage/>}/>
         </Routes>
     </BrowserRouter>
   );
