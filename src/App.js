@@ -18,12 +18,7 @@ import RegisterPage from './components/Login/Login';
 
 function App() {
   document.title = "Stoodle";
-  const {token, setToken} = useToken();
-  const {userId, setUserId} = useUserId();
 
-  if(!token) {
-    return <Login setToken={setToken} setUserId={setUserId}/> 
-  } 
 
   return (
     <BrowserRouter>

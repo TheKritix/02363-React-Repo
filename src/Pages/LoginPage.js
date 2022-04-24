@@ -4,14 +4,21 @@ import Login  from "../components/Login/Login";
 import useToken from '../components/Login/useToken';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProfilePage from '../Pages/ProfilePage';
+import useUserId from '../components/Login/useUserId';
+
 
 function LoginPage() {
 
-    const {token, setToken} = useToken();
-    if(!token) {
-        return <Login setToken={setToken}/> 
-      } 
+ 
+  const {token, setToken} = useToken();
+  const {userId, setUserId} = useUserId();
 
-    return 
+  if(!token) {
+    return <Login setToken={setToken} setUserId={setUserId}/> 
+  } 
+
+  return ( 
+    <ProfilePage></ProfilePage>
+  )
   }
   export default LoginPage;
