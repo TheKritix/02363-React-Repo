@@ -37,7 +37,6 @@ class Profile extends Component {
             <button className="postBtn">Add new post</button>
             <button className="editBtn">Edit profile</button>
           </div>
-
           <br />
 
           <div className="raiting">

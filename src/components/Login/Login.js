@@ -45,6 +45,10 @@ export default function Login({ setToken, setUserId }) {
     ]);
 
 
+    const logout = () => {
+      sessionStorage.removeItem(token)
+    };
+
     const handleLogin = (e) => {
       setLogin({
           ...login,
