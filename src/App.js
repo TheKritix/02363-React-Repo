@@ -13,6 +13,13 @@ import Navbar from './components/Navbar/Navbar.js';
 
 function App() {
   document.title = "Stoodle";
+  const {token, setToken} = useToken();
+  const {userId, setUserId} = useUserId();
+
+  if(!token) {
+    return <Login setToken={setToken} setUserId={setUserId}/> 
+  } 
+
   return (
     <BrowserRouter>
       <Topbar/>
