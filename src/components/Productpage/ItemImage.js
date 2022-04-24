@@ -8,8 +8,7 @@ export const ItemImage = ({book}) => {
     src={book.Image}
     alt="bookimage"
     className="itemImage" 
-    height='45%'
-    width='45%'
+    height='400px'
     ></img>
   )
 }

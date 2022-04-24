@@ -1,4 +1,21 @@
+.productContainer {
+    display: flex;
+    justify-content: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
+.productCardView {
 
+}
+
+.productImageDiv {
+    display: flex;
+    justify-content: Center;
+}
+
+.productUni {
+    float: right;
+}
 
 

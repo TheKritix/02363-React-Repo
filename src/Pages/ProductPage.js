@@ -57,24 +57,25 @@ function ProductPage() {
         <>
         {selectedBookData.map((book) => {     
                 return (
-                    <div style={{display: 'flex', justifyContent: 'center'}}>  
-                        <div className="left-div">
+                    <div className="productContainer">  
+                        <div className="productCardView">
                             <Card style={{
                                 width: 550,
                                 height: 660, 
                                 backgroundColor: "lightgray",
                                 margin: 10,
+                                position: 'sticky',
                                 }}>
                                 <CardContent>
                                     <ArrowBackButton/>
                                     <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
-                                    <div style={{display: 'flex', justifyContent: 'Center'}}>
+                                    <div className="productImageDiv">
                                         <ItemImage book={book}/>
                                     </div>
                                     <Divider style={{margin: 10,}}/>  
                                     <h2>{book.Title}</h2> 
                                     <h3>Author: {book.Author}</h3>
-                                    <h3 id='University' style={{float: 'right'}}><LocationOnOutlinedIcon/>{book.University}</h3>                                     
+                                    <h3 className="productUni"><LocationOnOutlinedIcon/>{book.University}</h3>                                     
                                 </CardContent>
                             </Card>
                         </div>
@@ -82,7 +83,7 @@ function ProductPage() {
                             <ItemTitle item={book}/>
                             <ItemDescription item={book}/>
                             <Divider/>
-                            <h3 id='price'>Pris: {book.Price}</h3>
+                            <h3>Pris: {book.Price}</h3>
                             <Divider/>
                         </div>  
                     </div>
