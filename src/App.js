@@ -17,11 +17,7 @@ import useToken from './components/Login/useToken';
 
 function App() {
   document.title = "Stoodle";
-  const {token, setToken} = useToken();
 
-if(!token) {
-    return <Login setToken={setToken}/> 
-  } 
   
   return (  
     <BrowserRouter>

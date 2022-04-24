@@ -1,13 +1,17 @@
 import React from 'react';
-import Navbar from '../components/Navbar/Navbar';
-import Topbar from '../components/Topbar/Topbar';
+
 import Login  from "../components/Login/Login";
+import useToken from '../components/Login/useToken';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProfilePage from '../Pages/ProfilePage';
 
 function LoginPage() {
-    return (
-        <>
-        <Login></Login>  
-        </>
-    )
+
+    const {token, setToken} = useToken();
+    if(!token) {
+        return <Login setToken={setToken}/> 
+      } 
+
+    return 
   }
   export default LoginPage;

@@ -20,6 +20,8 @@ import { useState } from "react";
      .then(data => data.json())
  }
 
+ 
+
 
 export default function Login({ setToken }) {
     const [email,setEmail] = useState();
@@ -73,8 +75,8 @@ export default function Login({ setToken }) {
       }
   };
 
+
     
-  
 
   return (
     <div className="inputLogin">
@@ -99,7 +101,7 @@ export default function Login({ setToken }) {
           
         ></input>
         <br />
-        <input type="submit" value="Login"></input>
+        <input type="submit" value="Login"  onClick={(event) => (window.location.href = "/profilepage")}></input>
       </form>
       <div>
         <h3 id="forgotPassword">Forgot Password?</h3>
