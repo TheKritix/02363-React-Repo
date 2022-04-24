@@ -22,7 +22,7 @@ function App() {
   const {userId, setUserId} = useUserId();
 
 if(!token) {
-    return <Login setToken={setToken}/> 
+    return <Login setToken={setToken} setUserId={setUserId}/> 
   } 
 
   return (  
