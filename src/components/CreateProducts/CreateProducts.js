@@ -16,6 +16,7 @@ export const CreateProducts = () => {
       course: "",
       lang: "",
       topic: "",
+      userId: window.sessionStorage.getItem("userId"),
     },
   ]);
   const [fileImage, setFileImage] = useState();
@@ -47,6 +48,7 @@ export const CreateProducts = () => {
       course: "",
       lang: "",
       topic: "",
+      userId: window.sessionStorage.getItem("userId"),
     });
   };
 
@@ -62,6 +64,7 @@ export const CreateProducts = () => {
       cond: products.cond,
       lang: products.lang,
       topic: products.topic,
+      userId: products.userId,
     };
 
     const formData = new FormData();
@@ -75,6 +78,7 @@ export const CreateProducts = () => {
     formData.append("cond", products.cond);
     formData.append("lang", products.lang);
     formData.append("topic", products.topic);
+    formData.append("user_id", products.userId);
 
     console.log(productObject);
     console.log(fileImage);

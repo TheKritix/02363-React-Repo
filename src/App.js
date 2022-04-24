@@ -18,8 +18,7 @@ import RegisterPage from './components/Login/Login';
 
 function App() {
   document.title = "Stoodle";
-
-
+  
   return (
     <BrowserRouter>
       <Topbar/>
