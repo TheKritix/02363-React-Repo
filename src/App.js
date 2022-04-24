@@ -10,23 +10,36 @@ import FavoritPage from './Pages/FavoritePage';
 import MyPostPage from './Pages/MyPostPage';
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
+import LoginPage from './Pages/LoginPage';
+import useToken from './components/Login/useToken';
+import useUserId from './components/Login/useUserId';
+import Login from './components/Login/Login';
+import RegisterPage from './components/Login/Login';
 
 function App() {
   document.title = "Stoodle";
+  const {token, setToken} = useToken();
+  const {userId, setUserId} = useUserId();
+
+  if(!token) {
+    return <Login setToken={setToken} setUserId={setUserId}/> 
+  } 
+
   return (
-    
     <BrowserRouter>
-    <Topbar/>
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="sell" element={<CreateProductPage/>}/>
-        <Route path="/productpage/:Book_Id" element={<ProductPage/>}/>
-        <Route path="buy" element={<BookOverview/>}/>
-        <Route path="profilepage" element={<ProfilePage/>}/>
-        <Route path="favoritpage" element={<FavoritPage/>}/>
-        <Route path="mypostpage" element={<MyPostPage/>}/>
-      </Routes>
+      <Topbar/>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="sell" element={<CreateProductPage/>}/>
+          <Route path="/productpage/:Book_Id" element={<ProductPage/>}/>
+          <Route path="buy" element={<BookOverview/>}/>
+          <Route path="profilepage" element={<ProfilePage/>}/>
+          <Route path="favoritpage" element={<FavoritPage/>}/>
+          <Route path="mypostpage" element={<MyPostPage/>}/>
+          <Route path="loginpage" element={<LoginPage/>}/>
+          <Route path="registerpage" element={<RegisterPage/>}/>
+        </Routes>
     </BrowserRouter>
   );
 }

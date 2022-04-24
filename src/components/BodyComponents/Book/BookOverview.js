@@ -2,8 +2,7 @@ import React from "react";
 import "./BookOverview.css";
 import { useState, useEffect } from "react";
 import { Grid, Container } from "@mui/material";
-import { Book } from "@mui/icons-material";
-import ButtonBase from '@mui/material/ButtonBase';
+import { Link } from "react-router-dom";
 
 export const BookOverview = () => {
   const [priceMin, setPriceMin] = useState(0);
@@ -85,28 +84,27 @@ export const BookOverview = () => {
                 element.Title.toLowerCase().includes(title.toLowerCase()) &&
                 element.Author.toLowerCase().includes(author.toLowerCase())
               )
-              
             })
             .filter(item => item.Price >= priceMin)
             .filter(item => item.Price <= priceMax)
             .map((item, index) => {
               return (
                 <Grid item xs={5} md={3} key={index}>
-                  <ButtonBase href={`/productpage/${item.Book_Id}`}>
-                  <div className="card-item">
-                    <div className="img-div">
-                      <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                  <Link to={`/productpage/${item.Book_Id}`}>
+                    <div className="card-item">
+                      <div className="img-div">
+                        <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                      </div>
+                      <div className="content">
+                        <h5>{item.Title}</h5>
+                        <h6>by {item.Author}</h6>
+                        <h6>{item.Price}</h6>
+                        <h6>
+                          {item.Publisher}, {item.Country}
+                        </h6>
+                      </div>
                     </div>
-                    <div className="content">
-                      <h5>{item.Title}</h5>
-                      <h6>by {item.Author}</h6>
-                      <h6>{item.Price}</h6>
-                      <h6>
-                        {item.Publisher}, {item.Country}
-                      </h6>
-                    </div>
-                  </div>
-                  </ButtonBase>
+                  </Link>
                 </Grid>
               );
             })}
