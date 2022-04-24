@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';  
@@ -14,15 +14,17 @@ import Navbar from './components/Navbar/Navbar.js';
 import { useState } from 'react';
 import LoginPage from './Pages/LoginPage';
 import useToken from './components/Login/useToken';
+import useUserId from './components/Login/useUserId';
 
 function App() {
   document.title = "Stoodle";
   const {token, setToken} = useToken();
+  const {userId, setUserId} = useUserId();
 
 if(!token) {
     return <Login setToken={setToken}/> 
   } 
-  
+
   return (  
     <BrowserRouter>
     <Topbar/>

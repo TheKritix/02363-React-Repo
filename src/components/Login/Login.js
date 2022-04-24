@@ -10,7 +10,7 @@ import { useState } from "react";
  */
 
  async function loginUser(credentials) {
-     return fetch("http://localhost:3001/api/logintoken", {
+     return fetch("http://localhost:3001/api/login", {
          method: 'POST',
          headers: {
              'content-type': 'application/json'
@@ -19,7 +19,6 @@ import { useState } from "react";
      })
      .then(data => data.json())
  }
-
 
 export default function Login({ setToken }) {
     const [email,setEmail] = useState();
@@ -31,6 +30,7 @@ export default function Login({ setToken }) {
             email, 
             password
         });
+      console.log(token);
       setToken(token);
     } 
 
@@ -40,41 +40,6 @@ export default function Login({ setToken }) {
         password: "",
       },
     ]);
-
-
-    const handleLogin = (e) => {
-      setLogin({
-          ...login,
-          [e.target.name]:e.target.value,
-      });
-  };
-
-  const submitLogin = (e) => {
-      e.preventDefault();
-      const loginObject = {
-          email: login.email,
-          password: login.password
-      };
-      console.log(loginObject);
-      if(
-          !(loginObject.email === "" && loginObject.password === "") 
-      )
-      {
-          fetch(`http://localhost:3001/api/login/${login.email}&${login.password}`, {
-              method: "GET",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-                Accept: "application/json"
-              },
-             
-          }).then(()=> {
-              console.log("email and password sendt to API")
-          });
-      }
-  };
-
-    
-  
 
   return (
     <div className="inputLogin">
