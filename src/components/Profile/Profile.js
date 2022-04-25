@@ -5,6 +5,7 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
+
 class Profile extends Component {
   render() {
     return (
