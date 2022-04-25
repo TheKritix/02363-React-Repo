@@ -3,7 +3,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10rem;
-    margin-top: 2rem;
+    margin-top: 10rem;
 }
 
 .about-us-master {
@@ -21,6 +21,10 @@
 
 .logoimg {
     height: 350px
+}
+
+.title {
+    border-bottom: 1px solid rgb(99, 99, 99);
 }
 
 /*@media from https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
