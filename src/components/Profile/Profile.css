@@ -5,13 +5,18 @@
     border-bottom: 1px solid;
     height: 250px;
     border-color: hsl(212, 92%, 61%, 25%);
-    margin: 30px;
+    align-items: middle;
+   
+    
+
     
       
 }
 .infoContainer{
-    display: flex;
-    margin-left: 20px;
+    
+    height: 250px;
+
+    
 }
 
 .divIcon{
@@ -20,9 +25,7 @@
 }
 
 .profileImg{
-    position: relative;
-
-   
+    
 }
 
 .cameraIcon{
@@ -33,11 +36,7 @@
 }
 
 .profileInfo{
-    font-size: 20px;
-    padding-top: 70px;
-    margin-left: 25px;
-    
-    
+   
 }
 
 .container{
