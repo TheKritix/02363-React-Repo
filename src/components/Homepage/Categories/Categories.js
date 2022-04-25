@@ -21,7 +21,7 @@ class Categoies extends Component {
                             <li key = {index} >
                                 <div className='imgContainer'>
                                     <h2 className='categeryTitle'> {item.title}</h2>
-                                    <img className='categoryImg' alt="item image for book"src = {item.image} ></img>
+                                    <img className='categoryImg' src = {item.image} ></img>
                                 </div>
                             </li>
                         )
@@ -47,7 +47,7 @@ class Categoies extends Component {
         useEffect(() => {
           requestRef.current = requestAnimationFrame(animate);
           return () => cancelAnimationFrame(requestRef.current);
-          // eslint-disable-next-line react-hooks/exhaustive-deps
+         
         }, []);
       };
 

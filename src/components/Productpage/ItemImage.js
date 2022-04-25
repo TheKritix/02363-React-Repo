@@ -1,13 +1,15 @@
 import React from "react";
 
-export const ItemImage = ({item}) => {
+export const ItemImage = ({book}) => {
 
   return (
     <img 
-    src={item.imageUrl}
+    crossorigin="anonymous"
+    src={book.Image}
+    alt="bookimage"
     className="itemImage" 
-    height='50%'
-    width='50%'
+    height='45%'
+    width='45%'
     ></img>
   )
 }
