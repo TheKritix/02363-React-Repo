@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CreateProducts.css";
-import pic from "../AddBook/Images/CameraImage.svg";
+import pic from "./Images/CameraImage.svg";
 
 
 export const CreateProducts = () => {
@@ -85,15 +85,25 @@ export const CreateProducts = () => {
     console.log(fileImage.name);
     console.log(formData);
 
-    if (!(productObject.Cond === "" && productObject.Lang === "" && productObject.price === "" && productObject.topic === "" && productObject.university === "" && productObject.title === "" )) {
+    if (
+      !(
+        productObject.Cond === "" &&
+        productObject.Lang === "" &&
+        productObject.price === "" &&
+        productObject.topic === "" &&
+        productObject.university === "" &&
+        productObject.title === "" &&
+        previewImg === pic
+      )
+    ) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
         method: "POST",
         action: "/",
-        body: formData
+        body: formData,
       }).then(() => {
-        setDefaultState()
-        console.log("Product added")
-      })
+        setDefaultState();
+        console.log("Product added");
+      });
     } else {
       alert.show("Please fill out the required fields");
     }
@@ -109,7 +119,6 @@ export const CreateProducts = () => {
               <input id="creaProdImageInput" name="image" type="file" accept='image/*' onChange={saveFile} />
               <label id="creaProdDesc">Description: </label>
               <textarea id="creaProdDescInput" name="description" type="text" value={products.description} onChange={handleChangeProducts} rows="5" cols="60" ></textarea>
-
           </div>
           <div className="rightCreateProducts">
             <p className="requireMark">*Please fill out all required fields</p>
@@ -148,7 +157,6 @@ export const CreateProducts = () => {
             <input id="creaProdPubInput" name="publisher" type="text" value={products.publisher} onChange={handleChangeProducts} />
             <label id="creaProdAuth"> Author: </label>
             <input id="creaProdAuthInput" name="author" type="text" value={products.author} onChange={handleChangeProducts} />
-
           <button id="creaProdSubmit" type="submit" >
             Submit
           </button>
