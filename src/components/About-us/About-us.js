@@ -12,7 +12,7 @@ class AboutUs extends Component {
             <p className="description">
               The intention of this website to create a platform where anyone is
               able to sell their university books of any kinds. It should be
-              easy and convient to use this website.
+              easy and convient to use this website. The website is called Stoodle.
             </p>
             <p className="description">
               This website has been created as part of a university project on
@@ -20,9 +20,9 @@ class AboutUs extends Component {
             </p>
 
             <p className="description">
-              The purpose of creating this website is to get a general understanding
-              of the React framework, and the markup languages including the programming
-              language JavaScript.
+              The purpose of creating this website is to get a general
+              understanding of the React framework, and the markup languages
+              including the programming language JavaScript.
             </p>
           </div>
           <div className="logo">

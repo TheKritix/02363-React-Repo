@@ -20,5 +20,20 @@
 }
 
 .logoimg {
-    height: 400px
+    height: 350px
+}
+
+/*@media from https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+@media only screen and (max-width: 850px) {
+    .logoimg {
+        display:none;
+    }
+
+    .about-us-master {
+        display: block;
+        grid-gap: 2rem;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
 }

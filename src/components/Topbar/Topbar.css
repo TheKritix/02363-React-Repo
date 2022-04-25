@@ -75,3 +75,121 @@
 }
 
 /* TOP BAR  -- END*/
+
+/*@media from https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+@media only screen and (max-width: 1150px) {
+  #logoImage {
+    display: none;
+  }
+
+  .topbar-menu {
+    display: block; 
+    margin-top: 20px;
+  }
+
+  .search-div {
+    margin: 2rem;
+    margin-left: 0px;
+  }
+  
+}
+
+@media only screen and (max-width: 800px) {
+  .search-div {
+    margin: 2rem;
+    margin-left: 0px;
+  }
+
+  #stoodleText {
+    float: center;
+    font-size: 3rem;
+    margin-right: 6rem;
+  }
+
+  #logoImage {
+    display: inline;
+  }
+
+  .divLogo {
+    margin-top: -10px;
+    margin-left: 6rem;
+    margin-bottom: 0rem;
+  }
+
+  .Topbar {
+  background-color: white;
+  height: 175px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  justify-content: center;
+  }
+
+  .topbar-menu {
+    display: grid; 
+    margin-top: -30px;
+    margin-right: 60px;
+    
+  }
+
+  .search-div {
+    margin: 2rem;
+    margin-left: 50px;
+    margin-top: 15px;
+  }
+
+  .search {
+    width: 20rem;
+  }
+  
+}
+
+@media only screen and (max-width: 421px) {
+  .search-div {
+    margin: 2rem;
+    margin-left: 0px;
+  }
+
+  #stoodleText {
+    float: center;
+    font-size: 3rem;
+    margin-right: 7rem;
+  }
+
+  #logoImage {
+    display: none;
+  }
+
+  .divLogo {
+    margin-top: -10px;
+    margin-left: 6rem;
+    margin-bottom: 0rem;
+  }
+
+  .Topbar {
+  background-color: white;
+  height: 175px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  justify-content: center;
+  }
+
+  .topbar-menu {
+    display: grid; 
+    margin-top: -30px;
+    margin-right: 42px;
+    
+  }
+
+  .search-div {
+    margin: 2rem;
+    margin-left: 50px;
+    margin-top: 15px;
+  }
+
+  .search {
+    width: 20rem;
+  }
+  
+}
