@@ -1,4 +1,3 @@
-
 .createProducts {
   min-height: 50vh;
   display: flex;
@@ -13,10 +12,23 @@
   border-width: 4vh;
   border-style: solid;
 }
+.createProducts-input{
+  border-color: rgb(45, 133, 204);
+  border-width: 2vh;
+  border-style: solid;
+}
+
+option {
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+
 .requireMark {
   font-size: calc(2px + 2vmin);
   color: red;
 }
+
 .leftCreateProducts {
   width: 40vh;
   min-height: 80vh;

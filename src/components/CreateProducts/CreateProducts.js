@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CreateProducts.css";
-import pic from "../AddBook/Images/CameraImage.svg"
+import pic from "../AddBook/Images/CameraImage.svg";
 
 
 export const CreateProducts = () => {
@@ -16,15 +16,16 @@ export const CreateProducts = () => {
       course: "",
       lang: "",
       topic: "",
+      userId: window.sessionStorage.getItem("userId"),
     },
-  ])
+  ]);
   const [fileImage, setFileImage] = useState();
   const [previewImg, setPreviewImage] = useState(pic);
-  
+
   const saveFile = (e) => {
-    setFileImage(e.target.files[0])
-    setPreviewImage(URL.createObjectURL(e.target.files[0]))
-  }
+    setFileImage(e.target.files[0]);
+    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+  };
 
   const handleChangeProducts = (e) => {
     setProducts({
@@ -34,8 +35,8 @@ export const CreateProducts = () => {
   };
 
   const setDefaultState = () => {
-    setPreviewImage(pic)
-    setFileImage("")
+    setPreviewImage(pic);
+    setFileImage("");
     setProducts({
       title: "",
       publisher: "",
@@ -47,8 +48,9 @@ export const CreateProducts = () => {
       course: "",
       lang: "",
       topic: "",
-    })
-  }
+      userId: window.sessionStorage.getItem("userId"),
+    });
+  };
 
   const submitProduct = (e) => {
     e.preventDefault();
@@ -62,28 +64,30 @@ export const CreateProducts = () => {
       cond: products.cond,
       lang: products.lang,
       topic: products.topic,
+      userId: products.userId,
     };
 
     const formData = new FormData();
-    formData.append('image', fileImage);
-    formData.append('title', products.title);
-    formData.append('publisher', products.publisher);
-    formData.append('author', products.author);
-    formData.append('price', products.price);
-    formData.append('description', products.description);
-    formData.append('university', products.university);
-    formData.append('cond', products.cond);
-    formData.append('lang', products.lang);
-    formData.append('topic', products.topic);
+    formData.append("image", fileImage);
+    formData.append("title", products.title);
+    formData.append("publisher", products.publisher);
+    formData.append("author", products.author);
+    formData.append("price", products.price);
+    formData.append("description", products.description);
+    formData.append("university", products.university);
+    formData.append("cond", products.cond);
+    formData.append("lang", products.lang);
+    formData.append("topic", products.topic);
+    formData.append("user_id", products.userId);
 
-    console.log(productObject)
-    console.log(fileImage)
-    console.log(fileImage.name)
-    console.log(formData)
+    console.log(productObject);
+    console.log(fileImage);
+    console.log(fileImage.name);
+    console.log(formData);
 
     if (!(productObject.Cond === "" && productObject.Lang === "" && productObject.price === "" && productObject.topic === "" && productObject.university === "" && productObject.title === "" )) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
-        method: 'POST',
+        method: "POST",
         action: "/",
         body: formData
       }).then(() => {
@@ -91,9 +95,9 @@ export const CreateProducts = () => {
         console.log("Product added")
       })
     } else {
-      alert.show("Please fill out the required fields")
+      alert.show("Please fill out the required fields");
     }
-  }
+  };
 
   return (
     <div>
@@ -133,7 +137,7 @@ export const CreateProducts = () => {
                 <label id="creaProdLang">Language<span className="requireMark">*</span>: </label>
                 <select id="creaProdLangInput" name="lang" type="number" value={products.lang} required onChange={handleChangeProducts}>
                   <option value="">Select language</option>
-                  <option value="danish">Danish</option>
+                  <option value="danish" >Danish</option>
                   <option value="english">English</option>
                 </select>
               </div>

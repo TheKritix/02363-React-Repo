@@ -47,7 +47,7 @@ class Categoies extends Component {
         useEffect(() => {
           requestRef.current = requestAnimationFrame(animate);
           return () => cancelAnimationFrame(requestRef.current);
-          // eslint-disable-next-line react-hooks/exhaustive-deps
+         
         }, []);
       };
 

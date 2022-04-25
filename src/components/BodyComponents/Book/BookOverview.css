@@ -1,7 +1,7 @@
 .SideMenu {
-    position: absolute;
-    width: 18.8rem;
-    height: 25rem;
+    position: relative;
+    width: 300px;
+    height: 400px;
     margin: 20px;
     border: 1px solid #bebebe;
     box-sizing: border-box;
@@ -9,35 +9,34 @@
 }
 
 div.SideMenu {
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
-    top: 2rem;
+    top: 20px;
 }
 
 .gridBox {
     position: relative;
     height: auto;
+    width: 75rem;
+    margin-top: 1.3rem;
+}
+
+.item-image {
+    height: 300px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
-    width: 70rem;
-    /*z-index: -100;*/
+    margin-top: 15px;
+    object-fit: fill;
 }
 
-.indiGrid {
-    
+.Overview {
+    display: flex;
 }
 
-.ItemBox {
-    overflow: hidden;
-    width: 20rem;
-    height: 25;
-    border: 0.01px solid #E5E9EB;
-}
 
-.invisBox {
-    width: 9rem;
-    grid-area: SideMenu;
-}
+
 
 #priceMin {
     position: absolute;
