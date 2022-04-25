@@ -17,8 +17,7 @@ const CommentForm = () => {
         <form>
             <textarea onChange={(e) => setText(e.target.value)}>
             </textarea>
-            <button className="comment-submit-btn">
-            </button>
+            <button className="comment-submit-button">Comment!</button>
         </form>
     )
 };

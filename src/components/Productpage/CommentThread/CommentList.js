@@ -8,7 +8,7 @@ import { CommentItem } from "./CommentItem.js"
 const CommentList = () => {
 
     const [comments, setComments] = useState([]);
-    const parentComment = CommentItem.filter(comment => comments.parentId === null);
+    const parentComment = CommentItem.filter(item => item.parentId === null);
 
 
 
@@ -18,10 +18,13 @@ const CommentList = () => {
             <div className="comment-form-title">Comment here</div>
             <CommentForm/>
             <div className="comments-container">
-                <Comment
-                key={parentComment.id}
-                comment={parentComment}
-                />
+                {parentComment.map((parentComment) => (
+                    <Comment
+                    key={parentComment.CommentId}
+                    comment={parentComment}
+                    />
+                ))
+            }
             </div>
         </div>
     )

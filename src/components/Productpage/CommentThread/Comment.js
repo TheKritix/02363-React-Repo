@@ -14,7 +14,7 @@ const Comment = ({
             <div className="comment-right">
                 <div className="comment-content">
                     <div className="comment-author">{comment.username}</div>
-                    <div>00:00</div>
+                    <div>{comment.createdAt}</div>
                     <div className="comment-text">{comment.body}</div>
                 </div>
             </div>
