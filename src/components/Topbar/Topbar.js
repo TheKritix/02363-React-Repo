@@ -8,6 +8,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { Favorite } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { IconButton } from '@mui/material';
+
 
 class Topbar extends Component {
   render() {
@@ -32,6 +34,11 @@ const logout = () => {
   sessionStorage.clear();
   console.log('logged out');
 };
+
+const iconButton = {
+  width: '50%',
+}
+
     return (
       <div className="Topbar">
         <div className="divLogo">
@@ -62,20 +69,19 @@ const logout = () => {
         </div>
         <div className="options">
           <div className="topbar-menu">
-            <Link className="topbar-links" to="/mypostpage">
+            <IconButton size = "small" style = {{width:40}} className="topbar-links" onClick="">
               {" "}
               <NotificationsNoneIcon className="icon"></NotificationsNoneIcon>
               <text>Notifications</text>
-            </Link>
-            <Link className="topbar-links" to="/favoritpage">
+            </IconButton>
+            <IconButton size = "small" style={{width:40}} className="topbar-links" onClick="">
               {" "}
               <Favorite id="favorit" className="icon" ></Favorite> Favorites
-            </Link>
-            <Link className="topbar-links" to="/profilepage">
+            </IconButton>
+            <IconButton size = "small" style={{width:40}} className="topbar-links" onClick="">
               <AccountCircleIcon className="icon"></AccountCircleIcon>Login
-            </Link>
-
-            <button onClick={logout}>logout</button>
+            </IconButton>
+            
           </div>
         </div>
       </div>
@@ -84,3 +90,6 @@ const logout = () => {
 }
 
 export default Topbar;
+
+/*<IconButton Size="small" style={{width:40}}> <AccountCircleIcon className="icon" onclick="">
+              </AccountCircleIcon>logout</IconButton>*/ 
