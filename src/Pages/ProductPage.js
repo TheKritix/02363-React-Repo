@@ -85,6 +85,7 @@ function ProductPage() {
                             <Divider/>
                             <h3>Pris: {book.Price}</h3>
                             <Divider/>
+                            <CommentList/>
                         </div>  
                     </div>
                 );
