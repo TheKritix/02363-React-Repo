@@ -117,6 +117,10 @@ export const CreateProducts = () => {
                 <input id="creaProdPriceInput" name="price" type="number" value={products.price} required onChange={handleChangeProducts} />
               </div>
               <div className="gridItem">
+                <label id="creaProdTopic">Topic<span className="requireMark">*</span>: </label>
+                <input id="creaProdTopicInput" name="topic" type="text" value={products.topic} required onChange={handleChangeProducts} />
+              </div>
+              <div className="gridItem">
                 <label id="creaProdCon">Condition<span className="requireMark">*</span>: </label>
                 <select id="creaProdConInput" name="cond" type="text" value={products.cond} required onChange={handleChangeProducts} >
                   <option value="">Select condition</option>
@@ -132,10 +136,6 @@ export const CreateProducts = () => {
                   <option value="danish">Danish</option>
                   <option value="english">English</option>
                 </select>
-              </div>
-              <div className="gridItem">
-                <label id="creaProdTopic">Topic<span className="requireMark">*</span>: </label>
-                <input id="creaProdTopicInput" name="topic" type="text" value={products.topic} required onChange={handleChangeProducts} />
               </div>
             </div>
             <label id="creaProdUni">University<span className="requireMark">*</span>: </label>

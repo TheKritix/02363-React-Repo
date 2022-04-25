@@ -51,6 +51,7 @@
 .gridItem {
   width: 20vh; 
   height: 10;
+  align-self: flex-end;
 }
 
 #creaProdTitleInput {
