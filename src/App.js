@@ -15,6 +15,8 @@ import useToken from './components/Login/useToken';
 import useUserId from './components/Login/useUserId';
 import Login from './components/Login/Login';
 import RegisterPage from './components/Login/Login';
+import Footer from './components/Footer/Footer';
+import About from './components/About-us/About-us';
 
 function App() {
   document.title = "Stoodle";
@@ -33,7 +35,9 @@ function App() {
           <Route path="mypostpage" element={<MyPostPage/>}/>
           <Route path="loginpage" element={<LoginPage/>}/>
           <Route path="registerpage" element={<RegisterPage/>}/>
+          <Route path="about-us" element={<About/>}/>
         </Routes>
+        <Footer/>
     </BrowserRouter>
   );
 }

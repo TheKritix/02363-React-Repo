@@ -1,0 +1,56 @@
+.footer {
+    border-top: 1px solid;
+    top: -16px;
+    position: relative;
+    background-color: rgb(240, 240, 240);
+    height: 15rem;
+    bottom: -16px;
+    
+}
+
+.footer-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    background-color: rgb(240, 240, 240);
+
+}
+
+.footer-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px,2fr));
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+.footer-articles {
+    position: relative;
+    
+}
+
+.footer-title {
+    position: relative;
+    border-bottom: 1px solid rgb(173, 172, 172);
+    text-align: center;
+    width: 220px;
+}
+
+.footer-ul {
+    list-style: none;
+    margin: 8px 0;
+    padding-left: 0;
+    margin-top: -10px;
+}
+
+.list-item {
+    margin-bottom: 12px;
+}
+
+/* Solution from https://www.delftstack.com/howto/css/remove-underline-from-link-css/ */
+a:link, a:visited, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
