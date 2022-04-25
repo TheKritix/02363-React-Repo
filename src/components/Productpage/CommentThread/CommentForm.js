@@ -2,19 +2,22 @@ import React from "react";
 import { useState } from "react";
 import './Comment.css';
 
-const CommentForm = () => {
+const CommentForm = ({
+    submitLabel,
+    handleSubmit
+}) => {
 
-    const [text, setText] = useState("Write Comment Here")
+    const [text, setText] = useState("")
     
     const onSubmit = (event) => {
         event.preventDefault();
-        //handleSubmit(text);
+        handleSubmit(text);
         setText("");
         console.log(text)
     }
 
     return (
-        <form>
+        <form onSubmit={onSubmit}>
             <textarea onChange={(e) => setText(e.target.value)}>
             </textarea>
             <button className="comment-submit-button">Comment!</button>

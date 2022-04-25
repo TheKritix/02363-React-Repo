@@ -4,7 +4,8 @@ import profileImg from "../../Profile/profileIcon.png";
 import './Comment.css';
 
 const Comment = ({
-    comment
+    comment,
+    deleteComment
 }) => {
     return (
         <div className="comment" key={comment.id}>
@@ -15,7 +16,8 @@ const Comment = ({
                 <div className="comment-content">
                     <div className="comment-author">{comment.username}</div>
                     <div>{comment.createdAt}</div>
-                    <div className="comment-text">{comment.body}</div>
+                    <div className="comment-text"> //-- {comment.body}</div>
+                    <button className="delete-button" onClick={() => deleteComment(comment.id)}>Delete</button>
                 </div>
             </div>
         </div>
