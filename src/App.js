@@ -15,6 +15,8 @@ import useToken from './components/Login/useToken';
 import useUserId from './components/Login/useUserId';
 import Login from './components/Login/Login';
 import RegisterPage from './components/Login/Login';
+import ToS from './Pages/ToS';
+import Tradcondition from './Pages/TradCondition';
 
 function App() {
   document.title = "Stoodle";
@@ -33,6 +35,8 @@ function App() {
           <Route path="mypostpage" element={<MyPostPage/>}/>
           <Route path="loginpage" element={<LoginPage/>}/>
           <Route path="registerpage" element={<RegisterPage/>}/>
+          <Route path="ToS" element={<ToS/>}/>
+          <Route path="TradCondition" element={<Tradcondition/>}/>
         </Routes>
     </BrowserRouter>
   );

@@ -19,12 +19,12 @@ export const ProfileMenuList = [
 
 {
     name: 'Privacy policey',
-    url: '#',
+    url: '/ToS',
     cname: 'profile-links'
 },
 {
     name: 'Trade conditions',
-    url: '#',
+    url: 'TradCondition',
     cname: 'profile-links'
 }
 ]
