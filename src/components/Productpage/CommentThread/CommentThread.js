@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import CommentForm from "./CommentForm.js";
 import Comment from "./Comment.js";
 import './Comment.css';
@@ -9,14 +10,16 @@ import {
     deleteComment as deleteCommentApi,
  } from "./CommentItem.js"
 
-const CommentList = () => {
+const CommentThread = () => {
+
+    const { Book_Id  } = useParams();
+    const threadId = parseInt(Book_Id);
+    console.log(threadId);
 
     const [comments, setComments] = useState([]);
-    //const parentComment = CommentItem.filter(item => item.parentId === null);
-
-
-    const addComment = (text, parentId) => {
-        createCommentApi(text, parentId).then((comment) => {
+    
+    const addComment = (text, parentId, Book_Id) => {
+        createCommentApi(text, parentId, Book_Id).then((comment) => {
             setComments([comment, ...comments]);
         }
         )
@@ -27,17 +30,23 @@ const CommentList = () => {
         if (window.confirm("ARE U SURE M8?")) {
             deleteCommentApi().then(() => {
                 const newComments = comments.filter(
-                (comments) => comments.id !== commentId
+                (comments) => comments.CommentId !== commentId
                 );
                 setComments(newComments);
             });
         }
     };
 
+    //const fetchReplies = (commentId) =>
+    //    comments.filter((comments) => 
+    //    comments.parentId === commentId);
+
     //will later be updated to fetch from db API
+
     useEffect(() => {
         getCommentItemApi().then((data) => {
             setComments(data);
+            //retrieveComments();
         });
     }, []);
     
@@ -48,10 +57,11 @@ const CommentList = () => {
             <div className="comment-form-title">Comment here</div>
             <CommentForm submitLabel="Write" handleSubmit={addComment}/>
             <div className="comments-container">
-                {comments.map((comment) => (
+                {comments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
                     <Comment
                     key={comment.CommentId}
                     comment={comment}
+                    //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
                     deleteComment={deleteComment}
                     />
                 ))
@@ -61,4 +71,4 @@ const CommentList = () => {
     )
 };
 
-export default CommentList;
+export default CommentThread;

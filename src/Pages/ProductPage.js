@@ -11,7 +11,7 @@ import FavoriteButton from '../components/Productpage/FavoriteButton.js';
 import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
 import { useParams } from 'react-router-dom';
 import Divider from '@mui/material/Divider';
-import CommentList from '../components/Productpage/CommentThread/CommentList.js';
+import CommentThread from '../components/Productpage/CommentThread/CommentThread.js';
 
 
 function ProductPage() {
@@ -85,7 +85,7 @@ function ProductPage() {
                             <Divider/>
                             <h3>Pris: {book.Price}</h3>
                             <Divider/>
-                            <CommentList/>
+                            <CommentThread/>
                         </div>  
                     </div>
                 );

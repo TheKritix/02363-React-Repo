@@ -3,6 +3,7 @@ export const CommentItem = async () => {
         {
             CommentId: "1",
             body: "hva så manner",
+            Book_Id: 38,
             username: "John",
             userId: "1",
             parentId: null,
@@ -11,14 +12,16 @@ export const CommentItem = async () => {
         {
             CommentId: "2",
             body: "forstår ikke matematik",
+            Book_Id: 38,
             username: "Per",
             userId: "2",
-            parentId: null,
+            parentId: 1,
             createdAt: "2022-01-02",
         },
         {
             CommentId: "3",
             body: "det okay",
+            Book_Id: 39,
             username: "Bob",
             userId: "3",
             parentId: null,
@@ -27,14 +30,15 @@ export const CommentItem = async () => {
     ];
 };
 
-export const createComment = async (text, parentId = null) => {
+export const createComment = async (text, parentId, Book_Id) => {
     return {
-        id: Math.random().toString(36).substr(2, 9),
+        CommentId: Math.random().toString(36).substr(2, 9),
         body: text,
+        Book_Id,
         parentId,
         userId: "1",
         username: "John",
-        createdAt: new Date().toString().slice(0, 15),
+        createdAt: new Date().toISOString().slice(0, 10),
     }
 }
 

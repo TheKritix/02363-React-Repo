@@ -5,10 +5,11 @@ import './Comment.css';
 
 const Comment = ({
     comment,
-    deleteComment
+    deleteComment,
+    //replies,
 }) => {
     return (
-        <div className="comment" key={comment.id}>
+        <div className="comment" key={comment.CommentId}>
             <div className="comment-image-container">
                 <img src={profileImg}/>
             </div>
@@ -17,7 +18,9 @@ const Comment = ({
                     <div className="comment-author">{comment.username}</div>
                     <div>{comment.createdAt}</div>
                     <div className="comment-text"> //-- {comment.body}</div>
-                    <button className="delete-button" onClick={() => deleteComment(comment.id)}>Delete</button>
+                    <button className="delete-button" onClick={() => deleteComment(comment.CommentId)}>Delete</button>
+                </div>
+                <div className="comment-reply">
                 </div>
             </div>
         </div>
