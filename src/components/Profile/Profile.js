@@ -4,6 +4,7 @@ import profileImg from "./profileIcon.png";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { Link } from "react-router-dom";
 
 class Profile extends Component {
   render() {
@@ -34,8 +35,12 @@ class Profile extends Component {
 
         <div className="container">
           <div className="buttons">
-            <button className="postBtn">Add new post</button>
-            <button className="editBtn">Edit profile</button>
+            <Link className="postBtn" to="/sell">
+              <text>Add new post</text>
+            </Link>
+            <button className="editBtn">
+              <text>Edit profile</text>
+            </button>
           </div>
 
           <br />

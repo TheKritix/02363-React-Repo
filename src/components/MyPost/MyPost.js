@@ -57,7 +57,7 @@ export const MyPost = () => {
                 <div className="card-item">
                   <div className="icon-div">
                     <IconButton
-                      className="editBtn"
+                      className="bookEditBtn"
                     >
                       <Edit></Edit>
                     </IconButton>
