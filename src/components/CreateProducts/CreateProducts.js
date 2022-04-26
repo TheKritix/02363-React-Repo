@@ -78,12 +78,13 @@ export const CreateProducts = () => {
     formData.append("cond", products.cond);
     formData.append("lang", products.lang);
     formData.append("topic", products.topic);
-    formData.append("user_id", products.userId);
+    formData.append("user_id", window.sessionStorage.getItem("userId"));
 
     console.log(productObject);
     console.log(fileImage);
     console.log(fileImage.name);
     console.log(formData);
+    console.log(products.userId);
 
     if (
       !(
