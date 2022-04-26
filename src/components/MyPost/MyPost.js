@@ -45,10 +45,10 @@ export const MyPost = () => {
                 <Grid item xs={5} md={3} key={index}>
                   <div className="card-item">
                     <div className="icon-div">
-                      <IconButton>
+                      <IconButton className="editBtn">
                         <Edit></Edit>
                       </IconButton>
-                      <IconButton>
+                      <IconButton className="deleteBtn">
                         <Delete></Delete>
                       </IconButton>
                     </div>
