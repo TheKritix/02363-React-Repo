@@ -8,7 +8,7 @@ export const ProfileMenuList = [
 },
 {
     name: 'Favorites',
-    url: '/favoritpage',
+    url: '/favoritepage',
     cname: 'profile-links'
 },
 {

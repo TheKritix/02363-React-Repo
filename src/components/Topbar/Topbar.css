@@ -61,7 +61,9 @@
   display: flex;
   color: black;
   text-decoration: none;
-  margin-right: 4rem;
+  
+
+  
 }
 
 .topbar-links:hover {

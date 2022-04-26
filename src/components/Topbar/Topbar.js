@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import React, { Component } from "react";
+import React, { Component, useEffect} from "react";
 import "./Topbar.css";
 import logo from "./logoStoodle.png";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -12,8 +12,18 @@ import { IconButton } from '@mui/material';
 
 
 class Topbar extends Component {
+
   render() {
-function LogoutBtn(props) {
+
+    const [login, setLogin] = useState("test");
+
+
+
+   
+
+
+
+    function LogoutBtn(props) {
   return <div> <Link to ="/homepage"></Link><AccountCircleIcon/>Logout</div>
 }
 
@@ -69,17 +79,16 @@ const iconButton = {
         </div>
         <div className="options">
           <div className="topbar-menu">
-            <IconButton size = "small" style = {{width:40}} className="topbar-links" onClick="">
+            <IconButton size = "small" style = {{width:140}} className="topbar-links" onClick="">
               {" "}
               <NotificationsNoneIcon className="icon"></NotificationsNoneIcon>
               <text>Notifications</text>
             </IconButton>
-            <IconButton size = "small" style={{width:40}} className="topbar-links" onClick="">
-              {" "}
+            <IconButton size = "small" style={{width:80}} className="topbar-links" component = {Link} to = '/favoritpage' >
               <Favorite id="favorit" className="icon" ></Favorite> Favorites
             </IconButton>
-            <IconButton size = "small" style={{width:40}} className="topbar-links" onClick="">
-              <AccountCircleIcon className="icon"></AccountCircleIcon>Login
+            <IconButton size = "small" style={{width:80}} className="topbar-links" component = {Link} to ='/loginpage' >
+              <AccountCircleIcon className="icon"></AccountCircleIcon>{login}
             </IconButton>
             
           </div>
@@ -91,5 +100,5 @@ const iconButton = {
 
 export default Topbar;
 
-/*<IconButton Size="small" style={{width:40}}> <AccountCircleIcon className="icon" onclick="">
+/*<IconButton Size="small" style={{width:40}}> <AccountCircleIcon className="icon" onclick={logout}>
               </AccountCircleIcon>logout</IconButton>*/ 
