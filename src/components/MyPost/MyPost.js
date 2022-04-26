@@ -14,7 +14,7 @@ export const MyPost = () => {
     const formData = new FormData();
     formData.append("book_id", item.bookId);
     console.log(item)
-    fetch("http://localhost:3001/api/books", {
+    fetch("https://stoodle.bhsi.xyz/api/books", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
