@@ -22,7 +22,7 @@ import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
  }
 
 
-export default function Login({ setToken, setUserId }) {
+export default function Login({ setToken, setUserId}) {
     const [email,setEmail] = useState();
     const [password,setPassword] = useState();
 

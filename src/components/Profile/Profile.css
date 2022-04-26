@@ -5,19 +5,20 @@
     border-bottom: 1px solid;
     height: 250px;
     border-color: hsl(212, 92%, 61%, 25%);
-    align-items: middle;
-   
-    
-
-    
-      
+    align-items: center;
+     
 }
-.infoContainer{
-    
-    height: 250px;
 
-    
+.infoContainer{   
+    height: fit-content; 
 }
+
+.profilList{
+column-count: 2;
+column-gap: 80px;
+}
+
+
 
 .divIcon{
     padding-top: 20px; 
@@ -45,33 +46,23 @@
 }
 
 .buttons{
-    padding-top: 70px;
+    display: flex;
+
    
 }
 
-.postBtn{
-    width: 200px;
-    height: 40px;
-    font-size: 18px;
-    color: white;
-    background-color: rgb(45, 133, 204);
-    border-radius: 6px;
-    margin-right: 20px;
-    border: none;
-    
-    
+#EditProfile {
+    margin-left:30px;
 }
-
-.editBtn{
+.profilBtn{
+    background-color: rgb(255, 255, 255);
     width: 200px;
-    height: 40px;
+    padding: 10px;
     font-size: 18px;
-    color: white;
-    background-color: rgb(45, 133, 204);
-    border-radius: 6px;
-    border: none;
-    
-    
+    text-align: left;
+    border-radius: 40px;
+    margin-top: 25px;
+
 }
 
 .raiting{
