@@ -7,8 +7,10 @@ class Tradcon extends Component {
     return (
       <>
         <div className="tra">
-          <h3>1. General provisions</h3>
-          1.1. These General Trading Terms and Conditions form an essential and
+          <h3 className="header">1. General provisions</h3>
+
+          
+          <text className="listtag">1.1.</text> These General Trading Terms and Conditions form an essential and
           necessary part of every offer and<br></br>
           every agreement concluded with the Contractor. By acceptance of these
           terms and conditions, within<br></br>
@@ -17,33 +19,34 @@ class Tradcon extends Component {
           regulations of the Commercial Code, Section III, which are
           inconsistent with them.<br></br>
           <br></br>
-          1.2. The Contract is not bound by any trading terms and conditions
+          
+          <text className="listtag">1.2.</text> The Contract is not bound by any trading terms and conditions
           mentioned in the Buyer's written<br></br>
           documents. Signing an order and its sending back is deemed to be the
           order confirmation only, not<br></br>
           the acceptance of the Buyer's trading terms and conditions.<br></br>
           <br></br>
-          <h3>2. Modification of terms and conditions</h3>
-          2.1. These General Trading Terms and Conditions may only be modified
+          <h3 className="header">2. Modification of terms and conditions</h3>
+          <text className="listtag">2.1.</text> These General Trading Terms and Conditions may only be modified
           by written amendments, signed<br></br>
           by a person authorized by the Contractor.<br></br>
           <br></br>
-          <h3>3. Prices</h3>
-          3.1. For deliveries of goods from the Contractor's warehouse in the
+          <h3 className="header">3. Prices</h3>
+          <text className="listtag">3.1.</text> For deliveries of goods from the Contractor's warehouse in the
           Czech Republic, prices of goods shall<br></br>
           be quoted in Czech Crowns or in Euros, depending on the specific
           contract.<br></br>
-          3.2. Delivery shall be billed by the Contractor as of the day that
+          <text className="listtag">3.2.</text> Delivery shall be billed by the Contractor as of the day that
           goods are delivered.<br></br>
           <br></br>
-          4. Terms of payment<br></br>
-          4.1. All payments shall be payable within 14 days of the day that the
+          <h3 className="header">4. Terms of payment</h3>
+          <text className="listtag">4.1.</text> All payments shall be payable within 14 days of the day that the
           respective invoice is issued, unless<br></br>
           otherwise agreed. The day of payment is regarded to be the day the sum
           is credited to the<br></br>
           Contractor's account and is free for disposal, unless otherwise
           agreed.<br></br>
-          4.2. Unless otherwise agreed, all payments in currency of CZK shall be
+          <text className="listtag">4.2.</text> Unless otherwise agreed, all payments in currency of CZK shall be
           remitted into the Contractor's<br></br>
           bank account No.17626413/0300, at Československá obchodní banka,a.s.,
           and all payments in<br></br>
@@ -55,7 +58,7 @@ class Tradcon extends Component {
           acceptable for cash payments and if<br></br>
           the Contractor's employee proves the authorization to collect, issued
           by the Contractor.<br></br>
-          4.3. Should the payment term not be kept, the Buyer shall be in
+          <text className="listtag">4.3.</text> Should the payment term not be kept, the Buyer shall be in
           default and any other existing claims<br></br>
           against the Buyer as of that day shall become payable with immediate
           effect. The Contractor's claims<br></br>
@@ -70,7 +73,7 @@ class Tradcon extends Component {
           an advance payment. The Contractor's right to compensation for damages
           on account of failure to<br></br>
           fulfil shall be retained by the Contractor.<br></br>
-          4.4. If the Buyer does not pay the purchase price within the term of
+          <text className="listtag">4.4.</text> If the Buyer does not pay the purchase price within the term of
           payment, the parties agree a<br></br>
           contractual penalty, amounting to 0.05% of the due amount per every
           started day of the Buyer's<br></br>
@@ -85,16 +88,16 @@ class Tradcon extends Component {
           to the Buyer separately. In individual cases the Contractor may waive
           its claim for payment of the<br></br>
           contractual penalty.<br></br>
-          4.5. The Buyer shall not be entitled to refuse or to defer any payment
+          <text className="listtag">4.5.</text> The Buyer shall not be entitled to refuse or to defer any payment
           on account of a complaint about<br></br>
           defects. In the case of a complaint about visual defects, the payment
           shall be solved by mutual<br></br>
           agreement of both parties.<br></br>
-          4.6. The Contractor shall be entitled to suspend delivery of ordered
+          <text className="listtag">4.6.</text> The Contractor shall be entitled to suspend delivery of ordered
           products till the Buyer fulfils all its<br></br>
           obligations against the Contractor existing as of the agreed date of
           delivery.<br></br>
-          4.7. The prices of goods as quoted by the Contractor are based, among
+          <text className="listtag">4.7.</text> The prices of goods as quoted by the Contractor are based, among
           other things, on the prices of raw<br></br>
           materials, employees' wages, prices of energy, costs required for
           replacement of missing raw<br></br>
@@ -106,22 +109,22 @@ class Tradcon extends Component {
           goods executed on the basis<br></br>
           of an order confirmed by the Contractor before the prices of goods
           were changed.<br></br>
-          4.8. The Buyer undertakes to indicate the Contractor's bank account
+          <text className="listtag">4.8.</text> The Buyer undertakes to indicate the Contractor's bank account
           number, constant symbol, variable<br></br>
           symbol, remitted amount and due date in every payment order given to
           its bank.<br></br>
           <br></br>
-          5. Delivery<br></br>
-          5.1. Unless otherwise agreed, the Seller shall choose the carrier and
+          <h3 className="header">5. Delivery</h3><br></br>
+          <text className="listtag">5.1.</text> Unless otherwise agreed, the Seller shall choose the carrier and
           shall pay costs connected with the<br></br>
           transport of goods to the place of destination; goods shall always be
           delivered and shipped at the risk<br></br>
           of the Buyer (CPT, Incoterms 2000). The method of shipment shall be
           determined after agreement<br></br>
           with the Buyer.<br></br>
-          5.2. The transport shall only be insured if it is ordered by the Buyer
+          <text className="listtag">5.2.</text> The transport shall only be insured if it is ordered by the Buyer
           in writing, at the Buyer's expense.<br></br>
-          5.3. If an order for goods was not cancelled properly and the goods
+          <text className="listtag">5.3.</text> If an order for goods was not cancelled properly and the goods
           cannot be delivered to the Buyer for a<br></br>
           reason on the part of the Buyer, and the Contractor cannot use the
           goods for further sale of<br></br>
