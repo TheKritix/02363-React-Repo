@@ -1,8 +1,12 @@
-.pri{
-
-text-align: left;
-padding-left: 70px;
-padding-right: 70px;
-
+.hoved{
+text-align: center;
+padding-left: 200px;
+padding-right: 200px;
 
 }
+
+.pri {
+    text-align: justify;
+    margin: 0 auto;
+    width: 55em;
+  }

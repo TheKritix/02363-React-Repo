@@ -9,11 +9,9 @@ return (
 
 <div className="pri">
 
-Effective date: 2022-04-25
+<h3 className="hoved">1. Introduction</h3> 
 
-1. Introduction <br></br>
-
-Welcome to Stoodle. <br></br>
+<text className="listen">Welcome to Stoodle. <br></br>
 
 Stoodle (“us”, “we”, or “our”) operates Stoodle.bhsi.xyz (hereinafter referred to as “Service”). <br></br>
 
@@ -21,11 +19,11 @@ Our Privacy Policy governs your visit to Stoodle.bhsi.xyz, and explains how we c
 
 We use your data to provide and improve Service. By using Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.<br></br>
 
-Our Terms and Conditions (“Terms”) govern all use of our Service and together with the Privacy Policy constitutes your agreement with us (“agreement”). <br></br>
+Our Terms and Conditions (“Terms”) govern all use of our Service and together with the Privacy Policy constitutes your agreement with us (“agreement”).</text> <br></br><br></br>
 
-2. Definitions <br></br>
+<h3 className="hoved">2. Definitions</h3> 
 
-SERVICE means the Stoodle.bhsi.xyz website operated by Stoodle. <br></br>
+<text className="listen">SERVICE means the Stoodle.bhsi.xyz website operated by Stoodle. <br></br>
 
 PERSONAL DATA means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession). <br></br>
 
@@ -39,15 +37,15 @@ DATA PROCESSORS (OR SERVICE PROVIDERS) means any natural or legal person who pro
 
 DATA SUBJECT is any living individual who is the subject of Personal Data. <br></br>
 
-THE USER is the individual using our Service. The User corresponds to the Data Subject, who is the subject of Personal Data. <br></br>
+THE USER is the individual using our Service. The User corresponds to the Data Subject, who is the subject of Personal Data.</text> <br></br><br></br>
 
-3. Information Collection and Use <br></br>
+<h3 className="hoved">3. Information Collection and Use</h3> 
 
-We collect several different types of information for various purposes to provide and improve our Service to you. <br></br>
+<text className="listen">We collect several different types of information for various purposes to provide and improve our Service to you.</text> <br></br><br></br>
 
-4. Types of Data Collected <br></br>
+<h3 className="hoved">4. Types of Data Collected</h3> 
 
-Personal Data <br></br>
+<text className="listen">Personal Data <br></br>
 
 While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”). Personally identifiable information may include, but is not limited to: <br></br>
 
@@ -91,11 +89,11 @@ Examples of Cookies we use:<br></br>
 
 Other Data<br></br>
 
-While using our Service, we may also collect the following information: sex, age, date of birth, place of birth, passport details, citizenship, registration at place of residence and actual address, telephone number (work, mobile), details of documents on education, qualification, professional training, employment agreements, NDA agreements, information on bonuses and compensation, information on marital status, family members, social security (or other taxpayer identification) number, office location and other data.<br></br>
+While using our Service, we may also collect the following information: sex, age, date of birth, place of birth, passport details, citizenship, registration at place of residence and actual address, telephone number (work, mobile), details of documents on education, qualification, professional training, employment agreements, NDA agreements, information on bonuses and compensation, information on marital status, family members, social security (or other taxpayer identification) number, office location and other data.</text><br></br><br></br>
 
-5. Use of Data<br></br>
+<h3 className="hoved">5. Use of Data</h3>
 
-Stoodle uses the collected data for various purposes:<br></br>
+<text className="listen">Stoodle uses the collected data for various purposes:<br></br>
 
 0.1. to provide and maintain our Service;<br></br>
 
@@ -121,27 +119,27 @@ Stoodle uses the collected data for various purposes:<br></br>
 
 0.12. in any other way we may describe when you provide the information;<br></br>
 
-0.13. for any other purpose with your consent.<br></br>
+0.13. for any other purpose with your consent.</text><br></br><br></br>
 
-6. Retention of Data<br></br>
+<h3 className="hoved">6. Retention of Data</h3>
 
-We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.<br></br>
+<text className="listen">We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.<br></br>
 
-We will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.<br></br>
+We will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.</text><br></br><br></br>
 
-7. Transfer of Data<br></br>
+<h3 className="hoved">7. Transfer of Data</h3>
 
-Your information, including Personal Data, may be transferred to – and maintained on – computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.<br></br>
+<text className="listen">Your information, including Personal Data, may be transferred to – and maintained on – computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.<br></br>
 
 If you are located outside Denmark and choose to provide information to us, please note that we transfer the data, including Personal Data, to Denmark and process it there.<br></br>
 
 Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.<br></br>
 
-Stoodle will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.<br></br>
+Stoodle will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.</text><br></br><br></br>
 
-8. Disclosure of Data<br></br>
+<h3 className="hoved">8. Disclosure of Data</h3>
 
-We may disclose personal information that we collect, or you provide:<br></br>
+<text className="listen">We may disclose personal information that we collect, or you provide:<br></br>
 
 0.1. Disclosure for Law Enforcement.<br></br>
 
@@ -165,15 +163,15 @@ If we or our subsidiaries are involved in a merger, acquisition or asset sale, y
 
 0.3.6. with your consent in any other cases;<br></br>
 
-0.3.7. if we believe disclosure is necessary or appropriate to protect the rights, property, or safety of the Company, our customers, or others.<br></br>
+0.3.7. if we believe disclosure is necessary or appropriate to protect the rights, property, or safety of the Company, our customers, or others.</text><br></br><br></br>
 
-9. Security of Data<br></br>
+<h3 className="hoved">9. Security of Data</h3>
 
-The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.<br></br>
+<text className="listen">The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</text><br></br><br></br>
 
-10. Your Data Protection Rights Under General Data Protection Regulation (GDPR)<br></br>
+<h3 className="hoved">10. Your Data Protection Rights Under General Data Protection Regulation (GDPR)</h3>
 
-If you are a resident of the European Union (EU) and European Economic Area (EEA), you have certain data protection rights, covered by GDPR.<br></br>
+<text className="listen">If you are a resident of the European Union (EU) and European Economic Area (EEA), you have certain data protection rights, covered by GDPR.<br></br>
 
 We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.<br></br>
 
@@ -195,11 +193,11 @@ In certain circumstances, you have the following data protection rights:<br></br
 
 Please note that we may ask you to verify your identity before responding to such requests. Please note, we may not able to provide Service without some necessary data.<br></br>
 
-You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).<br></br>
+You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).</text><br></br><br></br>
 
-11. Your Data Protection Rights under the California Privacy Protection Act (CalOPPA)<br></br>
+<h3 className="hoved">11. Your Data Protection Rights under the California Privacy Protection Act (CalOPPA)</h3>
 
-CalOPPA is the first state law in the nation to require commercial websites and online services to post a privacy policy. The law’s reach stretches well beyond California to require a person or company in the United States (and conceivable the world) that operates websites collecting personally identifiable information from California consumers to post a conspicuous privacy policy on its website stating exactly the information being collected and those individuals with whom it is being shared, and to comply with this policy.<br></br>
+<text className="listen">CalOPPA is the first state law in the nation to require commercial websites and online services to post a privacy policy. The law’s reach stretches well beyond California to require a person or company in the United States (and conceivable the world) that operates websites collecting personally identifiable information from California consumers to post a conspicuous privacy policy on its website stating exactly the information being collected and those individuals with whom it is being shared, and to comply with this policy.<br></br>
 
 According to CalOPPA we agree to the following:<br></br>
 
@@ -215,11 +213,11 @@ Our Policy on “Do Not Track” Signals:<br></br>
 
 We honor Do Not Track signals and do not track, plant cookies, or use advertising when a Do Not Track browser mechanism is in place. Do Not Track is a preference you can set in your web browser to inform websites that you do not want to be tracked.<br></br>
 
-You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.<br></br>
+You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.</text><br></br><br></br>
 
-12. Your Data Protection Rights under the California Consumer Privacy Act (CCPA)<br></br>
+<h3 className="hoved">12. Your Data Protection Rights under the California Consumer Privacy Act (CCPA)</h3>
 
-If you are a California resident, you are entitled to learn what data we collect about you, ask to delete your data and not to sell (share) it. To exercise your data protection rights, you can make certain requests and ask us:<br></br>
+<text className="listen">If you are a California resident, you are entitled to learn what data we collect about you, ask to delete your data and not to sell (share) it. To exercise your data protection rights, you can make certain requests and ask us:<br></br>
 
 0.1. What personal information we have about you. If you make this request, we will return to you:<br></br>
 
@@ -249,54 +247,56 @@ Please note, if you ask us to delete or stop selling your data, it may impact yo
 
 To exercise your California data protection rights described above, please send your request(s) by email: Stoodlesupport@fantasi.dk.<br></br>
 
-Your data protection rights, described above, are covered by the CCPA, short for the California Consumer Privacy Act. To find out more, visit the official California Legislative Information website. The CCPA took effect on 01/01/2020.
+Your data protection rights, described above, are covered by the CCPA, short for the California Consumer Privacy Act. To find out more, visit the official California Legislative Information website. The CCPA took effect on 01/01/2020.</text><br></br><br></br>
 
-13. Service Providers
+<h3 className="hoved">13. Service Providers</h3>
 
-We may employ third party companies and individuals to facilitate our Service (“Service Providers”), provide Service on our behalf, perform Service-related services or assist us in analysing how our Service is used.<br></br>
+<text className="listen">We may employ third party companies and individuals to facilitate our Service (“Service Providers”), provide Service on our behalf, perform Service-related services or assist us in analysing how our Service is used.<br></br>
 
-These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.<br></br>
+These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</text><br></br><br></br>
 
-14. Analytics<br></br>
+<h3 className="hoved">14. Analytics</h3>
 
-We may use third-party Service Providers to monitor and analyze the use of our Service.<br></br>
+<text className="listen">We may use third-party Service Providers to monitor and analyze the use of our Service.</text><br></br><br></br>
 
-15. CI/CD tools<br></br>
+<h3 className="hoved">15. CI/CD tools</h3>
 
-We may use third-party Service Providers to automate the development process of our Service.<br></br>
+<text className="listen">We may use third-party Service Providers to automate the development process of our Service.</text><br></br><br></br>
 
-16. Behavioral Remarketing<br></br>
+<h3 className="hoved">16. Behavioral Remarketing</h3>
 
-We may use remarketing services to advertise on third party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimise and serve ads based on your past visits to our Service.<br></br>
+<text className="listen">We may use remarketing services to advertise on third party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimise and serve ads based on your past visits to our Service.</text><br></br><br></br>
 
-17. Links to Other Sites<br></br>
+<h3 className="hoved">17. Links to Other Sites</h3>
 
-Our Service may contain links to other sites that are not operated by us. If you click a third party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy of every site you visit.<br></br>
+<text className="listen">Our Service may contain links to other sites that are not operated by us. If you click a third party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy of every site you visit.<br></br>
 
 We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.<br></br>
 
-For example, the outlined privacy policy has been made using PolicyMaker.io, a free tool that helps create high-quality legal documents. PolicyMaker’s privacy policy generator is an easy-to-use tool for creating a privacy policy for blog, website, e-commerce store or mobile app.<br></br>
+For example, the outlined privacy policy has been made using PolicyMaker.io, a free tool that helps create high-quality legal documents. PolicyMaker’s privacy policy generator is an easy-to-use tool for creating a privacy policy for blog, website, e-commerce store or mobile app.</text><br></br><br></br>
 
-18. Children’s Privacy<br></br>
+<h3 className="hoved">18. Children’s Privacy</h3>
 
-Our Services are not intended for use by children under the age of 18 (“Child” or “Children”).<br></br>
+<text className="listen">Our Services are not intended for use by children under the age of 18 (“Child” or “Children”).<br></br>
 
-We do not knowingly collect personally identifiable information from Children under 18. If you become aware that a Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from Children without verification of parental consent, we take steps to remove that information from our servers.<br></br>
+We do not knowingly collect personally identifiable information from Children under 18. If you become aware that a Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from Children without verification of parental consent, we take steps to remove that information from our servers.</text><br></br><br></br>
 
-19. Changes to This Privacy Policy<br></br>
+<h3 className="hoved">19. Changes to This Privacy Policy</h3>
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.<br></br>
+<text className="listen">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.<br></br>
 
 We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update “effective date” at the top of this Privacy Policy.<br></br>
 
-You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.<br></br>
+You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</text><br></br><br></br>
 
-20. Contact Us<br></br>
+<h3 className="hoved">20. Contact Us</h3>
 
-If you have any questions about this Privacy Policy, please contact us by email: Stoodlesupport@fantasi.dk.<br></br>
+<text className="listen">If you have any questions about this Privacy Policy, please contact us by email: Stoodlesupport@fantasi.dk.<br></br>
 
-This Privacy Policy was created for Stoodle.bhsi.xyz by PolicyMaker.io on 2022-04-25.<br></br><br></br><br></br>
+This Privacy Policy was created for Stoodle.bhsi.xyz by PolicyMaker.io on 2022-04-25.<br></br>
+Effective date: 2022-04-25</text>
 
+<br></br><br></br><br></br>
 </div>
 </>
 )

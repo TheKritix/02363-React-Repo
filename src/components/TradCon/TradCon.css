@@ -1,5 +1,15 @@
 .tra{
-text-align: justify;
-margin-left: auto;
-margin-right: auto;
+    text-align: justify;
+    text-align-last: center;
+    margin: 0 auto;
+    width: 45em;
+  }
+
+.listtag{
+
+    font-weight: bold;
+    
+
 }
+
+    

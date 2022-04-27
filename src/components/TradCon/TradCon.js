@@ -7,9 +7,9 @@ class Tradcon extends Component {
     return (
       <>
         <div className="tra">
+         
           <h3 className="header">1. General provisions</h3>
 
-          
           <text className="listtag">1.1.</text> These General Trading Terms and Conditions form an essential and
           necessary part of every offer and<br></br>
           every agreement concluded with the Contractor. By acceptance of these
@@ -142,14 +142,14 @@ class Tradcon extends Component {
           agreement or payment of the<br></br>
           contractual penalty, the Contractor's right to compensation for
           damages shall not be affected.<br></br>
-          5.4. If goods are delivered on pallets, disposable pallets or euro
+          <text className="listtag">5.4.</text> If goods are delivered on pallets, disposable pallets or euro
           pallets shall be used, unless otherwise<br></br>
           agreed. Unless otherwise agreed, the cost of pallets shall be included
           in the price of delivered goods,<br></br>
           and the pallets shall not be returnable.<br></br>
           <br></br>
-          6.Delivery terms<br></br>
-          6.1. Goods may be collected from the warehouse within 7 – 10 working
+          <h3 className="header">6.Delivery terms</h3>
+          <text className="listtag">6.1.</text> Goods may be collected from the warehouse within 7 – 10 working
           days, or within 14 working days<br></br>
           of written or phone order confirmation if delivered goods are
           cardboard tubes determined for further<br></br>
@@ -157,8 +157,8 @@ class Tradcon extends Component {
           condition of EXW, he must always<br></br>
           ask in advance whether the required goods are in stock.<br></br>
           <br></br>
-          7. Joint provisions<br></br>
-          7.1. The Contractor shall not be responsible for a breach of any of
+          <h3 className="header">7. Joint provisions</h3>
+          <text className="listtag">7.1.</text> The Contractor shall not be responsible for a breach of any of
           its obligations under the contractual<br></br>
           relationship arisen in consequence of unforeseeable obstacles, among
           others in manufacture, during<br></br>
@@ -186,11 +186,11 @@ class Tradcon extends Component {
           Contractor undertakes to notify the Buyer of force majeure and its
           consequences without undue<br></br>
           delay.<br></br>
-          7.2. The Contractor shall not compensate the Buyer for damages if
+          <text className="listtag">7.2.</text> The Contractor shall not compensate the Buyer for damages if
           delivery terms are exceeded.<br></br>
           <br></br>
-          8. Defects of goods<br></br>
-          8.1. The Buyer shall check delivered goods carefully as soon as
+          <h3 className="header">8. Defects of goods</h3>
+          <text className="listtag">8.1.</text> The Buyer shall check delivered goods carefully as soon as
           possible, and any complaints referring to<br></br>
           delivered goods must be filed with the Contractor by e-mail or by
           registered mail within 3 days of<br></br>
@@ -207,18 +207,18 @@ class Tradcon extends Component {
           immediately in a suitable manner and documented in a record, made in
           the presence of the carrier<br></br>
           upon the takeover of goods from the carrier.<br></br>
-          8.2. Complaints about hidden defects of goods must be filed with the
+          <text className="listtag">8.2.</text> Complaints about hidden defects of goods must be filed with the
           Contractor by the e-mails and then<br></br>
           also by the registered mail immediately after their establishment.
           <br></br>
-          8.3. All guarantees and rights to compensation for damage shall be
+          <text className="listtag">8.3.</text> All guarantees and rights to compensation for damage shall be
           excluded if goods were stolen or used,<br></br>
           as well as if goods were changed without the knowledge and approval of
           the Contractor. The<br></br>
           Contractor's liability for defects shall be excluded if storage
           conditions as recommended by the<br></br>
           Contractor were not kept.<br></br>
-          8.4. The justification of a complaint filed in due time shall be
+          <text className="listtag">8.4.</text> The justification of a complaint filed in due time shall be
           established by the Contractor's Inspection<br></br>
           Department. The Buyer must submit the goods under complaint to the
           Seller. If the Contractor does<br></br>
@@ -230,64 +230,64 @@ class Tradcon extends Component {
           costs incurred in connection with<br></br>
           the examination shall be paid by the losing party against which the
           assessment result was issued.<br></br>
-          8.5. If a complaint is admitted as justified, the Contractor, after
+          <text className="listtag">8.5.</text> If a complaint is admitted as justified, the Contractor, after
           agreement with the Buyer, must either<br></br>
           provide replacement or credit the corresponding amount for the benefit
           of the Buyer.<br></br>
-          8.6. Any returned goods shall only be accepted after previous written
+          <text className="listtag">8.6.</text> Any returned goods shall only be accepted after previous written
           agreement and in the original<br></br>
           packing. Should any doubt about the price arise, the price agreed for
           delivery of the goods to the<br></br>
           Buyer shall apply.<br></br>
           <br></br>
-          9. Reservation of title<br></br>
-          9.1. The title to all goods delivered by the Contractor shall be
+          <h3 className="header">9. Reservation of title</h3>
+          <text className="listtag">9.1.</text> The title to all goods delivered by the Contractor shall be
           retained by the Contractor till the full<br></br>
           payment of the purchase price, including all fees, has been made. If
           the Contractor has several<br></br>
           overdue claims against the Buyer, the title to goods shall pass to the
           Buyer only after the payment of<br></br>
           all the claims, including their ancillary rights.<br></br>
-          9.2. The Buyer must use any delivered goods that are still owned by
+          <text className="listtag">9.2.</text> The Buyer must use any delivered goods that are still owned by
           the Contractor carefully and must<br></br>
           store them accordingly. The Buyer undertakes to follow all of the
           Contractor's instructions as given<br></br>
           to the Buyer by the Contractor in order to protect the goods or its
           title.<br></br>
-          9.3. Any pledge or other encumbrance of products owned by the
+          <text className="listtag">9.3.</text> Any pledge or other encumbrance of products owned by the
           Contractor is not acceptable. The<br></br>
           Contractor must be notified of any act of a third person against the
           Contractor's goods by reason of<br></br>
           intervention.<br></br>
-          9.4. By agreement of the reservation of the title, the time that the
+          <text className="listtag">9.4.</text> By agreement of the reservation of the title, the time that the
           liability for damage to goods passes to<br></br>
           the Buyer under law or under these General Trading Terms and
           Conditions shall not be affected.<br></br>
-          9.5. The Contractor shall be entitled to request immediate return of
+          <text className="listtag">9.5.</text> The Contractor shall be entitled to request immediate return of
           any goods delivered if the Buyer did<br></br>
           not pay the price of goods duly and on time, or if the Buyer actually
           suspended its payments.<br></br>4<br></br>
           <br></br>
-          9.6. Unless otherwise agreed between the parties, if the Contractor
+          <text className="listtag">9.6.</text> Unless otherwise agreed between the parties, if the Contractor
           takes any goods back, it does not<br></br>
           mean that the Contractor terminates the contract. If sold goods, still
           owned by the Contractor, are<br></br>
           taken back, the Contractor shall retain the right to claim for damages
           on account of failure to fulfil a<br></br>
           contractual obligation.<br></br>
-          9.7. Till the reservation of the title expires, the Buyer shall be
+          <text className="listtag">9.7.</text> Till the reservation of the title expires, the Buyer shall be
           considered as the steward of the goods sold<br></br>
           with the reservation of the title.<br></br>
-          9.8. The costs incurred on account of the enforcement of the
+          <text className="listtag">9.8.</text> The costs incurred on account of the enforcement of the
           Contractor's title shall be regarded<br></br>
           as the Buyer's costs.<br></br>
           <br></br>
-          10. Concluding provisions<br></br>
-          10.1. These trading terms and conditions were executed in Czech,
+          <h3 className="header">10. Concluding provisions</h3>
+          <text className="listtag">10.1.</text> These trading terms and conditions were executed in Czech.
           Slovak, English and German. Should<br></br>
           any differences arise among individual versions, the Czech language
           version shall prevail.<br></br>
-          10.2. The relations between the parties shall be governed by the Czech
+          <text className="listtag">10.2.</text> The relations between the parties shall be governed by the Czech
           legal order. Any legal relations not<br></br>
           regulated in the contract or these terms and conditions expressly
           shall be governed by Act 513/1991<br></br>
@@ -300,7 +300,7 @@ class Tradcon extends Component {
           semicolon shall be applied even if the Buyer does not have a
           registered office in the country which is<br></br>a party to the
           Convention.<br></br>
-          10.3. If any of the provisions of these trading terms and conditions
+          <text className="listtag">10.3.</text> If any of the provisions of these trading terms and conditions
           is or becomes ineffective, other<br></br>
           provisions of these terms and conditions shall remain in effect. The
           parties undertake to supersede<br></br>
@@ -311,11 +311,11 @@ class Tradcon extends Component {
           individual provisions of the General Trading Terms and Conditions
           shall not affect the validity of<br></br>
           other provisions.<br></br>
-          10.4. If the content of a concluded individual contract is
+          <text className="listtag">10.4.</text> If the content of a concluded individual contract is
           inconsistent with the provisions of these General<br></br>
           Trading Terms and Conditions, the individual contract shall prevail.
           <br></br>
-          10.5. All disputes in relation to the contract concluded between the
+          <text className="listtag">10.5.</text> All disputes in relation to the contract concluded between the
           parties or these General Trading Terms<br></br>
           and Conditions shall be settled definitely in proceedings before the
           Arbitration Court at the<br></br>
@@ -329,7 +329,7 @@ class Tradcon extends Component {
           subject-matter jurisdiction of<br></br>
           the court with respect to a specific dispute, is not to be excluded.
           <br></br>
-          10.6. The Buyer expresses unreserved consent to these General Trading
+          <text className="listtag">10.6.</text> The Buyer expresses unreserved consent to these General Trading
           Terms and Conditions and<br></br>
           confirms the fact by its signature. <br></br>
           <br></br>
