@@ -23,15 +23,11 @@ export const Topbar = () => {
 
         const checkUser = () => {
       if (sessionStorage.getItem('token')) { 
-        //handleLogin();
-      //{setLogin("Profile")}
       handleProfileName();
-        //setLogin([...login, {Type:'Profile'}])
       }
      else {
-       //{setLogin("Login")}
      handleLogin();
-      //setLogin([...login, {Type:'Login', URL:"./"}])
+     
         
       }
     }
@@ -46,12 +42,6 @@ export const Topbar = () => {
       console.log("logged out");
     };
 
-   /*const handleLogin = (e) => {
-     const updateName = e.target.value;
-    setLogin({Type:"Profile"})
-    
-    }*/
-
    const handleLogin = () => {
       setLogin({Type:'Login', URL: './'});
     }
@@ -60,11 +50,6 @@ export const Topbar = () => {
       console.log("horse shit")
       setLogin({Type:'Profile'})
     }
-
-
-    /*const handleLogin = () => {
-      setLogin(!login);
-    }*/
 
     
 
