@@ -36,6 +36,7 @@ export default function Login({ setToken, setUserId }) {
       console.log(token);
       setToken(token);
       setUserId(token);
+      
       () => <Topbar onClick={handleProfileName()}/>
     } 
 
