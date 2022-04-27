@@ -17,6 +17,8 @@ import Login from './components/Login/Login';
 import RegisterPage from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import About from './components/About-us/About-us';
+import ToS from './Pages/ToS'
+import TradeCondition from './Pages/TradeCondition'
 
 function App() {
   document.title = "Stoodle";
@@ -36,6 +38,8 @@ function App() {
           <Route path="loginpage" element={<LoginPage/>}/>
           <Route path="registerpage" element={<RegisterPage/>}/>
           <Route path="about-us" element={<About/>}/>
+          <Route path="tos" element={<ToS/>}/>
+          <Route path="tradecondition" element={<TradeCondition/>}/>
         </Routes>
         <Footer/>
     </BrowserRouter>

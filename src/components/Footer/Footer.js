@@ -21,7 +21,11 @@ class Footer extends Component {
                     <text className="tos-text">Terms of Service</text>
                   </Link>
                 </li>
-                <li className="list-item">PLACEHOLDER</li>
+                <li className="list-item">
+                <Link className="tradecon" to="/tradecondition">
+                    <text className="tradecon-text">Trade Condition</text>
+                  </Link>
+                </li>
                 <li className="list-item">PLACEHOLDER</li>
               </ul>
             </article>

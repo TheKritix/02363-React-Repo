@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import Menu from '../Profile/ProfilMenu/ProfileMenuList';
-import "./Privacy.css"
+import "./ToS.css"
 
-class Privacy extends Component {
+class ToS extends Component {
 render() {
 return (
 <>
@@ -303,4 +303,4 @@ This Privacy Policy was created for Stoodle.bhsi.xyz by PolicyMaker.io on 2022-0
 }
 }
 
-export default Privacy;
+export default ToS;

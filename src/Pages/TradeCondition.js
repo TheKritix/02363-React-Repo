@@ -3,10 +3,9 @@ import Menu from '../components/Profile/ProfilMenu/ProfileMenu'
 import Tradcon from "../components/TradCon/TradCon"
 
 function Tradcondition() {
+    window.scrollTo(0, 0);
     return(
         <>
-        <Profile></Profile>
-        <Menu></Menu>
         <Tradcon></Tradcon>
         </>
     )

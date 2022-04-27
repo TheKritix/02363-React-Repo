@@ -1,15 +1,14 @@
 import Profile from "../components/Profile/Profile";
 import Menu from '../components/Profile/ProfilMenu/ProfileMenu'
-import Privacy from "../components/Privacy/Privacy";
+import ToS from "../components/ToS/ToS";
 
-function ToS() {
+function ToSPage() {
+    window.scrollTo(0, 0);
     return(
         <>
-        <Profile></Profile>
-        <Menu></Menu>
-        <Privacy></Privacy>
+        <ToS />
         </>
     )
 }
 
-export default ToS;
+export default ToSPage;
