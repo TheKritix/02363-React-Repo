@@ -19,6 +19,7 @@ import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
          body: JSON.stringify(credentials)
      })
      .then(data => data.json())
+     
  }
 
 
@@ -34,7 +35,8 @@ export default function Login({ setToken, setUserId }) {
         });
       console.log(token);
       setToken(token);
-      setUserId(token)
+      setUserId(token);
+      () => <Topbar onClick={handleProfileName()}/>
     } 
 
     const [login, setLogin] = useState([

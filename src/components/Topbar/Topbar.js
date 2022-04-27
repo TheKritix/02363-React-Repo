@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import "./Topbar.css";
 import logo from "./logoStoodle.png";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -8,9 +8,66 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { Favorite } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import PropTypes from "prop-types";
 
-class Topbar extends Component {
-  render() {
+
+export const Topbar = () => {
+
+    const [login, setLogin] = useState([
+      {
+       Type: "login",
+       URL: "./loginpage",
+     }]
+    );
+
+        const checkUser = () => {
+      if (sessionStorage.getItem('token')) { 
+        //handleLogin();
+      //{setLogin("Profile")}
+      handleProfileName();
+        //setLogin([...login, {Type:'Profile'}])
+      }
+     else {
+       //{setLogin("Login")}
+     handleLogin();
+      //setLogin([...login, {Type:'Login', URL:"./"}])
+        
+      }
+    }
+    
+    useEffect(() => {
+      checkUser();
+    }, []);
+
+
+    const logout = (setToken) => {
+      setToken(sessionStorage.clear());
+      console.log("logged out");
+    };
+
+   /*const handleLogin = (e) => {
+     const updateName = e.target.value;
+    setLogin({Type:"Profile"})
+    
+    }*/
+
+   const handleLogin = () => {
+      setLogin({Type:'Login', URL: './'});
+    }
+ 
+    const handleProfileName = () => {
+      console.log("horse shit")
+      setLogin({Type:'Profile'})
+    }
+
+
+    /*const handleLogin = () => {
+      setLogin(!login);
+    }*/
+
+    
+
     return (
       <div className="Topbar">
         <div className="divLogo">
@@ -41,23 +98,55 @@ class Topbar extends Component {
         </div>
         <div className="options">
           <div className="topbar-menu">
-            <Link className="topbar-links" to="/mypostpage">
+            <IconButton
+              size="small"
+              style={{ width: 140 }}
+              className="topbar-links"
+              onClick=""
+            >
               {" "}
               <NotificationsNoneIcon className="icon"></NotificationsNoneIcon>
               <text>Notifications</text>
-            </Link>
-            <Link className="topbar-links" to="/favoritpage">
-              {" "}
+            </IconButton>
+            <IconButton
+              size="small"
+              style={{ width: 80 }}
+              className="topbar-links"
+              component={Link}
+              to="/favoritpage"
+            >
               <Favorite id="favorit" className="icon"></Favorite> Favorites
-            </Link>
-            <Link className="topbar-links" to="/loginpage">
-              <AccountCircleIcon className="icon"></AccountCircleIcon>Login
-            </Link>
+            </IconButton>
+            <IconButton
+              size="small"
+              style={{ width: 80 }}
+              className="topbar-links"
+              component={Link}
+              to="/loginpage"
+              onClick={() => checkUser()}
+            >
+              <AccountCircleIcon className="icon" ></AccountCircleIcon>
+              {login.Type}
+            </IconButton>
           </div>
         </div>
       </div>
     );
   }
-}
+
 
 export default Topbar;
+
+
+
+/*return (
+        <IconButton Size="small" style={{width: 40}}>
+          {" "}
+          <AccountCircleIcon
+            className="icon"
+            onclick={logout}
+          ></AccountCircleIcon>
+          Logout
+        </IconButton>
+    
+      )*/

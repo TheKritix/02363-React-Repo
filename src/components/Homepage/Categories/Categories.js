@@ -51,6 +51,8 @@ class Categoies extends Component {
         }, []);
       };
 
+
+
       const CANVAS_WIDTH = window.innerWidth;
       const SCROLL_SPEED = 0.3;
       

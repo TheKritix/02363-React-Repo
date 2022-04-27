@@ -4,7 +4,6 @@ import {ProfileMenuList} from './ProfileMenuList';
 
 class profileMenu extends Component {
 render() {
-
     return(
         <div className='profileMenuDiv'>
             <ul className='profil-menu'>
