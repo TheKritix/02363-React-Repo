@@ -93,17 +93,6 @@ export default function Login({ setToken, setUserId }) {
         {" "}
         Create an account
       </button>
-      <br />
-      <br />
-
-      <Button
-        className="googleBtn"
-        variant="outlined"
-        style={{ borderRadius: 40, height: 44 }}
-        startIcon={<GoogleIcon />}
-      >
-        Continue with Google
-      </Button>
     </div>
   );
 
