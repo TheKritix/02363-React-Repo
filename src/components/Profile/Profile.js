@@ -103,7 +103,9 @@ export const Profile = () => {
               <h5>{item.EMAIL}</h5>
               <h5>{item.Phonenumber}</h5>
               <h5>{item.Address}</h5>
-              <h5>{item.country}</h5>
+              <h5>{item.City},</h5>
+              <h5>{item.Postalcode}</h5>
+              <h5>{item.Country}</h5>
               <h5>{item.University}</h5>
             </ul>
           );
@@ -151,7 +153,7 @@ export const Profile = () => {
         />
         </div>
         <input
-          type="phonenumber"
+          type="number"
           name="Phonenumber"
           value={updatedInfo.Phonenumber}
           placeholder="Phonenumber"
@@ -189,6 +191,14 @@ export const Profile = () => {
           placeholder="Country"
         />
         <br/>
+        <input
+          type="university"
+          name="University"
+          onChange={handleChangeUserInfo}
+          value={updatedInfo.University}
+          placeholder="University"
+        />
+        <br/>
         <button>
           Confirm changes
         </button>
@@ -196,8 +206,6 @@ export const Profile = () => {
           }
           handleClose={togglePopup}></PopUp>}
         </div>
-
-
         <br/>
 
         <div className="raiting">
