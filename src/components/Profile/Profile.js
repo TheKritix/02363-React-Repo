@@ -6,6 +6,8 @@ import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import PopUp from './ProfilMenu/PopUp';
+
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
   console.log(userId);
@@ -33,6 +35,59 @@ export const Profile = () => {
     retriveUserInfo();
   }, []);
 
+  // function for opnening and closing popup window for editing userinformation
+  const[isOpen, setisOpen] = useState(false);
+  const togglePopup = () => {
+    setisOpen(!isOpen);
+  }
+
+
+  const [updatedInfo, setUpdatedInfo] = useState([
+    {
+      Firstname: "",
+      Lastname: "",
+      Phonenumber:"",
+      Address: "",
+      City: "",
+      Postalcode: "",
+      Country: "",
+    }
+  ]);
+
+  const sumbitUpdatedUserInfo = (e) => {
+    e.preventDefault();
+    const userObject = {
+      Firstname: updatedInfo.Firstname,
+      Lastname: updatedInfo.Lastname,
+      Phonenumber: updatedInfo.Phonenumber,
+      Address: updatedInfo.Address,
+      City: updatedInfo.City,
+      Postalcode: updatedInfo.Postalcode,
+      Country: updatedInfo.Country,
+      User_Id: userId
+    }
+    fetch(`http://localhost:3001/api/updateuser`, {
+      method: 'PUT',
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userObject),
+    })
+    .then (response => response.json())
+    .then(data => console.log(data))
+      console.log("User information updated")
+  }
+
+  const handleChangeUserInfo = (e) => {
+    setUpdatedInfo({
+      ...updatedInfo,
+      [e.target.name]: e.target.value,
+    });
+    console.log(updatedInfo);
+  };
+  
+  
+
   return (
     <div className="profileLayout">
       <div className="divIcon">
@@ -46,10 +101,10 @@ export const Profile = () => {
                 {item.Firstname} {item.Lastname}
               </h5>
               <h5>{item.EMAIL}</h5>
-              <h5>phonenumber</h5>
-              <h5>Adresse</h5>
-              <h5>country</h5>
-              <h5>University</h5>
+              <h5>{item.Phonenumber}</h5>
+              <h5>{item.Address}</h5>
+              <h5>{item.country}</h5>
+              <h5>{item.University}</h5>
             </ul>
           );
         })}
@@ -65,16 +120,85 @@ export const Profile = () => {
           >
             Add new post
           </Button>
+       
           <Button id="EditProfile"
             className="profilBtn"
             variant="outlined"
             style={{ borderRadius: 40, height: 44 }}
+            onClick={togglePopup} 
           >
             Edit profile
           </Button>
+          {isOpen && <PopUp
+          content = {
+          <form className="formdiv" onSubmit={sumbitUpdatedUserInfo}>
+            <h2 id="editHeader">Edit your profil information</h2>
+            <div className="group">
+            <input
+          type="firstname"
+          name="Firstname"
+          value={updatedInfo.Firstname}
+          placeholder="First name"
+          onChange={handleChangeUserInfo}
+        
+        ></input>
+        <input
+          type="lastname"
+          name="Lastname"
+          value={updatedInfo.Lastname}
+          placeholder="Last name"
+          onChange={handleChangeUserInfo}
+        />
+        </div>
+        <input
+          type="phonenumber"
+          name="Phonenumber"
+          value={updatedInfo.Phonenumber}
+          placeholder="Phonenumber"
+          onChange={handleChangeUserInfo}
+        />
+        <br/>
+        <input
+          type="address"
+          name="Address"
+          value={updatedInfo.Address}
+          onChange={handleChangeUserInfo}
+          placeholder="Address"
+        />
+        <div className="group">
+            <input
+          type="city"
+          name="City"
+          onChange={handleChangeUserInfo}
+          value={updatedInfo.City}
+          placeholder="City"
+        />
+          <input
+          type="postcode"
+          name="Postalcode"
+          onChange={handleChangeUserInfo}
+          value={updatedInfo.Postalcode}
+          placeholder="Postal code"
+        />
+      </div>
+        <input
+          type="country"
+          name="Country"
+          onChange={handleChangeUserInfo}
+          value={updatedInfo.Country}
+          placeholder="Country"
+        />
+        <br/>
+        <button>
+          Confirm changes
+        </button>
+          </form>
+          }
+          handleClose={togglePopup}></PopUp>}
         </div>
 
-        <br />
+
+        <br/>
 
         <div className="raiting">
           <StarOutlineIcon></StarOutlineIcon>

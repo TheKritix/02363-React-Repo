@@ -67,12 +67,58 @@ column-gap: 80px;
 
 .raiting{
     color: rgb(244, 116, 44, 100%);
-    padding-left: 270px;
+    padding-left: 270px;   
+}
 
+.group{
+    display: flex;
+}
+input[type="phonenumber"], input[type="university"], input[type="country"]{
+    padding: 15px;
+    width: 300px;
+    margin-top: 15px;
+ 
+}
+
+input[type="firstname"] {
+    width: 150px;
+    padding: 15px;
+    margin-right: 15px;
     
 }
 
+input [type="lastname"] {
+  padding: 15px;
+    width: 150px;
+}
 
 
+input[type="adress"]{
+    padding: 15px;
+    width: 500px;
+    margin-top: 15px;
+ 
+}
 
+input[type="postcode"]{
+    padding: 15px;
+    width: 150px;
+    margin-top: 15px;
+
+}
+
+input[type="city"]{
+    width: 400px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#editHeader {
+    text-decoration: underline;
+}
+
+#confirmBtn {
+    margin-top: 15px;
+}
 
