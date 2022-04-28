@@ -40,7 +40,7 @@ DATA PROCESSORS (OR SERVICE PROVIDERS) means any natural or legal person who pro
 DATA SUBJECT is any living individual who is the subject of Personal Data. 
 
 THE USER is the individual using our Service. The User corresponds to the Data Subject, who is the subject of Personal Data.</text> <br></br><br></br>
-
+<br></br>
 <h3 className="hoved">3. Information Collection and Use</h3> 
 
 <text className="listen">We collect several different types of information for various purposes to provide and improve our Service to you.</text> <br></br><br></br>
@@ -51,16 +51,17 @@ THE USER is the individual using our Service. The User corresponds to the Data S
 
 While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”). Personally identifiable information may include, but is not limited to: 
 
-0.1. Email address 
-
-0.2. First name and last name 
- 
-0.3. Phone number
-
-0.4. Address, Country, State, Province, ZIP/Postal code, City
-
-0.5. Cookies and Usage Data
-
+<ol>
+ <ul>0.1.  Email address</ul> 
+ <br></br>
+ <ul>0.2.  First name and last name</ul>
+ <br></br>
+ <ul>0.3.  Phone number</ul>
+ <br></br>
+ <ul>0.4.  Address, Country, State, Province, ZIP/Postal code, City</ul>
+ <br></br>
+ <ul>0.5.  Cookies and Usage Data</ul>
+</ol>
 We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link.<br></br>
 
 Usage Data <br></br>
@@ -81,13 +82,15 @@ You can instruct your browser to refuse all cookies or to indicate when a cookie
 
 Examples of Cookies we use:<br></br>
 
-0.1. Session Cookies: We use Session Cookies to operate our Service.<br></br>
-
-0.2. Preference Cookies: We use Preference Cookies to remember your preferences and various settings.<br></br>
-
-0.3. Security Cookies: We use Security Cookies for security purposes.<br></br>
-
-0.4. Advertising Cookies: Advertising Cookies are used to serve you with advertisements that may be relevant to you and your interests.<br></br>
+<ol>
+<ul>0.1.  Session Cookies: We use Session Cookies to operate our Service.</ul>
+<br></br>
+<ul>0.2.  Preference Cookies: We use Preference Cookies to remember your preferences and various settings.</ul>
+<br></br>
+<ul>0.3.  Security Cookies: We use Security Cookies for security purposes.</ul>
+<br></br>
+<ul>0.4.  Advertising Cookies: Advertising Cookies are used to serve you with advertisements that may be relevant to you and your interests.</ul>
+</ol>
 
 Other Data<br></br>
 
@@ -95,33 +98,35 @@ While using our Service, we may also collect the following information: sex, age
 
 <h3 className="hoved">5. Use of Data</h3>
 
-<text className="listen">Stoodle uses the collected data for various purposes:<br></br>
+<text className="listen">Stoodle uses the collected data for various purposes:</text><br></br>
 
-0.1. to provide and maintain our Service;<br></br>
-
-0.2. to notify you about changes to our Service;<br></br>
-
-0.3. to allow you to participate in interactive features of our Service when you choose to do so;<br></br>
-
-0.4. to provide customer support;<br></br>
-
-0.5. to gather analysis or valuable information so that we can improve our Service;<br></br>
-
-0.6. to monitor the usage of our Service;<br></br>
-
-0.7. to detect, prevent and address technical issues;<br></br>
-
-0.8. to fulfil any other purpose for which you provide it;<br></br>
-
-0.9. to carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection;<br></br>
-
-0.10. to provide you with notices about your account and/or subscription, including expiration and renewal notices, email-instructions, etc.;<br></br>
-
-0.11. to provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information;<br></br>
-
-0.12. in any other way we may describe when you provide the information;<br></br>
-
-0.13. for any other purpose with your consent.</text><br></br><br></br>
+<ol>
+ <ul>0.1.  to provide and maintain our Service;</ul>
+ <br></br>
+ <ul>0.2.  to notify you about changes to our Service;</ul>
+ <br></br>
+ <ul>0.3.  to allow you to participate in interactive features of our Service when you choose to do so;</ul>
+ <br></br>
+ <ul>0.4.  to provide customer support;</ul>
+ <br></br>
+ <ul>0.5.  to gather analysis or valuable information so that we can improve our Service;</ul>
+ <br></br>
+ <ul>0.6.  to monitor the usage of our Service;</ul>
+ <br></br>
+ <ul>0.7.  to detect, prevent and address technical issues;</ul>
+ <br></br>
+ <ul>0.8.  to fulfil any other purpose for which you provide it;</ul>
+ <br></br>
+ <ul>0.9.  to carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection;</ul>
+ <br></br>
+ <ul>0.10.  to provide you with notices about your account and/or subscription, including expiration and renewal notices, email-instructions, etc.;</ul>
+ <br></br>
+ <ul>0.11.  to provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information;</ul>
+ <br></br>
+ <ul>0.12.  in any other way we may describe when you provide the information;</ul>
+ <br></br>
+ <ul>0.13.  for any other purpose with your consent.</ul>
+</ol> <br></br>
 
 <h3 className="hoved">6. Retention of Data</h3>
 
@@ -141,31 +146,33 @@ Stoodle will take all the steps reasonably necessary to ensure that your data is
 
 <h3 className="hoved">8. Disclosure of Data</h3>
 
-<text className="listen">We may disclose personal information that we collect, or you provide:<br></br>
+<text className="listen">We may disclose personal information that we collect, or you provide:</text><br></br>
 
-0.1. Disclosure for Law Enforcement.<br></br>
+<ol>
+<ul>0.1.  Disclosure for Law Enforcement.
 
-Under certain circumstances, we may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities.<br></br>
+Under certain circumstances, we may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities.</ul>
+<br></br>
+<ul>0.2.  Business Transaction.
 
-0.2. Business Transaction.<br></br>
+If we or our subsidiaries are involved in a merger, acquisition or asset sale, your Personal Data may be transferred.</ul>
 
-If we or our subsidiaries are involved in a merger, acquisition or asset sale, your Personal Data may be transferred.<br></br>
-
-0.3. Other cases. We may disclose your information also:<br></br>
-
-0.3.1. to our subsidiaries and affiliates;<br></br>
-
-0.3.2. to contractors, service providers, and other third parties we use to support our business;<br></br>
-
-0.3.3. to fulfill the purpose for which you provide it;<br></br>
-
-0.3.4. for the purpose of including your company’s logo on our website;<br></br>
-
-0.3.5. for any other purpose disclosed by us when you provide the information;<br></br>
-
-0.3.6. with your consent in any other cases;<br></br>
-
-0.3.7. if we believe disclosure is necessary or appropriate to protect the rights, property, or safety of the Company, our customers, or others.</text><br></br><br></br>
+<ul>0.3.  Other cases. We may disclose your information also:</ul>
+<br></br>
+<ul>0.3.1.  to our subsidiaries and affiliates;</ul>
+<br></br>
+<ul>0.3.2.  to contractors, service providers, and other third parties we use to support our business;</ul>
+<br></br>
+<ul>0.3.3.  to fulfill the purpose for which you provide it;</ul>
+<br></br>
+<ul>0.3.4.  for the purpose of including your companys logo on our website;</ul>
+<br></br>
+<ul>0.3.5.  for any other purpose disclosed by us when you provide the information;</ul>
+<br></br>
+<ul>0.3.6.  with your consent in any other cases;</ul>
+<br></br>
+<ul>0.3.7.  if we believe disclosure is necessary or appropriate to protect the rights, property, or safety of the Company, our customers, or others.</ul>
+</ol>
 
 <h3 className="hoved">9. Security of Data</h3>
 
@@ -181,17 +188,19 @@ If you wish to be informed what Personal Data we hold about you and if you want 
 
 In certain circumstances, you have the following data protection rights:<br></br>
 
-0.1. the right to access, update or to delete the information we have on you;<br></br>
-
-0.2. the right of rectification. You have the right to have your information rectified if that information is inaccurate or incomplete;<br></br>
-
-0.3. the right to object. You have the right to object to our processing of your Personal Data;<br></br>
-
-0.4. the right of restriction. You have the right to request that we restrict the processing of your personal information;<br></br>
-
-0.5. the right to data portability. You have the right to be provided with a copy of your Personal Data in a structured, machine-readable and commonly used format;<br></br>
-
-0.6. the right to withdraw consent. You also have the right to withdraw your consent at any time where we rely on your consent to process your personal information;<br></br>
+<ol>
+<ul>0.1.  the right to access, update or to delete the information we have on you;</ul>
+<br></br>
+<ul>0.2.  the right of rectification. You have the right to have your information rectified if that information is inaccurate or incomplete;</ul>
+<br></br>
+<ul>0.3.  the right to object. You have the right to object to our processing of your Personal Data;</ul>
+<br></br>
+<ul>0.4.  the right of restriction. You have the right to request that we restrict the processing of your personal information;</ul>
+<br></br>
+<ul>0.5.  the right to data portability. You have the right to be provided with a copy of your Personal Data in a structured, machine-readable and commonly used format;</ul>
+<br></br>
+<ul>0.6.  the right to withdraw consent. You also have the right to withdraw your consent at any time where we rely on your consent to process your personal information;</ul>
+</ol>
 
 Please note that we may ask you to verify your identity before responding to such requests. Please note, we may not able to provide Service without some necessary data.<br></br>
 
@@ -203,13 +212,15 @@ You have the right to complain to a Data Protection Authority about our collecti
 
 According to CalOPPA we agree to the following:<br></br>
 
-0.1. users can visit our site anonymously;<br></br>
-
-0.2. our Privacy Policy link includes the word “Privacy”, and can easily be found on the home page of our website;<br></br>
-
-0.3. users will be notified of any privacy policy changes on our Privacy Policy Page;<br></br>
-
-0.4. users are able to change their personal information by emailing us at Stoodlesupport@fantasi.dk.<br></br>
+<ol>
+<ul>0.1.  users can visit our site anonymously;</ul>
+<br></br>
+<ul>0.2.  our Privacy Policy link includes the word “Privacy”, and can easily be found on the home page of our website;</ul>
+<br></br>
+<ul>0.3.  users will be notified of any privacy policy changes on our Privacy Policy Page;</ul>
+<br></br>
+<ul>0.4.  users are able to change their personal information by emailing us at Stoodlesupport@fantasi.dk.</ul>
+</ol>
 
 Our Policy on “Do Not Track” Signals:<br></br>
 
@@ -221,27 +232,33 @@ You can enable or disable Do Not Track by visiting the Preferences or Settings p
 
 <text className="listen">If you are a California resident, you are entitled to learn what data we collect about you, ask to delete your data and not to sell (share) it. To exercise your data protection rights, you can make certain requests and ask us:<br></br>
 
-0.1. What personal information we have about you. If you make this request, we will return to you:<br></br>
+<ol>
+<ul>0.1.  What personal information we have about you. If you make this request, we will return to you:</ul>
+<br></br>
+<ul>0.0.1.  The categories of personal information we have collected about you.</ul>
+<br></br>
+<ul>0.0.2.  The categories of sources from which we collect your personal information.</ul>
+<br></br>
+<ul>0.0.3.  The business or commercial purpose for collecting or selling your personal information.</ul>
+<br></br>
+<ul>0.0.4.  The categories of third parties with whom we share personal information.</ul>
+<br></br>
+<ul>0.0.5.  The specific pieces of personal information we have collected about you.</ul>
+<br></br>
+<ul>0.0.6.  A list of categories of personal information that we have sold, along with the category of any other company we sold it to. If we have not sold your personal information, we will inform you of that fact.</ul>
+<br></br>
+<ul>0.0.7.  A list of categories of personal information that we have disclosed for a business purpose, along with the category of any other company we shared it with.</ul>
+</ol>
 
-0.0.1. The categories of personal information we have collected about you.<br></br>
-
-0.0.2. The categories of sources from which we collect your personal information.<br></br>
-
-0.0.3. The business or commercial purpose for collecting or selling your personal information.<br></br>
-
-0.0.4. The categories of third parties with whom we share personal information.<br></br>
-
-0.0.5. The specific pieces of personal information we have collected about you.<br></br>
-
-0.0.6. A list of categories of personal information that we have sold, along with the category of any other company we sold it to. If we have not sold your personal information, we will inform you of that fact.<br></br>
-
-0.0.7. A list of categories of personal information that we have disclosed for a business purpose, along with the category of any other company we shared it with.<br></br>
 
 Please note, you are entitled to ask us to provide you with this information up to two times in a rolling twelve-month period. When you make this request, the information provided may be limited to the personal information we collected about you in the previous 12 months.<br></br>
 
-0.2. To delete your personal information. If you make this request, we will delete the personal information we hold about you as of the date of your request from our records and direct any service providers to do the same. In some cases, deletion may be accomplished through de-identification of the information. If you choose to delete your personal information, you may not be able to use certain functions that require your personal information to operate.<br></br>
+<ol>
+<ul>0.2.  To delete your personal information. If you make this request, we will delete the personal information we hold about you as of the date of your request from our records and direct any service providers to do the same. In some cases, deletion may be accomplished through de-identification of the information. If you choose to delete your personal information, you may not be able to use certain functions that require your personal information to operate.</ul>
+<br></br>
 
-0.3. To stop selling your personal information. We don’t sell or rent your personal information to any third parties for any purpose. We do not sell your personal information for monetary consideration. However, under some circumstances, a transfer of personal information to a third party, or within our family of companies, without monetary consideration may be considered a “sale” under California law. You are the only owner of your Personal Data and can request disclosure or deletion at any time.<br></br>
+<ul>0.3.  To stop selling your personal information. We don’t sell or rent your personal information to any third parties for any purpose. We do not sell your personal information for monetary consideration. However, under some circumstances, a transfer of personal information to a third party, or within our family of companies, without monetary consideration may be considered a “sale” under California law. You are the only owner of your Personal Data and can request disclosure or deletion at any time.</ul>
+</ol>
 
 If you submit a request to stop selling your personal information, we will stop making such transfers.<br></br>
 
