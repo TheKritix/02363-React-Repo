@@ -62,7 +62,8 @@ function ProductPage() {
                             <Card style={{
                                 width: 550,
                                 height: 660, 
-                                backgroundColor: "lightgray",
+                                backgroundColor: "white",
+                                border: "2px solid rgb(45, 133, 204)",
                                 margin: 10,
                                 position: 'sticky',
                                 }}>

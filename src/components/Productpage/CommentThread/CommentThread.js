@@ -20,7 +20,7 @@ const CommentThread = () => {
     
     const addComment = (text, parentId, Book_Id) => {
         createCommentApi(text, parentId, Book_Id).then((comment) => {
-            setComments([comment, ...comments]);
+            setFetchedComments([comment, ...comments]);
         }
         )
         console.log(comments);
@@ -32,7 +32,7 @@ const CommentThread = () => {
                 const newComments = comments.filter(
                 (comments) => comments.CommentId !== commentId
                 );
-                setComments(newComments);
+                setFetchedComments(newComments);
             });
         }
     };
