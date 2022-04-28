@@ -12,6 +12,8 @@ class Tradcon extends Component {
          
           <h3 className="header1">1. General provisions</h3>
 
+          <text className="listtag">1.0.</text> None of these conditions apply in actuality as this is a part of a university project.<br></br><br></br>
+
           <text className="listtag">1.1.</text> These General Trading Terms and Conditions form an essential and
           necessary part of every offer and
           every agreement concluded with the Contractor. By acceptance of these
