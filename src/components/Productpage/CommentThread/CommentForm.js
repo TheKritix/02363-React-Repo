@@ -15,6 +15,7 @@ const CommentForm = ({
 
     const onSubmit = (event) => {
         event.preventDefault();  
+        console.log(threadId);
         handleSubmit(text, null, threadId);
         setText("");
         console.log(text)

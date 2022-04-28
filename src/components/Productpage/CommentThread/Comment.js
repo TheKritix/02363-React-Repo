@@ -17,7 +17,7 @@ const Comment = ({
                 <div className="comment-content">
                     <div className="comment-author">{comment.username}</div>
                     <div>{comment.createdAt}</div>
-                    <div className="comment-text"> //-- {comment.body}</div>
+                    <div className="comment-text"> //-- {comment.CommentText}</div>
                     <button className="delete-button" onClick={() => deleteComment(comment.CommentId)}>Delete</button>
                 </div>
                 <div className="comment-reply">

@@ -37,17 +37,26 @@ const CommentThread = () => {
         }
     };
 
-    //const fetchReplies = (commentId) =>
-    //    comments.filter((comments) => 
-    //    comments.parentId === commentId);
-
-    //will later be updated to fetch from db API
+    const [fetchedComments, setFetchedComments] = useState([]);
+    const fetchComments = () => {
+    fetch('https://stoodle.bhsi.xyz/api/comments',{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+      .then ((response) => {
+        console.log(response)
+        return response.json();
+      })
+      .then((JSON) => {
+        console.log(JSON);
+        setFetchedComments(JSON)
+      });
+    }
 
     useEffect(() => {
-        getCommentItemApi().then((data) => {
-            setComments(data);
-            //retrieveComments();
-        });
+        fetchComments();
     }, []);
     
 
@@ -57,7 +66,7 @@ const CommentThread = () => {
             <div className="comment-form-title">Comment here</div>
             <CommentForm submitLabel="Write" handleSubmit={addComment}/>
             <div className="comments-container">
-                {comments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
+                {fetchedComments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
                     <Comment
                     key={comment.CommentId}
                     comment={comment}
