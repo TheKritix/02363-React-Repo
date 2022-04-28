@@ -6,7 +6,7 @@ import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import PopUp from './ProfilMenu/PopUp';
+import PopUp from "./ProfilMenu/PopUp";
 
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
@@ -36,22 +36,21 @@ export const Profile = () => {
   }, []);
 
   // function for opnening and closing popup window for editing userinformation
-  const[isOpen, setisOpen] = useState(false);
+  const [isOpen, setisOpen] = useState(false);
   const togglePopup = () => {
     setisOpen(!isOpen);
-  }
-
+  };
 
   const [updatedInfo, setUpdatedInfo] = useState([
     {
       Firstname: "",
       Lastname: "",
-      Phonenumber:"",
+      Phonenumber: "",
       Address: "",
       City: "",
       Postalcode: "",
       Country: "",
-    }
+    },
   ]);
 
   const sumbitUpdatedUserInfo = (e) => {
@@ -64,19 +63,19 @@ export const Profile = () => {
       City: updatedInfo.City,
       Postalcode: updatedInfo.Postalcode,
       Country: updatedInfo.Country,
-      User_Id: userId
-    }
+      User_Id: userId,
+    };
     fetch(`http://localhost:3001/api/updateuser`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(userObject),
     })
-    .then (response => response.json())
-    .then(data => console.log(data))
-      console.log("User information updated")
-  }
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+    console.log("User information updated");
+  };
 
   const handleChangeUserInfo = (e) => {
     setUpdatedInfo({
@@ -85,8 +84,6 @@ export const Profile = () => {
     });
     console.log(updatedInfo);
   };
-  
-  
 
   return (
     <div className="profileLayout">
@@ -96,18 +93,19 @@ export const Profile = () => {
       <div className="profileInfo">
         {userInfo.map((item, index) => {
           return (
+        
             <ul key={index} className="profilList">
-              <h5>
-                {item.Firstname} {item.Lastname}
-              </h5>
+              <h5>{item.Firstname}</h5>
+              <h5>{item.Lastname}</h5>
               <h5>{item.EMAIL}</h5>
               <h5>{item.Phonenumber}</h5>
-              <h5>{item.Address}</h5>
+              <h5 id="breakitem">{item.Address}</h5>
               <h5>{item.City},</h5>
               <h5>{item.Postalcode}</h5>
               <h5>{item.Country}</h5>
               <h5>{item.University}</h5>
             </ul>
+       
           );
         })}
       </div>
@@ -118,95 +116,97 @@ export const Profile = () => {
             className="profilBtn"
             variant="outlined"
             style={{ borderRadius: 40, height: 44 }}
-            component = {Link} to ='/sell' 
+            component={Link}
+            to="/sell"
           >
             Add new post
           </Button>
-       
-          <Button id="EditProfile"
+
+          <Button
+            id="EditProfile"
             className="profilBtn"
             variant="outlined"
             style={{ borderRadius: 40, height: 44 }}
-            onClick={togglePopup} 
+            onClick={togglePopup}
           >
             Edit profile
           </Button>
-          {isOpen && <PopUp
-          content = {
-          <form className="formdiv" onSubmit={sumbitUpdatedUserInfo}>
-            <h2 id="editHeader">Edit your profil information</h2>
-            <div className="group">
-            <input
-          type="firstname"
-          name="Firstname"
-          value={updatedInfo.Firstname}
-          placeholder="First name"
-          onChange={handleChangeUserInfo}
-        
-        ></input>
-        <input
-          type="lastname"
-          name="Lastname"
-          value={updatedInfo.Lastname}
-          placeholder="Last name"
-          onChange={handleChangeUserInfo}
-        />
+          {isOpen && (
+            <PopUp
+              content={
+                <form className="formdiv" onSubmit={sumbitUpdatedUserInfo}>
+                  <h2 id="editHeader">Edit your profil information</h2>
+                  <div className="group">
+                    <input
+                      type="firstname"
+                      name="Firstname"
+                      value={updatedInfo.Firstname}
+                      placeholder="First name"
+                      onChange={handleChangeUserInfo}
+                    ></input>
+                    <input
+                      type="lastname"
+                      name="Lastname"
+                      value={updatedInfo.Lastname}
+                      placeholder="Last name"
+                      onChange={handleChangeUserInfo}
+                    />
+                  </div>
+                  <input
+                    type="number"
+                    name="Phonenumber"
+                    value={updatedInfo.Phonenumber}
+                    placeholder="Phonenumber"
+                    onChange={handleChangeUserInfo}
+                  />
+                  <br />
+                  <input
+                    type="address"
+                    name="Address"
+                    value={updatedInfo.Address}
+                    onChange={handleChangeUserInfo}
+                    placeholder="Address"
+                  />
+                  <div className="group">
+                    <input
+                      type="city"
+                      name="City"
+                      onChange={handleChangeUserInfo}
+                      value={updatedInfo.City}
+                      placeholder="City"
+                    />
+                    <input
+                      type="postcode"
+                      name="Postalcode"
+                      onChange={handleChangeUserInfo}
+                      value={updatedInfo.Postalcode}
+                      placeholder="Postal code"
+                    />
+                  </div>
+                  <input
+                    type="country"
+                    name="Country"
+                    onChange={handleChangeUserInfo}
+                    value={updatedInfo.Country}
+                    placeholder="Country"
+                  />
+                  <br />
+                  <input
+                    type="university"
+                    name="University"
+                    onChange={handleChangeUserInfo}
+                    value={updatedInfo.University}
+                    placeholder="University"
+                  />
+                  <br />
+                  <button>Confirm changes</button>
+                </form>
+              }
+              handleClose={togglePopup}
+            ></PopUp>
+          )}
         </div>
-        <input
-          type="number"
-          name="Phonenumber"
-          value={updatedInfo.Phonenumber}
-          placeholder="Phonenumber"
-          onChange={handleChangeUserInfo}
-        />
-        <br/>
-        <input
-          type="address"
-          name="Address"
-          value={updatedInfo.Address}
-          onChange={handleChangeUserInfo}
-          placeholder="Address"
-        />
-        <div className="group">
-            <input
-          type="city"
-          name="City"
-          onChange={handleChangeUserInfo}
-          value={updatedInfo.City}
-          placeholder="City"
-        />
-          <input
-          type="postcode"
-          name="Postalcode"
-          onChange={handleChangeUserInfo}
-          value={updatedInfo.Postalcode}
-          placeholder="Postal code"
-        />
-      </div>
-        <input
-          type="country"
-          name="Country"
-          onChange={handleChangeUserInfo}
-          value={updatedInfo.Country}
-          placeholder="Country"
-        />
-        <br/>
-        <input
-          type="university"
-          name="University"
-          onChange={handleChangeUserInfo}
-          value={updatedInfo.University}
-          placeholder="University"
-        />
-        <br/>
-        <button>
-          Confirm changes
-        </button>
-          </form>
-          }
-          handleClose={togglePopup}></PopUp>}
-        </div>
-        <br/>
+        <br />
 
         <div className="raiting">
           <StarOutlineIcon></StarOutlineIcon>
