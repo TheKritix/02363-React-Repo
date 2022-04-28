@@ -9,4 +9,12 @@ padding-right: 200px;
     text-align: justify;
     margin: 0 auto;
     width: 50em;
+    width: 55em;
+  }
+
+  .ToS-title {
+    margin-top: 50px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    text-align: center;
   }

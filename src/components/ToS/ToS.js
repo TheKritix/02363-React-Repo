@@ -9,11 +9,13 @@ return (
 
 <div className="pri">
 
+<h1 className="ToS-title">Terms of Condition</h1>
+
 <h3 className="hoved">1. Introduction</h3> 
 
 <text className="listen">Welcome to Stoodle. 
 
-Stoodle (“us”, “we”, or “our”) operates Stoodle.bhsi.xyz (hereinafter referred to as “Service”). 
+Stoodle (“us”, “we”, or “our”) operates Stoodle.bhsi.xyz (hereinafter referred to as “Service”). * This is part of project, and therefore none of this applies in actuality *.
 
 Our Privacy Policy governs your visit to Stoodle.bhsi.xyz, and explains how we collect, safeguard and disclose information that results from your use of our Service. 
 
