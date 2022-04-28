@@ -1,8 +1,12 @@
 .tra{
     text-align: justify;
     text-align-last: center;
-    margin: 0 auto;
-    width: 45em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 45em;
+
   }
 
 .listtag{
