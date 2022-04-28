@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Menu from '../Profile/ProfilMenu/ProfileMenuList';
 import "./ToS.css"
 
 class ToS extends Component {
