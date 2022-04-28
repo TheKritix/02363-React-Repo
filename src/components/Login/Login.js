@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
 import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
+import { useNavigate } from 'react-router-dom'
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
  *https://www.freecodecamp.org/news/how-to-use-react-icons/
  *
@@ -27,6 +28,8 @@ export default function Login({ setToken, setUserId }) {
     const [email,setEmail] = useState();
     const [password,setPassword] = useState();
 
+    const navigate = useNavigate()
+
     const handleLoginToken = async e => {
         e.preventDefault();
         const token = await loginUser({
@@ -36,8 +39,8 @@ export default function Login({ setToken, setUserId }) {
       console.log(token);
       setToken(token);
       setUserId(token);
-      
-      () => <Topbar onClick={handleProfileName()}/>
+      navigate("/profilepage");
+      navigate(0);
     } 
 
     const [login, setLogin] = useState([
