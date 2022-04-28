@@ -1,79 +1,127 @@
-.profileLayout{
+.profileLayout {
     display: flex;
     list-style: none;
-    justify-content: space-around;
     font-family: Inter;
     border-bottom: 1px solid;
     height: 250px;
     border-color: hsl(212, 92%, 61%, 25%);
-    margin: 30px;
+    align-items: center;
     width: 100%;
-    
-      
-}
-.infoContainer{
+    padding-left: 30px;
+  }
+  
+  .profilList {
+    column-count: 2;
+    column-gap: 80px;
+    margin-top: 1em;
+    margin-top: 0ch;
+    line-height: 3px;
+    padding-left: 100px;
+  }
+  
+  #breakitem {
+    padding-top: 18px;
+  }
+  
+  .divIcon {
+    padding-top: 20px;
+  }
+  
+  .profiletext {
+    border: 1px solid;
+    border-color: hsl(212, 92%, 61%, 25%);
+  }
+  
+  .profileImg {
+  }
+  
+  .cameraIcon {
+    position: absolute;
+    right: 30%;
+    top: 37%;
+  }
+  
+  .profileInfo {
+  }
+  
+  .container {
+    margin-left: 400px;
+  }
+  
+  .buttons {
     display: flex;
-    margin-left: 20px;
-}
-
-.divIcon{
-    padding-top: 20px; 
-    margin-right: 20px;
-}
-
-.profileImg{
-    position: relative;
-
-}
-
-.cameraIcon{
-    position: relative;
-    margin-bottom: 10px;    
-}
-
-.profileInfo{
-    font-size: 20px;
-    padding-top: 70px;
-    margin-left: 25px;
-}
-
-.container{
-    margin-left: 550px;
-}
-
-.buttons{
-    padding-top: 70px;
-   
-}
-
-.postBtn{
+  }
+  
+  #EditProfile {
+    margin-left: 30px;
+  }
+  .profilBtn {
+    background-color: rgb(255, 255, 255);
     width: 200px;
-    height: 40px;
+    padding: 10px;
     font-size: 18px;
-    color: white;
-    background-color: rgb(45, 133, 204);
-    border-radius: 6px;
-    margin-right: 20px;
-    text-align: center;
-}
-
-.editBtn{
-    width: 200px;
-    height: 40px;
-    font-size: 18px;
-    color: white;
-    background-color: rgb(45, 133, 204);
-    border-radius: 6px;
-}
-
-.raiting{
+    text-align: left;
+    border-radius: 40px;
+    margin-top: 25px;
+  }
+  
+  .raiting {
     color: rgb(244, 116, 44, 100%);
     padding-left: 270px;
+  }
+  
+  .group {
+    display: flex;
+  }
+ 
+  input[type="university"],
+  input[type="country"] {
+    padding: 15px;
+    width: 300px;
+    margin-top: 15px;
+  }
 
-    
-}
+  input[type="phonenumber"] {
+    padding: 15px;
+    width: 200px;
+    margin-top: 15px;
 
-
-
-
-
+  }
+  
+  input[type="firstname"] {
+    width: 150px;
+    padding: 15px;
+    margin-right: 15px;
+  }
+  
+  input [type="lastname"] {
+    padding: 15px;
+    width: 150px;
+  }
+  
+  input[type="address"] {
+    padding: 15px;
+    width: 500px;
+    margin-top: 15px;
+  }
+  
+  input[type="postcode"] {
+    padding: 15px;
+    width: 150px;
+    margin-top: 15px;
+  }
+  
+  input[type="city"] {
+    width: 400px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+  
+  #editHeader {
+    text-decoration: underline;
+  }
+  
+  #confirmBtn {
+    margin-top: 15px;
+  }
