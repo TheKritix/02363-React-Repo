@@ -4,7 +4,7 @@ export const ItemImage = ({book}) => {
 
   return (
     <img 
-    crossorigin="anonymous"
+    crossOrigin="anonymous"
     src={book.Image}
     alt="bookimage"
     className="itemImage" 

@@ -10,36 +10,90 @@ import {
     deleteComment as deleteCommentApi,
  } from "./CommentItem.js"
 
-const CommentThread = () => {
+export const CommentThread = () => {
 
     const { Book_Id  } = useParams();
     const threadId = parseInt(Book_Id);
-    console.log(threadId);
 
-    const [comments, setComments] = useState([]);
-    
-    const addComment = (text, parentId, Book_Id) => {
-        createCommentApi(text, parentId, Book_Id).then((comment) => {
-            setFetchedComments([comment, ...comments]);
+    const [fetchedComments, setFetchedComments] = useState([]);
+    const [comment, setComment] = useState(
+        {
+            CommentText: "",
+            Book_Id: 0,
+            userId: 0,
+            username: "",
+            createdAt: "",
+
         }
-        )
-        console.log(comments);
-    }
+    );
+    
+    const handleChangeComment = (e) => {
+        setComment({
+            CommentText: e.target.value,
+            Book_Id: threadId,
+            userId: 0,
+            username: "John",
+            createdAt: Date().toString().slice(0, 10)
+        });
+    };
 
-    const deleteComment = (commentId) => {
-        if (window.confirm("ARE U SURE M8?")) {
-            deleteCommentApi().then(() => {
-                const newComments = comments.filter(
-                (comments) => comments.CommentId !== commentId
-                );
-                setFetchedComments(newComments);
+    const setDefaultComment = () => {
+        setComment(
+            {
+                CommentText: "",
+                Book_Id: 0,
+                userId: 0,
+                username: "",
+                createdAt: "",
+            }
+        )
+    };
+
+    const submitComment = (e) => {
+        e.preventDefault();
+        const commentObject = {
+            CommentText: comment.CommentText,
+            Book_Id: comment.Book_Id,
+            userId: comment.userId,
+            username: comment.username,
+            createdAt: comment.createdAt,
+        };
+
+        const formComment = new FormData();
+        formComment.append("CommentText", comment.CommentText);
+        formComment.append("Book_Id", comment.Book_Id);
+        formComment.append("userId", comment.userId);
+        formComment.append("username", comment.username);
+        formComment.append("createdAt", comment.createdAt);
+        
+        console.log(commentObject);
+        console.log(formComment);
+        console.log(comment);
+
+        if (
+            !(
+            commentObject.CommentText === ""
+            //commentObject.Book_Id === null
+            //commentObject.userId === "" &&
+            //commentObject.username === "" &&
+            //commentObject.createdAt === ""
+            )
+        ) {
+            fetch("HTTP://localhost:3001/api/comments", {
+            method: "POST",
+            action: "/",
+            body: comment,
+            }).then(() => {
+            setDefaultComment();
+            console.log();
             });
+        } else {
+            alert.show("Empty comment");
         }
     };
 
-    const [fetchedComments, setFetchedComments] = useState([]);
     const fetchComments = () => {
-    fetch('https://stoodle.bhsi.xyz/api/comments',{
+    fetch('HTTP://localhost:3001/api/comments',{
       headers : {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -64,20 +118,28 @@ const CommentThread = () => {
         <div className="commentList">
             <h3 className="commentList-title">Comments</h3>
             <div className="comment-form-title">Comment here</div>
-            <CommentForm submitLabel="Write" handleSubmit={addComment}/>
+            <form className="submitCommentForm" onSubmit={submitComment}>
+                <textarea
+                    type="text"
+                    value={comment.CommentText}
+                    onChange={handleChangeComment}
+                    >
+                </textarea>
+                <button className="comment-submit-button">Comment!</button>
+            </form>
             <div className="comments-container">
                 {fetchedComments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
                     <Comment
                     key={comment.CommentId}
                     comment={comment}
                     //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
-                    deleteComment={deleteComment}
+                    //deleteComment={deleteComment}
                     />
                 ))
             }
             </div>
         </div>
-    )
+    );
 };
 
 export default CommentThread;
