@@ -4,6 +4,7 @@ import { Grid, Container, IconButton } from "@mui/material";
 import { Delete, Edit } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 import "./MyPost.css";
+import PopUp from "../PopUp/PopUp";
 
 export const MyPost = () => {
   const userId = window.sessionStorage.getItem("userId");
@@ -13,7 +14,7 @@ export const MyPost = () => {
   const deleteBook = (item) => {
     const formData = new FormData();
     formData.append("book_id", item.bookId);
-    console.log(item)
+    console.log(item);
     fetch("https://stoodle.bhsi.xyz/api/books", {
       method: "DELETE",
       headers: {
@@ -22,9 +23,8 @@ export const MyPost = () => {
       },
       action: "/",
       body: JSON.stringify(item),
-    })
-    .then(() => retrieveBookData())
-  }
+    }).then(() => retrieveBookData());
+  };
 
   const retrieveBookData = () => {
     fetch(`https://stoodle.bhsi.xyz/api/userBooks/${userId}`, {
@@ -45,7 +45,39 @@ export const MyPost = () => {
     retrieveBookData();
   }, []);
 
+  const SubmitBookInfo = (e) => {
+    e.preventDefault();
+    const bookObject = {};
+  };
 
+  // Handles closing of popup window when changing book information
+  const [isOpen, setisOpen] = useState(false);
+  const togglePopup = () => {
+    setisOpen(!isOpen);
+  };
+
+  // Update book data
+  const [updatedBookInfo, setUpdatedBookInfo] = useState([
+    {
+      Title: "",
+      Puplisher: "",
+      Author: "",
+      Price: "",
+      Discription: "",
+      University: "",
+      Cond: "",
+      Lang: "",
+      Topic: "",
+    },
+  ]);
+
+  const handleBookUpdated = (e) => {
+    setUpdatedBookInfo({
+      ...updatedBookInfo,
+      [e.target.name]: e.target.value,
+    });
+    console.log(updatedBookInfo);
+  };
 
   return (
     <div>
@@ -56,13 +88,95 @@ export const MyPost = () => {
               <Grid item xs={5} md={3} key={index}>
                 <div className="card-item">
                   <div className="icon-div">
-                    <IconButton
-                      className="bookEditBtn"
-                    >
-                      <Edit></Edit>
+                    <IconButton className="bookEditBtn" onClick={togglePopup}>
+                      
+                      {isOpen && (
+                        <PopUp
+                          content={
+                            <form
+                              className=""
+                             >
+                              <h2 id="">Edit book</h2>
+    
+                                <input
+                                  type="title"
+                                  name="Title"
+                                  value={updatedBookInfo.Title}
+                                  placeholder="Title"
+                                  onChange={handleBookUpdated}
+                                ></input>
+                                <br/>
+                                <input
+                                type="price"
+                                name="Price"
+                                value={updatedBookInfo.Price}
+                                onChange={handleBookUpdated}
+                                placeholder="Price"
+                              />
+                                <input
+                                type="cond"
+                                name="Cond"
+                                value={updatedBookInfo.Cond}
+                                onChange={handleBookUpdated}
+                                placeholder="Condition"
+                              />
+                              <br/>
+                              <input
+                                type="lang"
+                                name="Lang"
+                                onChange={handleBookUpdated}
+                                value={updatedBookInfo.Lang}
+                                placeholder="Language"
+                              />
+                              <input
+                                type="topic"
+                                name="Topic"
+                                onChange={handleBookUpdated}
+                                value={updatedBookInfo.Topic}
+                                placeholder="Topic"
+                              />
+                              <br/>
+                                <input
+                                  type="publisher"
+                                  name="Publisher"
+                                  value={updatedBookInfo.Publisher}
+                                  placeholder="Publisher"
+                                  onChange={handleBookUpdated}
+                                />
+                             
+                              <input
+                                type="author"
+                                name="Author"
+                                value={updatedBookInfo.Author}
+                                placeholder="Author"
+                                onChange={handleBookUpdated}
+                              />
+                              <br />
+                            
+                              <br />
+                          
+                              <input
+                                type="discription"
+                                name="Discription"
+                                onChange={handleBookUpdated}
+                                value={updatedBookInfo.Discription}
+                                placeholder="Discription"
+                              />
+                              <br />
+       
+                              <button>Confirm changes</button>
+                            </form>
+                          }
+                        ></PopUp>
+                      )}
+                      <Edit ></Edit>
                     </IconButton>
-                    <IconButton className="deleteBtn"
-                    onClick={() => {deleteBook(item);}}>
+                    <IconButton
+                      className="deleteBtn"
+                      onClick={() => {
+                        deleteBook(item);
+                      }}
+                    >
                       <Delete></Delete>
                     </IconButton>
                   </div>
