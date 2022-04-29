@@ -44,7 +44,6 @@ export const Topbar = () => {
   };
 
   const handleProfileName = () => {
-    console.log("horse shit");
     setLogin({ Type: "Profile" });
     setLoginDest("/profilepage");
   };
