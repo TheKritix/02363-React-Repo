@@ -31,8 +31,10 @@
 
 .icon-div{
     position: relative;
+    z-index: -100;
 }
 
 .myPost-container {
     height: 500px;
+
 }
