@@ -6,13 +6,13 @@
     padding-right: 30px;
     padding-left: 30px;
     max-width: 45em;
-
   }
 
 .listtag{
 
     font-weight: bold;
     font-style: italic;
+    font-family: Inter;
 }
 
 .header1{
