@@ -18,7 +18,19 @@ div.SideMenu {
     position: relative;
     height: auto;
     width: 75rem;
+    min-width: 75rem;
+    max-width: 75rem;
     margin-top: 1.3rem;
+    margin-left: 74px;
+}
+
+.card-item {
+    max-height: 500px;
+    max-width: 300px;
+}
+
+.content {
+    line-height: 0;
 }
 
 .item-image {
@@ -34,9 +46,6 @@ div.SideMenu {
     display: flex;
 }
 
-
-
-
 #priceMin {
     position: absolute;
     width: 100px;
@@ -49,7 +58,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -103,7 +111,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -141,7 +148,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -178,7 +184,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -239,3 +244,20 @@ div.SideMenu {
     box-sizing: border-box;
     border-radius: 6px;
 }
+
+@media only screen and (max-width: 1150px) {
+
+    .SideMenu {
+        display: none;
+    }
+    
+    .gridBox {
+        position: relative;
+        height: auto;
+        width: 75rem;
+        min-width: 75rem;
+        max-width: 75rem;
+        margin-top: 1.3rem;
+    }
+
+  }

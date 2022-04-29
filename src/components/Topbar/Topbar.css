@@ -28,7 +28,7 @@
 /* SEARCH - START*/
 .search-div {
   margin: 2rem;
-  margin-left: 120px;
+  margin-left: 158px;
 }
 
 .search {
@@ -63,7 +63,7 @@
 }
 
 .topbar-links:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #favorit {
@@ -71,30 +71,32 @@
 }
 
 .icon {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 
 /* TOP BAR  -- END*/
 
 /*@media from https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1230px) {
   #logoImage {
     display: none;
   }
 
   .topbar-menu {
-    display: block; 
-    margin-top: 20px;
+    display: flex;
   }
 
   .search-div {
     margin: 2rem;
-    margin-left: 0px;
+    margin-left: 210px;
   }
-  
+
+  .search {
+    width: 20rem;
+  }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1139px) {
   .search-div {
     margin: 2rem;
     margin-left: 0px;
@@ -117,19 +119,18 @@
   }
 
   .Topbar {
-  background-color: white;
-  height: 175px;
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  align-items: center;
-  justify-content: center;
+    background-color: white;
+    height: 175px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    justify-content: center;
   }
 
   .topbar-menu {
-    display: grid; 
+    display: grid;
     margin-top: -30px;
-    margin-right: 60px;
-    
+    margin-right: 42px;
   }
 
   .search-div {
@@ -141,7 +142,7 @@
   .search {
     width: 20rem;
   }
-  
+
 }
 
 @media only screen and (max-width: 421px) {
@@ -167,19 +168,18 @@
   }
 
   .Topbar {
-  background-color: white;
-  height: 175px;
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  align-items: center;
-  justify-content: center;
+    background-color: white;
+    height: 175px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    justify-content: center;
   }
 
   .topbar-menu {
-    display: grid; 
+    display: grid;
     margin-top: -30px;
     margin-right: 42px;
-    
   }
 
   .search-div {
@@ -191,5 +191,4 @@
   .search {
     width: 20rem;
   }
-  
 }
