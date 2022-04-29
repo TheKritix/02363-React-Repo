@@ -2,12 +2,11 @@
     display: flex;
     list-style: none;
     font-family: Inter;
-    border-bottom: 1px solid;
     height: 250px;
-    border-color: hsl(212, 92%, 61%, 25%);
     align-items: center;
     width: 100%;
     padding-left: 30px;
+    
   }
   
   .profilList {
@@ -33,6 +32,8 @@
   }
   
   .profileImg {
+    
+    
   }
   
   .cameraIcon {
@@ -55,6 +56,8 @@
   #EditProfile {
     margin-left: 30px;
   }
+
+  
   .profilBtn {
     background-color: rgb(255, 255, 255);
     width: 200px;
@@ -62,57 +65,51 @@
     font-size: 18px;
     text-align: left;
     border-radius: 40px;
-    margin-top: 25px;
+    margin-top: 25px; 
   }
   
-  .raiting {
-    color: rgb(244, 116, 44, 100%);
-    padding-left: 270px;
-  }
-  
-  .group {
-    display: flex;
-  }
-
   .formdiv{
     z-index: 100;
   }
+
  
   input[type="university"],
   input[type="country"] {
     padding: 15px;
     width: 300px;
     margin-top: 15px;
+    height: 50px;
   }
 
   input[type="phonenumber"] {
     padding: 15px;
     width: 200px;
     margin-top: 15px;
+    height: 50px;
 
   }
   
-  input[type="firstname"] {
+  input[type="firstname"], input [type="lastname"] {
     width: 150px;
     padding: 15px;
     margin-right: 15px;
+    height: 50px;
   }
   
-  input [type="lastname"] {
-    padding: 15px;
-    width: 150px;
-  }
   
   input[type="address"] {
     padding: 15px;
     width: 500px;
     margin-top: 15px;
+    height: 50px;
+    margin-left: 12px;
   }
   
   input[type="postcode"] {
     padding: 15px;
     width: 150px;
     margin-top: 15px;
+    height: 50px;
   }
   
   input[type="city"] {
@@ -120,6 +117,7 @@
     padding: 15px;
     margin-top: 15px;
     margin-right: 15px;
+    height: 50px;
   }
   
   #editHeader {
@@ -128,4 +126,26 @@
   
   #confirmBtn {
     margin-top: 15px;
+  }
+
+  .logoutBtn{
+    color: white;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 40px;
+    margin-top: 25px;
+    text-align: center;
+    font-family: Inter;
+    background-color:rgb(244, 116,44, 100%);
+    border-color: rgb(244, 116,44, 100%);
+    float: right;
+
+  }
+
+  .logoutBtn:hover{
+    background-color: rgb(212, 102, 39);
+    transition: 0.7s;
+    
   }

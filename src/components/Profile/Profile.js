@@ -7,20 +7,15 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import PopUp from "../PopUp/PopUp";
-import { color } from "@mui/system";
+import { color, fontFamily } from "@mui/system";
 import { IconButton } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
-
-
-
 
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
   console.log(userId);
 
   const [userInfo, setUserInfo] = useState([]);
-  
 
   const retriveUserInfo = () => {
     fetch(`http://localhost:3001/api/userinfo/${userId}`, {
@@ -43,17 +38,14 @@ export const Profile = () => {
     retriveUserInfo();
   }, []);
 
-
   /*function for logout. removes user ID and token, and send the user back to homepage */
   const logout = () => {
-    if (sessionStorage.getItem("token")){
-      sessionStorage.clear()
-      window.location.href='/'
-      
+    if (sessionStorage.getItem("token")) {
+      sessionStorage.clear();
+      window.location.href = "/";
     }
     console.log("logged out");
   };
-
 
   // function for opnening and closing popup window for editing userinformation
   const [isOpen, setisOpen] = useState(false);
@@ -108,12 +100,11 @@ export const Profile = () => {
   return (
     <div className="profileLayout">
       <div className="divIcon">
-        <img src={profileImg} alt="profileImg" width={180} height={180}></img>
+        <img src={profileImg} className="profileImg" width={180} height={180}></img>
       </div>
       <div className="profileInfo">
         {userInfo.map((item, index) => {
           return (
-        
             <ul key={index} className="profilList">
               <h5>{item.Firstname}</h5>
               <h5>{item.Lastname}</h5>
@@ -125,7 +116,6 @@ export const Profile = () => {
               <h5>{item.Country}</h5>
               <h5>{item.University}</h5>
             </ul>
-       
           );
         })}
       </div>
@@ -135,7 +125,8 @@ export const Profile = () => {
           <Button
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc", textTransform: 'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             component={Link}
             to="/sell"
           >
@@ -146,7 +137,8 @@ export const Profile = () => {
             id="EditProfile"
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc" , textTransform:'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             onClick={togglePopup}
           >
             Edit profile
@@ -229,15 +221,11 @@ export const Profile = () => {
         <br />
 
         <div className="logout">
-        
-        <button Size="small" onClick={logout} href="/" >
-          Logout
-        </button>
-        
-        </div> 
+          <button className="logoutBtn" onClick={logout} href="/">
+            Logout
+          </button>
+        </div>
       </div>
-    
-      
     </div>
   );
 };
