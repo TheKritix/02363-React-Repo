@@ -1,14 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import CommentForm from "./CommentForm.js";
 import Comment from "./Comment.js";
+import CommentForm from "./CommentForm.js"
 import './Comment.css';
-import { 
-    CommentItem as getCommentItemApi,
-    createComment as createCommentApi,
-    deleteComment as deleteCommentApi,
- } from "./CommentItem.js"
 
 export const CommentThread = () => {
 
@@ -51,41 +46,20 @@ export const CommentThread = () => {
 
     const submitComment = (e) => {
         e.preventDefault();
-        const commentObject = {
-            CommentText: comment.CommentText,
-            Book_Id: comment.Book_Id,
-            userId: comment.userId,
-            username: comment.username,
-            createdAt: comment.createdAt,
-        };
-
-        const formComment = new FormData();
-        formComment.append("CommentText", comment.CommentText);
-        formComment.append("Book_Id", comment.Book_Id);
-        formComment.append("userId", comment.userId);
-        formComment.append("username", comment.username);
-        formComment.append("createdAt", comment.createdAt);
-        
-        console.log(commentObject);
-        console.log(formComment);
         console.log(comment);
 
         if (
-            !(
-            commentObject.CommentText === ""
-            //commentObject.Book_Id === null
-            //commentObject.userId === "" &&
-            //commentObject.username === "" &&
-            //commentObject.createdAt === ""
-            )
+            comment.CommentText !== ""
         ) {
             fetch("HTTP://localhost:3001/api/comments", {
             method: "POST",
             action: "/",
-            body: comment,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(comment)
             }).then(() => {
             setDefaultComment();
-            console.log();
             });
         } else {
             alert.show("Empty comment");
@@ -117,13 +91,13 @@ export const CommentThread = () => {
     return (
         <div className="commentList">
             <h3 className="commentList-title">Comments</h3>
-            <div className="comment-form-title">Comment here</div>
+            <div className="comment-form-title">Comment here</div>¨
             <form className="submitCommentForm" onSubmit={submitComment}>
                 <textarea
                     type="text"
                     value={comment.CommentText}
                     onChange={handleChangeComment}
-                    >
+                >
                 </textarea>
                 <button className="comment-submit-button">Comment!</button>
             </form>

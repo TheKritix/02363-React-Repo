@@ -12,13 +12,13 @@ const CommentForm = ({
     const [threadId, setThreadId] = useState(parseInt(Book_Id));
     const [text, setText] = useState("");
     
-    /*const submitComment = (event) => {
+    const submitComment = (event) => {
         event.preventDefault();  
         console.log(threadId);
         handleSubmit(text, null, threadId);
         setText("");
         console.log(text)
-    }*/
+    }
 
     return (
         <form onSubmit={handleSubmit}>
