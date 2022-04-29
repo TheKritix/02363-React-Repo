@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
 import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
  *https://www.freecodecamp.org/news/how-to-use-react-icons/
  *
@@ -89,13 +89,13 @@ export default function Login({ setToken, setUserId }) {
 
       <h4 id="lineText">or</h4>
 
-      <button
-        className="regBtn"
-        onClick={(event) => (window.location.href = "/registerpage")}
-      >
-        {" "}
-        Create an account
-      </button>
+     
+<Link to="/registerPage">
+        <button className="regBtn">
+          Create an account
+        </button>
+      </Link>
+
     </div>
   );
 

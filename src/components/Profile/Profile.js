@@ -5,15 +5,22 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PopUp from "../PopUp/PopUp";
 import { color } from "@mui/system";
+import { IconButton } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+
+
+
 
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
   console.log(userId);
 
   const [userInfo, setUserInfo] = useState([]);
+  
 
   const retriveUserInfo = () => {
     fetch(`http://localhost:3001/api/userinfo/${userId}`, {
@@ -35,6 +42,18 @@ export const Profile = () => {
   useEffect(() => {
     retriveUserInfo();
   }, []);
+
+
+  /*function for logout. removes user ID and token, and send the user back to homepage */
+  const logout = () => {
+    if (sessionStorage.getItem("token")){
+      sessionStorage.clear()
+      window.location.href='/'
+      
+    }
+    console.log("logged out");
+  };
+
 
   // function for opnening and closing popup window for editing userinformation
   const [isOpen, setisOpen] = useState(false);
@@ -209,15 +228,16 @@ export const Profile = () => {
         </div>
         <br />
 
-        <div className="raiting">
-          <StarOutlineIcon></StarOutlineIcon>
-          <StarOutlineIcon></StarOutlineIcon>
-          <StarOutlineIcon></StarOutlineIcon>
-          <StarOutlineIcon></StarOutlineIcon>
-          <StarOutlineIcon></StarOutlineIcon>
-          <PersonOutlineIcon></PersonOutlineIcon>
-        </div>
+        <div className="logout">
+        
+        <button Size="small" onClick={logout} href="/" >
+          Logout
+        </button>
+        
+        </div> 
       </div>
+    
+      
     </div>
   );
 };
