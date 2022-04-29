@@ -18,19 +18,21 @@
 }
 
 .bookEditBtn {
+    position: relative;
     width:40px;
-}
-.deleteBtn {
-    width:40px;
+    z-index: 1;
 }
 
-/* .content {
-    padding-left: 20px;
-    padding-right: 20px;
-} */
+
+.deleteBtn {
+    position: relative;
+    width:40px;
+    z-index: 1;
+}
 
 .icon-div{
-    position: absolute;
+    position: relative;
+    z-index: 1;
 }
 
 .myPost-container {

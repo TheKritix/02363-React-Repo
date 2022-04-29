@@ -6,7 +6,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-   
+    z-index: 5;   
   }
    
   .popup {
@@ -21,6 +21,7 @@
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    z-index: 5;   
   }
    
   .close{
@@ -37,4 +38,5 @@
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
+    z-index: 5;   
   }

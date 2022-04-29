@@ -89,7 +89,8 @@ export const MyPost = () => {
                 <div className="card-item">
                   <div className="icon-div">
                     <IconButton className="bookEditBtn" onClick={togglePopup}>
-                      
+                    <Edit/>
+                    </IconButton>
                       {isOpen && (
                         <PopUp
                           content={
@@ -169,8 +170,8 @@ export const MyPost = () => {
                           }
                         ></PopUp>
                       )}
-                      <Edit ></Edit>
-                    </IconButton>
+                      
+                    
                     <IconButton
                       className="deleteBtn"
                       onClick={() => {
