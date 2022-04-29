@@ -1,6 +1,6 @@
 .SideMenu {
     position: relative;
-    width: 300px;
+    min-width: 300px;
     height: 400px;
     margin: 20px;
     border: 1px solid #bebebe;
@@ -10,7 +10,6 @@
 
 div.SideMenu {
     position: -webkit-sticky;
-    /* Safari */
     position: sticky;
     top: 20px;
 }
