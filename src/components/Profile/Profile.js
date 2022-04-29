@@ -44,6 +44,7 @@ export const Profile = () => {
   }, []);
 
 
+  /*function for logout. removes user ID and token, and send the user back to homepage */
   const logout = () => {
     if (sessionStorage.getItem("token")){
       sessionStorage.clear()
@@ -229,7 +230,6 @@ export const Profile = () => {
 
         <div className="logout">
         
-        {/*<Link to={{pathname:"/"}} onClick={refreshPage}></Link>*/}
         <button Size="small" onClick={logout} href="/" >
           Logout
         </button>

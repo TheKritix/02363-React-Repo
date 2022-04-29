@@ -11,10 +11,11 @@ import MyPostPage from './Pages/MyPostPage';
 import Topbar from "./components/Topbar/Topbar";
 import Navbar from './components/Navbar/Navbar.js';
 import LoginPage from './Pages/LoginPage';
+import RegisterPage from './Pages/RegisterPage';
 import useToken from './components/Login/useToken';
 import useUserId from './components/Login/useUserId';
 import Login from './components/Login/Login';
-import RegisterPage from './components/Login/Login';
+
 import Footer from './components/Footer/Footer';
 import About from './components/About-us/About-us';
 import ToS from './Pages/ToS'

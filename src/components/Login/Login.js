@@ -5,70 +5,68 @@ import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
 import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from "react-router-dom";
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
  *https://www.freecodecamp.org/news/how-to-use-react-icons/
  *
  */
 
- async function loginUser(credentials) {
-     return fetch("https://stoodle.bhsi.xyz/api/login", {
-         method: 'POST',
-         headers: {
-             'content-type': 'application/json'
-         },
-         body: JSON.stringify(credentials)
-     })
-     .then(data => data.json())
-     
- }
-
+async function loginUser(credentials) {
+  return fetch("https://stoodle.bhsi.xyz/api/login", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  }).then((data) => data.json());
+}
 
 export default function Login({ setToken, setUserId }) {
-    const [email,setEmail] = useState();
-    const [password,setPassword] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    const handleLoginToken = async e => {
-        e.preventDefault();
-        const token = await loginUser({
-            email, 
-            password
-        });
-      console.log(token);
-      setToken(token);
-      setUserId(token);
-      navigate("/profilepage");
-      navigate(0);
-    } 
-
-    const [login, setLogin] = useState([
-      {
-        email: "",
-        password: "",
-      },
-    ]);
-
-
-    const handleLogin = (e) => {
-      setLogin({
-          ...login,
-          [e.target.name]:e.target.value,
-      });
+  const handleLoginToken = async (e) => {
+    e.preventDefault();
+    const token = await loginUser({
+      email,
+      password,
+    });
+    console.log(token);
+    setToken(token);
+    setUserId(token);
+    navigate("/profilepage");
+    navigate(0);
   };
+
+  const [login, setLogin] = useState([
+    {
+      email: "",
+      password: "",
+    },
+  ]);
+
+  const handleLogin = (e) => {
+    setLogin({
+      ...login,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
 
   return (
     <div className="inputLogin">
       <h1 id="headlineLogin">Sign in</h1>
-      <form  onSubmit={handleLoginToken}>
+      <form onSubmit={handleLoginToken}>
         <input
           type="email"
           name="email"
           placeholder="Email"
           required
-          value = {login.email}
-          onChange={ e => setEmail(e.target.value)}
+          value={login.email}
+          onChange={(e) => setEmail(e.target.value)}
         ></input>
         <br />
         <input
@@ -76,9 +74,8 @@ export default function Login({ setToken, setUserId }) {
           name="password"
           placeholder="Password"
           required
-          value = {login.password}
-          onChange={e => setPassword(e.target.value)}
-          
+          value={login.password}
+          onChange={(e) => setPassword(e.target.value)}
         ></input>
         <br />
         <input type="submit" value="Login"></input>
@@ -89,20 +86,15 @@ export default function Login({ setToken, setUserId }) {
 
       <h4 id="lineText">or</h4>
 
-      <button
-        className="regBtn">
-        {" "}
-        Create an account
-      </button>
-
-      
+      <Link to="/registerPage">
+        <button className="regBtn">
+          Create an account
+        </button>
+      </Link>
     </div>
-
-    
   );
-
-};
+}
 
 Login.propTypes = {
-    setToken: PropTypes.func.isRequired 
+  setToken: PropTypes.func.isRequired,
 };
