@@ -6,8 +6,9 @@
     height: 250px;
     border-color: hsl(212, 92%, 61%, 25%);
     align-items: center;
-    width: 100%;
-    padding-left: 30px;
+    width: 98%;
+    margin-right: auto;
+    margin-left: auto;
   }
   
   .profilList {
@@ -45,7 +46,8 @@
   }
   
   .container {
-    margin-left: 400px;
+    margin-left: auto;
+    
   }
   
   .buttons {
