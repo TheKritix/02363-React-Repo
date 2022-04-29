@@ -49,6 +49,7 @@ export const Topbar = () => {
     setLoginDest("/profilepage");
   };
 
+  
   return (
     <div className="Topbar">
       <div className="divLogo">
@@ -108,10 +109,13 @@ export const Topbar = () => {
           >
             <AccountCircleIcon className="icon"></AccountCircleIcon>
             {login.Type}
+        
           </IconButton>
+           
         </div>
       </div>
     </div>
+          
   );
 };
 
