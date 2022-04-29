@@ -54,8 +54,8 @@ h4#lineText {
   display: flex;
   flex-direction: row;
   font-weight: 300;
-  
 
+  
 }
 /*line design*/
 h4#lineText:before, h4#lineText:after{
