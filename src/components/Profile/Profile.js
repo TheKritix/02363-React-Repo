@@ -1,19 +1,9 @@
 import React, { Component, useState, useEffect } from "react";
 import "./Profile.css";
 import profileImg from "./profileIcon.png";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import PopUp from "../PopUp/PopUp";
-import { color } from "@mui/system";
-import { IconButton } from "@mui/material";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
-
-
-
 
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
