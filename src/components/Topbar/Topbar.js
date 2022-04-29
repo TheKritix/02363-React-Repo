@@ -9,6 +9,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { Favorite } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
+import PropTypes from "prop-types";
 
 
 export const Topbar = () => {
@@ -32,11 +33,6 @@ export const Topbar = () => {
     checkUser();
   }, []);
 
-  const logout = (setToken) => {
-    setToken(sessionStorage.clear());
-    console.log("logged out");
-  };
-
 
   const handleLogin = () => {
     setLogin({ Type: "Login" });
@@ -49,6 +45,7 @@ export const Topbar = () => {
     setLoginDest("/profilepage");
   };
 
+ 
   
   return (
     <div className="Topbar">
@@ -121,17 +118,5 @@ export const Topbar = () => {
 
 export default Topbar;
 
-/*return (
-        <IconButton Size="small" style={{width: 40}}>
-          {" "}
-          <AccountCircleIcon
-            className="icon"
-            onclick={logout}
-            component={Link}
-            to={"/homepage"}
-          ></AccountCircleIcon>
-          Logout
-        </IconButton>
-    
-      )*/
+
 
