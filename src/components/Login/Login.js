@@ -90,13 +90,15 @@ export default function Login({ setToken, setUserId }) {
       <h4 id="lineText">or</h4>
 
       <button
-        className="regBtn"
-        onClick={(event) => (window.location.href = "/registerpage")}
-      >
+        className="regBtn">
         {" "}
         Create an account
       </button>
+
+      
     </div>
+
+    
   );
 
 };

@@ -20,10 +20,7 @@ export const Profile = () => {
   console.log(userId);
 
   const [userInfo, setUserInfo] = useState([]);
-  /*const token = window.sessionStorage.getItem("token");
-  console.log(token);*/
   
-  const [logoutDest, setLogoutDest] = useState(["/"]);
 
   const retriveUserInfo = () => {
     fetch(`http://localhost:3001/api/userinfo/${userId}`, {
@@ -47,24 +44,14 @@ export const Profile = () => {
   }, []);
 
 
-  const navigate = useNavigate();
   const logout = () => {
     if (sessionStorage.getItem("token")){
       sessionStorage.clear()
       window.location.href='/'
-      //navigate(0);
-    
+      
     }
     console.log("logged out");
   };
-
-  function refreshPage(){
-    window.location.reload();
-
-  }
-
- 
-
 
 
   // function for opnening and closing popup window for editing userinformation
