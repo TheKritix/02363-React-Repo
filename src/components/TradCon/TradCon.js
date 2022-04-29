@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Menu from "../Profile/ProfilMenu/ProfileMenuList";
 import "./TradCon.css";
 
 class Tradcon extends Component {

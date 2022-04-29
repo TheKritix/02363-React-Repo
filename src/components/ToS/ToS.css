@@ -1,14 +1,18 @@
 .hoved{
 text-align: center;
-padding-left: 200px;
-padding-right: 200px;
+padding-left: 100px;
+padding-right: 100px;
 
 }
 
 .pri {
     text-align: justify;
     margin: 0 auto;
-    width: 55em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 45em;
   }
 
   .ToS-title {
@@ -17,3 +21,5 @@ padding-right: 200px;
     padding-bottom: 20px;
     text-align: center;
   }
+
+  
