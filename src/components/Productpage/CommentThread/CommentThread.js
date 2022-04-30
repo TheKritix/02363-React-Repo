@@ -8,22 +8,11 @@ export const CommentThread = () => {
 
     const { Book_Id  } = useParams();
     const threadId = parseInt(Book_Id);
-
     const userIdString = sessionStorage.getItem("userId");
     const userId = JSON.parse(userIdString);
-    console.log(userId);
-
     const [userLoggedIn, setUserLoggedIn] = useState(false);
-
-    const isUserLoggedIn = () => {
-        if (userId === null) {
-            setUserLoggedIn(false)
-        } else {
-            setUserLoggedIn(true)
-        }
-    } 
-
     const [fetchedComments, setFetchedComments] = useState([]);
+    const [currentUserInfo, setCurrentUserInfo] = useState([]);
     const [comment, setComment] = useState(
         {
             CommentText: "",
@@ -34,13 +23,21 @@ export const CommentThread = () => {
 
         }
     );
+
+    const isUserLoggedIn = () => {
+        if (userId === null) {
+            setUserLoggedIn(false)
+        } else {
+            setUserLoggedIn(true)
+        }
+    } 
     
     const handleComment = (e) => {
         setComment({
             CommentText: e.target.value,
             Book_Id: threadId,
             userId: userId,
-            username: "blank for now",
+            username: [currentUserInfo[0].Firstname, currentUserInfo[0].Lastname].join(' '),
             createdAt: Date().toString().slice(0, 10)
         });
     };
@@ -130,8 +127,26 @@ export const CommentThread = () => {
       });
     }
 
+    const fetchUsername = () => {
+        fetch(`http://localhost:3001/api/userinfo/${userId}`, {
+          headers: {
+            "content-type": "application/json",
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            console.log(response);
+            return response.json();
+          })
+          .then((JSON) => {
+            console.log(JSON);
+            setCurrentUserInfo(JSON);
+          });
+      };
+
     useEffect(() => {
         fetchComments();
+        fetchUsername();
         isUserLoggedIn();
     }, []);
     
