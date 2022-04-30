@@ -45,8 +45,6 @@ export const MyPost = () => {
     retrieveBookData();
   }, []);
 
-
-
   // Handles closing of popup window when changing book information
   const [isOpen, setisOpen] = useState(false);
   const togglePopup = () => {
@@ -59,12 +57,13 @@ export const MyPost = () => {
       Title: "",
       Puplisher: "",
       Author: "",
-      Price: "",
+      Price: 0,
       Discription: "",
       University: "",
       Cond: "",
       Lang: "",
       Topic: "",
+      bookId: 0,
     },
   ]);
 
@@ -73,12 +72,10 @@ export const MyPost = () => {
       ...updatedBookInfo,
       [e.target.name]: e.target.value,
     });
-    console.log(updatedBookInfo);
   };
 
-
-
-  const SubmitBookInfo = (item) => {
+  const SubmitBookInfo = (e) => {
+    e.preventDefault();
     const bookObject = {
       Title: updatedBookInfo.Title,
       Publisher: updatedBookInfo.Publisher,
@@ -89,18 +86,18 @@ export const MyPost = () => {
       Cond: updatedBookInfo.Cond,
       Lang: updatedBookInfo.Lang,
       Topic: updatedBookInfo.Topic,
-      Book_Id: item.bookId
+      book_id: updatedBookInfo.bookId,
     };
     fetch(`http://localhost:3001/api/updatebook`, {
       method: "PUT",
       headers: {
-        "content-type": "application/json"
+        "content-type": "application/json",
       },
-      body: JSON.stringify(bookObject)
+      body: JSON.stringify(bookObject),
     })
-    .then((response)=> response.json())
-    .then((data)=> console.log(data));
-    console.log("book information is updated")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+    console.log("book information is updated");
   };
 
   return (
@@ -113,90 +110,91 @@ export const MyPost = () => {
                 <div className="card-item">
                   <div className="icon-div">
                     <IconButton className="bookEditBtn" onClick={togglePopup}>
-                    <Edit/>
+                      <Edit />
                     </IconButton>
-                      {isOpen && (
-                        <PopUp
-                          content={
-                            <form
-                              onSubmit={SubmitBookInfo(item)}
-                              className=""
-                             >
-                              <h2 id="">Edit book</h2>
-    
-                                <input
-                                  type="title"
-                                  name="Title"
-                                  value={updatedBookInfo.Title}
-                                  placeholder="Title"
-                                  onChange={handleBookUpdated}
-                                ></input>
-                                <br/>
-                                <input
-                                type="price"
-                                name="Price"
-                                value={updatedBookInfo.Price}
-                                onChange={handleBookUpdated}
-                                placeholder="Price"
-                              />
-                                <input
-                                type="cond"
-                                name="Cond"
-                                value={updatedBookInfo.Cond}
-                                onChange={handleBookUpdated}
-                                placeholder="Condition"
-                              />
-                              <br/>
-                              <input
-                                type="lang"
-                                name="Lang"
-                                onChange={handleBookUpdated}
-                                value={updatedBookInfo.Lang}
-                                placeholder="Language"
-                              />
-                              <input
-                                type="topic"
-                                name="Topic"
-                                onChange={handleBookUpdated}
-                                value={updatedBookInfo.Topic}
-                                placeholder="Topic"
-                              />
-                              <br/>
-                                <input
-                                  type="publisher"
-                                  name="Publisher"
-                                  value={updatedBookInfo.Publisher}
-                                  placeholder="Publisher"
-                                  onChange={handleBookUpdated}
-                                />
-                             
-                              <input
-                                type="author"
-                                name="Author"
-                                value={updatedBookInfo.Author}
-                                placeholder="Author"
-                                onChange={handleBookUpdated}
-                              />
-                              <br />
-                            
-                              <br />
-                          
-                              <input
-                                type="discription"
-                                name="Discription"
-                                onChange={handleBookUpdated}
-                                value={updatedBookInfo.Discription}
-                                placeholder="Discription"
-                              />
-                              <br />
-       
-                              <button>Confirm changes</button>
-                            </form>
-                          }
-                        ></PopUp>
-                      )}
-                      
-                    
+                    {isOpen && (
+                      <PopUp
+                        content={
+                          <form
+                            onSubmit={SubmitBookInfo}
+                            className="bookFormDiv"
+                          >
+                            <h2 id="">Edit book</h2>
+                            <input
+                              type="title"
+                              name="Title"
+                              value={updatedBookInfo.Title}
+                              placeholder="Title"
+                              onChange={handleBookUpdated}
+                            />
+                            <br />
+                            <input
+                              type="price"
+                              name="Price"
+                              value={updatedBookInfo.Price}
+                              onChange={handleBookUpdated}
+                              placeholder="Price"
+                            />
+                            <input
+                              type="cond"
+                              name="Cond"
+                              value={updatedBookInfo.Cond}
+                              onChange={handleBookUpdated}
+                              placeholder="Condition"
+                            />
+                            <br />
+                            <input
+                              type="lang"
+                              name="Lang"
+                              onChange={handleBookUpdated}
+                              value={updatedBookInfo.Lang}
+                              placeholder="Language"
+                            />
+                            <input
+                              type="topic"
+                              name="Topic"
+                              onChange={handleBookUpdated}
+                              value={updatedBookInfo.Topic}
+                              placeholder="Topic"
+                            />
+                            <br />
+                            <input
+                              type="publisher"
+                              name="Publisher"
+                              value={updatedBookInfo.Publisher}
+                              placeholder="Publisher"
+                              onChange={handleBookUpdated}
+                            />
+
+                            <input
+                              type="author"
+                              name="Author"
+                              value={updatedBookInfo.Author}
+                              placeholder="Author"
+                              onChange={handleBookUpdated}
+                            />
+                            <br />
+
+                            <br />
+
+                            <input
+                              type="discription"
+                              name="Discription"
+                              onChange={handleBookUpdated}
+                              value={updatedBookInfo.Discription}
+                              placeholder="Discription"
+                            />
+                            <br />
+
+                            <button>
+                              Confirm changes
+                            </button>
+                          </form>
+                        }
+                        handleClose={togglePopup}
+                      ></PopUp>
+                    )}
+
                     <IconButton
                       className="deleteBtn"
                       onClick={() => {
