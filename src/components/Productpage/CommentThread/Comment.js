@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import profileImg from "../../Profile/profileIcon.png";
 import './Comment.css';
@@ -15,11 +14,11 @@ const Comment = ({
     comment,
     deleteComment,
     editComment,
-    CommentId,
+    userId,
 }) => {
 
     const [isEditingComment, setIsEditingComment] = useState(false);
-    const commentId = CommentId;
+    const canEdit = userId === comment.userId;
     const [editedComment, setEditedComment] = useState(
         {
             CommentId: 0,
@@ -57,6 +56,8 @@ const Comment = ({
         console.log(editedComment);
     }
 
+    
+
     return (
         <div className="comment" key={comment.CommentId}>
             <div className="comment-image-container">
@@ -69,7 +70,9 @@ const Comment = ({
                 </div>
                 <div className="comment-content">
                     <div className="comment-text">{comment.CommentText}</div>
-                    <div className="comment-actions">
+                    {canEdit
+                    ? (
+                        <div className="comment-actions">
                         {isEditingComment
                         ? (
                             <form>
@@ -90,7 +93,12 @@ const Comment = ({
                             onClick={() => deleteComment(comment)}>
                                 <DeleteIcon/>
                         </IconButton>
-                    </div>
+                        </div>
+                    ) 
+                    : (
+                        <div className="empty-div-comment"/>
+                    )
+                    }
                 </div>
             </div>
         </div>

@@ -9,6 +9,20 @@ export const CommentThread = () => {
     const { Book_Id  } = useParams();
     const threadId = parseInt(Book_Id);
 
+    const userIdString = sessionStorage.getItem("userId");
+    const userId = JSON.parse(userIdString);
+    console.log(userId);
+
+    const [userLoggedIn, setUserLoggedIn] = useState(false);
+
+    const isUserLoggedIn = () => {
+        if (userId === null) {
+            setUserLoggedIn(false)
+        } else {
+            setUserLoggedIn(true)
+        }
+    } 
+
     const [fetchedComments, setFetchedComments] = useState([]);
     const [comment, setComment] = useState(
         {
@@ -25,8 +39,8 @@ export const CommentThread = () => {
         setComment({
             CommentText: e.target.value,
             Book_Id: threadId,
-            userId: 0,
-            username: "John",
+            userId: userId,
+            username: "blank for now",
             createdAt: Date().toString().slice(0, 10)
         });
     };
@@ -118,13 +132,16 @@ export const CommentThread = () => {
 
     useEffect(() => {
         fetchComments();
+        isUserLoggedIn();
     }, []);
     
 
     return (
         <div className="commentList">
             <h3 className="commentList-title">Comments</h3>
-            <form className="submitCommentForm" onSubmit={submitComment}>
+            {userLoggedIn
+            ? (
+                <form className="submitCommentForm" onSubmit={submitComment}>
                 <textarea
                     type="text"
                     value={comment.CommentText}
@@ -133,6 +150,11 @@ export const CommentThread = () => {
                 </textarea>
                 <button className="comment-submit-button">Comment!</button>
             </form>
+            )
+            : (
+                <div className="empty-div-comment"/>
+            )
+            }
             <div className="comments-container">
                 {fetchedComments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
                     <Comment
@@ -142,6 +164,7 @@ export const CommentThread = () => {
                     deleteComment={deleteComment}
                     editComment={editComment}
                     CommentId={comment.CommentId}
+                    userId={userId}
                     />
                 ))
             }
