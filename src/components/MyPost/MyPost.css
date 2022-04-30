@@ -45,3 +45,19 @@ input[type="title"], input[type="university"], input[type="publisher"], input[ty
     margin-top: 15px;
 }
 
+input[type="price"], input[type="cond"], input[type="lang"], input[type="topic"] {
+    width: 200px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+input [type="price"] {
+    width: 200px;
+}
+
+input[type="discription"] {
+    width: 400px;
+    height: 200px;
+
+}

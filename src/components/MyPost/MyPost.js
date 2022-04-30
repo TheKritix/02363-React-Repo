@@ -45,10 +45,7 @@ export const MyPost = () => {
     retrieveBookData();
   }, []);
 
-  const SubmitBookInfo = (e) => {
-    e.preventDefault();
-    const bookObject = {};
-  };
+
 
   // Handles closing of popup window when changing book information
   const [isOpen, setisOpen] = useState(false);
@@ -79,6 +76,33 @@ export const MyPost = () => {
     console.log(updatedBookInfo);
   };
 
+
+
+  const SubmitBookInfo = (item) => {
+    const bookObject = {
+      Title: updatedBookInfo.Title,
+      Publisher: updatedBookInfo.Publisher,
+      Author: updatedBookInfo.Author,
+      Price: updatedBookInfo.Price,
+      Discription: updatedBookInfo.Discription,
+      University: updatedBookInfo.University,
+      Cond: updatedBookInfo.Cond,
+      Lang: updatedBookInfo.Lang,
+      Topic: updatedBookInfo.Topic,
+      Book_Id: item.bookId
+    };
+    fetch(`http://localhost:3001/api/updatebook`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(bookObject)
+    })
+    .then((response)=> response.json())
+    .then((data)=> console.log(data));
+    console.log("book information is updated")
+  };
+
   return (
     <div>
       <Container className="myPost-container">
@@ -95,6 +119,7 @@ export const MyPost = () => {
                         <PopUp
                           content={
                             <form
+                              onSubmit={SubmitBookInfo(item)}
                               className=""
                              >
                               <h2 id="">Edit book</h2>

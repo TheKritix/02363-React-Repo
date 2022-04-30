@@ -196,7 +196,7 @@ export const Profile = () => {
                       placeholder="City"
                     />
                     <input
-                      type="postcode"
+                      type="postalcode"
                       name="Postalcode"
                       onChange={handleChangeUserInfo}
                       value={updatedInfo.Postalcode}
