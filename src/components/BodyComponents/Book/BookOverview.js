@@ -89,7 +89,7 @@ export const BookOverview = () => {
             .filter(item => item.Price <= priceMax)
             .map((item, index) => {
               return (
-                <Grid item xs={5} md={3} key={index}>
+                <Grid item xs={6} md={3} key={index} spacing = {0}>
                   <Link to={`/productpage/${item.Book_Id}`}>
                     <div className="card-item">
                       <div className="img-div">
