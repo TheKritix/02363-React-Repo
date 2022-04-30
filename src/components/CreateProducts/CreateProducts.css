@@ -16,12 +16,6 @@
   border-style: solid;
 }
 
-option {
-  font-size: 15px;
-  background-color: #ffffff;
-}
-
-
 .requireMark {
   font-size: calc(2px + 2vmin);
   color: rgb(244, 116, 44, 100%);
@@ -148,9 +142,14 @@ select{
   font-size: 13px;
   font-family: Inter;
   border-color: rgb(210, 212, 213);
-  
-  
 }
+
+option {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
 
 label{
   display: inline-block;
