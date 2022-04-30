@@ -55,15 +55,14 @@ export const MyPost = () => {
   const [updatedBookInfo, setUpdatedBookInfo] = useState([
     {
       Title: "",
-      Puplisher: "",
+      Publisher: "",
       Author: "",
       Price: 0,
-      Discription: "",
+      Description: "",
       University: "",
       Cond: "",
       Lang: "",
       Topic: "",
-      bookId: 0,
     },
   ]);
 
@@ -74,20 +73,21 @@ export const MyPost = () => {
     });
   };
 
-  const SubmitBookInfo = (e) => {
-    e.preventDefault();
+  const SubmitBookInfo = (event, item) => {
+   event.preventDefault();
     const bookObject = {
       Title: updatedBookInfo.Title,
       Publisher: updatedBookInfo.Publisher,
       Author: updatedBookInfo.Author,
       Price: updatedBookInfo.Price,
-      Discription: updatedBookInfo.Discription,
+      Description: updatedBookInfo.Description,
       University: updatedBookInfo.University,
       Cond: updatedBookInfo.Cond,
       Lang: updatedBookInfo.Lang,
       Topic: updatedBookInfo.Topic,
-      book_id: updatedBookInfo.bookId,
+      book_id: item.Book_Id,
     };
+    console.log(bookObject);
     fetch(`http://localhost:3001/api/updatebook`, {
       method: "PUT",
       headers: {
@@ -115,10 +115,7 @@ export const MyPost = () => {
                     {isOpen && (
                       <PopUp
                         content={
-                          <form
-                            onSubmit={SubmitBookInfo}
-                            className="bookFormDiv"
-                          >
+                          <form onSubmit={(event) => SubmitBookInfo(event, item)} className="bookFormDiv">
                             <h2 id="">Edit book</h2>
                             <input
                               type="title"
@@ -174,15 +171,13 @@ export const MyPost = () => {
                               onChange={handleBookUpdated}
                             />
                             <br />
-
                             <br />
-
                             <input
-                              type="discription"
-                              name="Discription"
+                              type="description"
+                              name="Description"
                               onChange={handleBookUpdated}
-                              value={updatedBookInfo.Discription}
-                              placeholder="Discription"
+                              value={updatedBookInfo.Description}
+                              placeholder="Description"
                             />
                             <br />
 
