@@ -1,13 +1,11 @@
 describe('example to-do app', () => {
+    const email = 'cypress@test.dk'
+    const password = 'Cypress'
     beforeEach(() => {
-        // Cypress starts out with a blank slate for each test
-        // so we must tell it to visit our website with the `cy.visit()` command.
-        // Since we want to visit the same URL at the start of all our tests,
-        // we include it in our beforeEach function so that it runs before each test
-        cy.visit('https://stoodle.bhsi.xyz/')
+        cy.visit('http://localhost:3000/')
     })
 
-    it('create products can be opened and a new product can be uploaded', () => {
+    /*it('create products can be opened and a new product can be uploaded', () => {
         const p = 'pic.svg'
         cy.contains('Sell').click()
         cy.get('input[name=title]').type('CypressTestTitle')
@@ -21,7 +19,7 @@ describe('example to-do app', () => {
         cy.get('input[name=author]').type('CypressTestAuthor')
         cy.get('input[name=image]').attachFile(p);
         cy.contains('Submit').click()
-    })
+    })*/
 
     it('buy tab for books can be opened', () => {
         cy.contains('Buy').click()
@@ -35,13 +33,17 @@ describe('example to-do app', () => {
         cy.get('input[id=pMax]').type('200',{force: true})
         cy.contains('The Theory of Moral Sentiments').parent().click()
     })
-    it('access profile', () => {
-        cy.contains('Profil').click()
+    it('login then go to profile', () => {
+        cy.contains('Login').click()
+        cy.get('input[name=email]').type(email)
+        cy.get('input[name=password]').type(password)
+        cy.get('.inputLogin').get('form').submit()
+        cy.contains('Profile').click()
     })
 
-    it('access profile, go to favorites', () => {
-        cy.contains('Profil').click()
-        cy.contains('Favorites').click()
+    it('access profile, then logout', () => {
+        cy.contains('Profile').click()
+        cy.contains('Logout').click({position:'bottom'})
     })
     
 })
