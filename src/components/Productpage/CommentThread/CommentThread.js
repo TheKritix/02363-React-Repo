@@ -50,7 +50,7 @@ export const CommentThread = () => {
         if (
             comment.CommentText !== ""
         ) {
-            fetch("HTTP://localhost:3001/api/comments", {
+            fetch("HTTPS://stoodle.bhsi.xyz/api/comments", {
             method: "POST",
             action: "/",
             headers: {
@@ -69,7 +69,7 @@ export const CommentThread = () => {
 
     const deleteComment = (comment) => {
         if (window.confirm("Are you sure you want to delete this comment?")) {
-            fetch("HTTP://localhost:3001/api/comments", {
+            fetch("HTTPS://stoodle.bhsi.xyz/api/comments", {
                 method: "DELETE",
                 headers: {
                     'content-type': 'application/json',
@@ -85,7 +85,7 @@ export const CommentThread = () => {
 
     const editComment = (comment) => {
         if (window.confirm("Are you sure you want to edit this comment?")) {
-            fetch("HTTP://localhost:3001/api/comments", {
+            fetch("HTTPS://stoodle.bhsi.xyz/api/comments", {
                 method: "PUT",
                 headers: {
                     'content-type': 'application/json',
@@ -100,7 +100,7 @@ export const CommentThread = () => {
     };
 
     const fetchComments = () => {
-    fetch('HTTP://localhost:3001/api/comments',{
+    fetch("HTTPS://stoodle.bhsi.xyz/api/comments",{
       headers : {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
