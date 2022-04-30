@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import Comment from "./Comment.js";
-import CommentForm from "./CommentForm.js"
 import './Comment.css';
 
 export const CommentThread = () => {
@@ -22,7 +21,7 @@ export const CommentThread = () => {
         }
     );
     
-    const handleChangeComment = (e) => {
+    const handleComment = (e) => {
         setComment({
             CommentText: e.target.value,
             Book_Id: threadId,
@@ -69,20 +68,36 @@ export const CommentThread = () => {
     };
 
     const deleteComment = (comment) => {
-        //comment.preventDefault();
+        if (window.confirm("Are you sure you want to delete this comment?")) {
+            fetch("HTTP://localhost:3001/api/comments", {
+                method: "DELETE",
+                headers: {
+                    'content-type': 'application/json',
+                    Accept: "application/json",
+                },
+                action: "/",
+                body: JSON.stringify(comment)
 
-        fetch("HTTP://localhost:3001/api/comments", {
-            method: "DELETE",
-            headers: {
-                'content-type': 'application/json',
-                Accept: "application/json",
-            },
-            action: "/",
-            body: JSON.stringify(comment)
+            })
+            .then(() => fetchComments())
+        }   
+    };
 
-        })
-        .then(() => fetchComments())
-    }
+    const editComment = (comment) => {
+        if (window.confirm("Are you sure you want to edit this comment?")) {
+            fetch("HTTP://localhost:3001/api/comments", {
+                method: "PUT",
+                headers: {
+                    'content-type': 'application/json',
+                    Accept: "application/json",
+                },
+                action: "/",
+                body: JSON.stringify(comment)
+            })
+            .then(() => fetchComments())
+        }
+
+    };
 
     const fetchComments = () => {
     fetch('HTTP://localhost:3001/api/comments',{
@@ -109,12 +124,11 @@ export const CommentThread = () => {
     return (
         <div className="commentList">
             <h3 className="commentList-title">Comments</h3>
-            <div className="comment-form-title">Comment here</div>¨
             <form className="submitCommentForm" onSubmit={submitComment}>
                 <textarea
                     type="text"
                     value={comment.CommentText}
-                    onChange={handleChangeComment}
+                    onChange={handleComment}
                 >
                 </textarea>
                 <button className="comment-submit-button">Comment!</button>
@@ -126,6 +140,8 @@ export const CommentThread = () => {
                     comment={comment}
                     //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
                     deleteComment={deleteComment}
+                    editComment={editComment}
+                    CommentId={comment.CommentId}
                     />
                 ))
             }

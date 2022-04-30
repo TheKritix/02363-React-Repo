@@ -1,8 +1,10 @@
 .commentList {
+    margin-left: 50px;
     margin-top: 20px;
+    width: 100%; 
 }
 
-.comments-title {
+.commentList-title {
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -24,11 +26,17 @@
 .comment {
     display: flex;
     margin-bottom: 28px;
+    width: 55%;
+    border: 1px solid rgb(45, 133, 204);
+    border-radius: 20px;
+    
 }
 
 .comment-image-container {
+    margin-top: 5px;
     margin-right: 12px;
-    
+    margin-left: 5px;
+    top: 50%;
 }
 
 .comment-image-container img {
@@ -37,25 +45,54 @@
     height: 50px;
 }
 
-.comment-right {
-    width: 40%;
+.comment-box {
+    width: 100%;
+}
+
+.comment-userinfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .comment-content {
-    display: flex; 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .comment-author {
+    margin-left: 8px;
     margin-right: 8px;
-    font-size: 20px;
-    color: green;
+    color: rgb(45, 133, 204)
+}
+
+.comment-date {
+    margin-left: 8px;
+    margin-right: 15px;
+}
+
+.comment-text {
+    margin-left: 8px;
+    margin-top: 2px;
+    margin-right: 8px;
+}
+
+.comment-actions {
+    float: right;
+    
 }
 
 .delete-button {
     margin-right: 8px;
-    width: 60px;
-    float: right;
-    background-color: rgb(207, 45, 45);
-    font-size: 10px;
+    width: 50px;
+    color: rgb(207, 45, 45);
+}
+
+.edit-button {
+    margin-right: 8px;
+    width: 50px;
 }
 
