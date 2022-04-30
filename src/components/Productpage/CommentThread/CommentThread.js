@@ -60,23 +60,28 @@ export const CommentThread = () => {
             body: JSON.stringify(comment)
             }).then(() => {
             setDefaultComment();
+            //rerender list of comments from db with inserted comment
+            fetchComments();
             });
         } else {
             alert.show("Empty comment");
         }
     };
 
-    const deleteComment = (e) => {
-        e.preventDefault();
+    const deleteComment = (comment) => {
+        //comment.preventDefault();
 
         fetch("HTTP://localhost:3001/api/comments", {
             method: "DELETE",
-            action: "/",
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                Accept: "application/json",
             },
+            action: "/",
+            body: JSON.stringify(comment)
 
         })
+        .then(() => fetchComments())
     }
 
     const fetchComments = () => {
@@ -120,7 +125,7 @@ export const CommentThread = () => {
                     key={comment.CommentId}
                     comment={comment}
                     //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
-                    //deleteComment={deleteComment}
+                    deleteComment={deleteComment}
                     />
                 ))
             }
