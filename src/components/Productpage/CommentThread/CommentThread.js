@@ -66,6 +66,19 @@ export const CommentThread = () => {
         }
     };
 
+    const deleteComment = (e) => {
+        e.preventDefault();
+
+        fetch("HTTP://localhost:3001/api/comments", {
+            method: "DELETE",
+            action: "/",
+            headers: {
+                'content-type': 'application/json'
+            },
+
+        })
+    }
+
     const fetchComments = () => {
     fetch('HTTP://localhost:3001/api/comments',{
       headers : {
