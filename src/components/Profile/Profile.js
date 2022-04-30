@@ -1,9 +1,15 @@
 import React, { Component, useState, useEffect } from "react";
 import "./Profile.css";
 import profileImg from "./profileIcon.png";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import PopUp from "../PopUp/PopUp";
+import { color, fontFamily } from "@mui/system";
+import { IconButton } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
@@ -98,12 +104,11 @@ export const Profile = () => {
   return (
     <div className="profileLayout">
       <div className="divIcon">
-        <img src={profileImg} alt="profileImg" width={180} height={180}></img>
+        <img src={profileImg} className="profileImg" width={180} height={180}></img>
       </div>
       <div className="profileInfo">
         {userInfo.map((item, index) => {
           return (
-        
             <ul key={index} className="profilList">
               <h5>{item.Firstname}</h5>
               <h5>{item.Lastname}</h5>
@@ -115,7 +120,6 @@ export const Profile = () => {
               <h5>{item.Country}</h5>
               <h5>{item.University}</h5>
             </ul>
-       
           );
         })}
       </div>
@@ -125,7 +129,8 @@ export const Profile = () => {
           <Button
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc", textTransform: 'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             component={Link}
             to="/sell"
           >
@@ -136,7 +141,8 @@ export const Profile = () => {
             id="EditProfile"
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc" , textTransform:'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             onClick={togglePopup}
           >
             Edit profile
@@ -219,15 +225,11 @@ export const Profile = () => {
         <br />
 
         <div className="logout">
-        
-        <button Size="small" onClick={logout} href="/" >
-          Logout
-        </button>
-        
-        </div> 
+          <button className="logoutBtn" onClick={logout} href="/">
+            Logout
+          </button>
+        </div>
       </div>
-    
-      
     </div>
   );
 };
