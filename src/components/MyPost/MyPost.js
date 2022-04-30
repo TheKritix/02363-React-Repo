@@ -63,7 +63,6 @@ export const MyPost = () => {
       Cond: "",
       Lang: "",
       Topic: "",
-      bookId: 0,
     },
   ]);
 
@@ -73,6 +72,7 @@ export const MyPost = () => {
       [e.target.name]: e.target.value,
     });
   };
+
 
   const SubmitBookInfo = (e) => {
     e.preventDefault();
@@ -174,9 +174,6 @@ export const MyPost = () => {
                               onChange={handleBookUpdated}
                             />
                             <br />
-
-                            <br />
-
                             <input
                               type="discription"
                               name="Discription"
@@ -184,9 +181,11 @@ export const MyPost = () => {
                               value={updatedBookInfo.Discription}
                               placeholder="Discription"
                             />
-                            <br />
 
-                            <button>
+                      
+                            <br />
+                            <button
+                            >
                               Confirm changes
                             </button>
                           </form>
