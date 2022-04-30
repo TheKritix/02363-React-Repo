@@ -40,17 +40,6 @@ export const Profile = () => {
   }, []);
 
 
-  /*function for logout. removes user ID and token, and send the user back to homepage */
-  const logout = () => {
-    if (sessionStorage.getItem("token")){
-      sessionStorage.clear()
-      window.location.href='/'
-      
-    }
-    console.log("logged out");
-  };
-
-
   // function for opnening and closing popup window for editing userinformation
   const [isOpen, setisOpen] = useState(false);
   const togglePopup = () => {
@@ -110,15 +99,20 @@ export const Profile = () => {
         {userInfo.map((item, index) => {
           return (
             <ul key={index} className="profilList">
+              <div className="column" >
               <h5>{item.Firstname}</h5>
-              <h5>{item.Lastname}</h5>
+              <h5>{item.Address}</h5>
+              <h5>{item.Postalcode}</h5>
               <h5>{item.EMAIL}</h5>
               <h5>{item.Phonenumber}</h5>
-              <h5 id="breakitem">{item.Address}</h5>
+              </div>
+              <div className="column">
+              <h5>{item.Lastname}</h5>
+              <br/>
               <h5>{item.City},</h5>
-              <h5>{item.Postalcode}</h5>
               <h5>{item.Country}</h5>
               <h5>{item.University}</h5>
+              </div>
             </ul>
           );
         })}
@@ -150,7 +144,7 @@ export const Profile = () => {
           {isOpen && (
             <PopUp
               content={
-                <form className="formdiv" onSubmit={sumbitUpdatedUserInfo}>
+                <form className="formdiv" onSubmit={sumbitUpdatedUserInfo} >
                   <h2 id="editHeader">Edit your profil information</h2>
                   <div className="group">
                     <input
@@ -215,7 +209,7 @@ export const Profile = () => {
                     placeholder="University"
                   />
                   <br />
-                  <button>Confirm changes</button>
+                  <button id='confirmBtn'>Confirm changes</button>
                 </form>
               }
               handleClose={togglePopup}
@@ -223,12 +217,6 @@ export const Profile = () => {
           )}
         </div>
         <br />
-
-        <div className="logout">
-          <button className="logoutBtn" onClick={logout} href="/">
-            Logout
-          </button>
-        </div>
       </div>
     </div>
   );

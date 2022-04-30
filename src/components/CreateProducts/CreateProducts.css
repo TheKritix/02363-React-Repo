@@ -118,15 +118,7 @@ input[type="file"] {
   margin-top:2px;
   border-radius: 40px;
   border: 1px solid rgb(45, 133, 204);
-  color: rgb(45, 133, 204);
     
-}
-
-.uploadBtn:hover{
-  background-color: rgb(240, 248, 255);
-  transition: 0.7s;
-  color: rgb(45, 133, 204);
-
 }
 
 
@@ -177,12 +169,6 @@ button{
   align-self: center;
   font-family: Inter;
 
-}
-
-#creaProdSubmit:hover{
-  background-color: rgb(240, 248, 255);
-  transition: 0.7s;
-  color: rgb(45, 133, 204);
 }
 
 .requiredFields{
