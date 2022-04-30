@@ -85,7 +85,12 @@ const Comment = ({
                             <IconButton style={{width: 50}} onClick={() => setIsEditingComment(false)}><CloseIcon/></IconButton>
                             </form>
                         ) : (
-                            <IconButton className="edit-button" onClick={() => handleEditClick()}><EditIcon/></IconButton>
+                            <IconButton 
+                                style={{float: 'right'}} 
+                                className="edit-button" 
+                                onClick={() => handleEditClick()}>
+                                    <EditIcon/>
+                            </IconButton>
                         ) }
                         <IconButton 
                             style={{float: 'right'}} 
