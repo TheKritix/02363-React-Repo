@@ -93,7 +93,7 @@ export const BookOverview = () => {
                   <Link to={`/productpage/${item.Book_Id}`}>
                     <div className="card-item">
                       <div className="img-div">
-                        <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                        <img className="item-image" crossOrigin="anonymous" alt="bookimage" src={item.Image}></img>
                       </div>
                       <div className="content">
                         <h5>{item.Title}</h5>

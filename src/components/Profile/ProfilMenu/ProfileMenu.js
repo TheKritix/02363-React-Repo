@@ -8,9 +8,9 @@ render() {
     return(
         <div className='profileMenuDiv'>
             <ul className='profil-menu'>
-            {ProfileMenuList.map((item,index)=>{
+            {ProfileMenuList.map((item, index)=>{
                 return(
-                    <li > 
+                    <li key={index}> 
                         <a className={item.cname} href={item.url}> {item.name} </a>
                     </li>
                 )

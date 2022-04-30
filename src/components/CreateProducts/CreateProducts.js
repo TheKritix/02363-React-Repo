@@ -105,7 +105,7 @@ export const CreateProducts = () => {
               {" "}
               Upload an image<span className="requireMark">*</span>{" "}
             </label>
-            <label for="fileBtn" className="uploadBtn">
+            <label htmlFor="fileBtn" className="uploadBtn">
               <i className="browseBtn"></i>Browse...
             </label>
             <input
