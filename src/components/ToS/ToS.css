@@ -1,0 +1,25 @@
+.hoved{
+text-align: center;
+padding-left: 100px;
+padding-right: 100px;
+
+}
+
+.pri {
+    text-align: justify;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 45em;
+  }
+
+  .ToS-title {
+    margin-top: 50px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  

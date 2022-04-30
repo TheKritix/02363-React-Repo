@@ -3,11 +3,11 @@
     justify-content: left;
     font-family: Inter;
     border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding-top: 20px;
     border-color: hsl(212, 92%, 61%, 25%);
     margin: 30px;
-
-
-
+    
 }
 
 
@@ -19,8 +19,8 @@
 }
 
 .profile-links {
-color: grey;
-text-decoration: none;
+    color: grey;
+    text-decoration: none;
 }
 
  .profile-links:hover {

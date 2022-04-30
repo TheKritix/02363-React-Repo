@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import "./CreateProducts.css";
-import pic from "../AddBook/Images/CameraImage.svg";
-
+import pic from "./Images/CameraImage.svg";
 
 export const CreateProducts = () => {
-  const [products, setProducts] = useState([
-    {
-      title: "",
-      publisher: "",
-      author: "",
-      price: 0,
-      description: "",
-      university: "",
-      cond: "",
-      course: "",
-      lang: "",
-      topic: "",
-    },
-  ]);
+  const defaultObject = () => ({
+    title: "",
+    publisher: "",
+    author: "",
+    price: 0,
+    description: "",
+    university: "",
+    cond: "",
+    course: "",
+    lang: "",
+    topic: "",
+    userId: window.sessionStorage.getItem("userId"),
+  });
+  const [products, setProducts] = useState([defaultObject]);
   const [fileImage, setFileImage] = useState();
   const [previewImg, setPreviewImage] = useState(pic);
 
@@ -36,18 +35,7 @@ export const CreateProducts = () => {
   const setDefaultState = () => {
     setPreviewImage(pic);
     setFileImage("");
-    setProducts({
-      title: "",
-      publisher: "",
-      author: "",
-      price: 0,
-      description: "",
-      university: "",
-      cond: "",
-      course: "",
-      lang: "",
-      topic: "",
-    });
+    setProducts(defaultObject);
   };
 
   const submitProduct = (e) => {
@@ -62,6 +50,7 @@ export const CreateProducts = () => {
       cond: products.cond,
       lang: products.lang,
       topic: products.topic,
+      userId: products.userId,
     };
 
     const formData = new FormData();
@@ -75,6 +64,7 @@ export const CreateProducts = () => {
     formData.append("cond", products.cond);
     formData.append("lang", products.lang);
     formData.append("topic", products.topic);
+    formData.append("user_id", window.sessionStorage.getItem("userId"));
 
     console.log(productObject);
     console.log(fileImage);
@@ -117,7 +107,7 @@ export const CreateProducts = () => {
             </label>
             <label for="fileBtn" className="uploadBtn">
               <i className="browseBtn"></i>Browse...
-              </label>
+            </label>
             <input
               id="fileBtn"
               name="image"
@@ -138,7 +128,6 @@ export const CreateProducts = () => {
             ></textarea>
           </div>
           <div className="rightCreateProducts">
-            
             <label id="creaProdTitle">
               {" "}
               Title<span className="requireMark">*</span>:{" "}
@@ -196,7 +185,7 @@ export const CreateProducts = () => {
                   onChange={handleChangeProducts}
                 >
                   <option value="">Select language</option>
-                  <option value="danish" >Danish</option>
+                  <option value="danish">Danish</option>
                   <option value="english">English</option>
                 </select>
               </div>
@@ -246,7 +235,9 @@ export const CreateProducts = () => {
               Submit
             </button>
 
-            <p className="requiredFields">*Please fill out all required fields</p>
+            <p className="requiredFields">
+              *Please fill out all required fields
+            </p>
           </div>
         </div>
       </form>

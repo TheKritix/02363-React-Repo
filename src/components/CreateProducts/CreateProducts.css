@@ -16,12 +16,6 @@
   border-style: solid;
 }
 
-option {
-  font-size: 15px;
-  background-color: #ffffff;
-}
-
-
 .requireMark {
   font-size: calc(2px + 2vmin);
   color: rgb(244, 116, 44, 100%);
@@ -124,7 +118,15 @@ input[type="file"] {
   margin-top:2px;
   border-radius: 40px;
   border: 1px solid rgb(45, 133, 204);
+  color: rgb(45, 133, 204);
     
+}
+
+.uploadBtn:hover{
+  background-color: rgb(240, 248, 255);
+  transition: 0.7s;
+  color: rgb(45, 133, 204);
+
 }
 
 
@@ -148,9 +150,14 @@ select{
   font-size: 13px;
   font-family: Inter;
   border-color: rgb(210, 212, 213);
-  
-  
 }
+
+option {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
 
 label{
   display: inline-block;
@@ -170,6 +177,12 @@ button{
   align-self: center;
   font-family: Inter;
 
+}
+
+#creaProdSubmit:hover{
+  background-color: rgb(240, 248, 255);
+  transition: 0.7s;
+  color: rgb(45, 133, 204);
 }
 
 .requiredFields{

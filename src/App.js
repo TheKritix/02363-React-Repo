@@ -14,17 +14,15 @@ import LoginPage from './Pages/LoginPage';
 import useToken from './components/Login/useToken';
 import useUserId from './components/Login/useUserId';
 import Login from './components/Login/Login';
-import RegisterPage from './components/Login/Login';
+import RegisterPage from './Pages/RegisterPage';
+import Footer from './components/Footer/Footer';
+import About from './components/About-us/About-us';
+import ToS from './Pages/ToS'
+import TradeCondition from './Pages/TradeCondition'
 
 function App() {
   document.title = "Stoodle";
-  const {token, setToken} = useToken();
-  const {userId, setUserId} = useUserId();
-
-  if(!token) {
-    return <Login setToken={setToken} setUserId={setUserId}/> 
-  } 
-
+  
   return (
     <BrowserRouter>
       <Topbar/>
@@ -39,7 +37,11 @@ function App() {
           <Route path="mypostpage" element={<MyPostPage/>}/>
           <Route path="loginpage" element={<LoginPage/>}/>
           <Route path="registerpage" element={<RegisterPage/>}/>
+          <Route path="about-us" element={<About/>}/>
+          <Route path="tos" element={<ToS/>}/>
+          <Route path="tradecondition" element={<TradeCondition/>}/>
         </Routes>
+        <Footer/>
     </BrowserRouter>
   );
 }
