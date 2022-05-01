@@ -72,7 +72,7 @@ export const CreateProducts = () => {
     console.log(formData);
     console.log(products);
 
-    /*if (
+    if (
       !(
         productObject.Cond === "" &&
         productObject.Lang === "" &&
@@ -92,7 +92,7 @@ export const CreateProducts = () => {
       });
     } else {
       alert.show("Please fill out the required fields");
-    }*/
+    }
   };
 
   return (
