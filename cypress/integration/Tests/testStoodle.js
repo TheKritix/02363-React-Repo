@@ -5,7 +5,7 @@ describe('example to-do app', () => {
         cy.visit('http://localhost:3000/')
     })
 
-    /*it('create products can be opened and a new product can be uploaded', () => {
+    it('create a book post and submit it to the database', () => {
         const p = 'pic.svg'
         cy.contains('Sell').click()
         cy.get('input[name=title]').type('CypressTestTitle')
@@ -19,7 +19,7 @@ describe('example to-do app', () => {
         cy.get('input[name=author]').type('CypressTestAuthor')
         cy.get('input[name=image]').attachFile(p);
         cy.contains('Submit').click()
-    })*/
+    })
 
     it('buy tab for books can be opened', () => {
         cy.contains('Buy').click()
@@ -33,16 +33,42 @@ describe('example to-do app', () => {
         cy.get('input[id=pMax]').type('200',{force: true})
         cy.contains('The Theory of Moral Sentiments').parent().click()
     })
-    it('log in to account', () => {
+    it('login to account', () => {
         cy.contains('Login').click()
         cy.get('input[name=email]').type(email)
         cy.get('input[name=password]').type(password)
         cy.get('.inputLogin').get('form').submit()
     })
 
+    it('comment on a book', () => {
+        cy.wait(1000)
+        cy.contains('Buy').click()
+        cy.wait(1000)
+        cy.contains('Jane Eyre').parent().click()
+        cy.wait(1000)
+        cy.get('input[name=commentInput]').type('Cypress Hell')
+        cy.get('Button[id=commentSub]').click()
+    })
+
+    it('Edit comment', () => {
+        cy.contains('Buy').click()
+        cy.wait(1000)
+        cy.contains('Jane Eyre').parent().click()
+        cy.get('.edit-button').click()
+        cy.get('input[name=editingInput]').type(" and Heaven")
+        cy.get('button[name=confirm]').click()
+    })
+
+    it('Delete comment', () => {
+        cy.contains('Buy').click()
+        cy.wait(1000)
+        cy.contains('Jane Eyre').parent().click()
+        cy.get('.delete-button').click()
+    })
+
+
     it('access profile, then logout', () => {
         cy.contains('Profile').click()
         cy.contains('Logout').click({position:'bottom'})
     })
-    
 })

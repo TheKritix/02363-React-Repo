@@ -21,8 +21,9 @@ export const CreateProducts = () => {
   const [previewImg, setPreviewImage] = useState(pic);
 
   const saveFile = (e) => {
-    setFileImage(e.target.files[0]);
-    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+    const image = e.target.files[0];
+    setFileImage(image);
+    setPreviewImage(URL.createObjectURL(image));
   };
 
   const handleChangeProducts = (e) => {
@@ -40,19 +41,6 @@ export const CreateProducts = () => {
 
   const submitProduct = (e) => {
     e.preventDefault();
-    const productObject = {
-      title: products.title,
-      publisher: products.publisher,
-      author: products.author,
-      price: products.price,
-      description: products.description,
-      university: products.university,
-      cond: products.cond,
-      lang: products.lang,
-      topic: products.topic,
-      userId: products.userId,
-    };
-
     const formData = new FormData();
     formData.append("image", fileImage);
     formData.append("title", products.title);
@@ -66,20 +54,19 @@ export const CreateProducts = () => {
     formData.append("topic", products.topic);
     formData.append("user_id", window.sessionStorage.getItem("userId"));
 
-    console.log(productObject);
     console.log(fileImage);
     console.log(fileImage.name);
     console.log(formData);
     console.log(products);
 
-    /*if (
+    if (
       !(
-        productObject.Cond === "" &&
-        productObject.Lang === "" &&
-        productObject.price === "" &&
-        productObject.topic === "" &&
-        productObject.university === "" &&
-        productObject.title === ""
+        products.Cond === "" &&
+        products.Lang === "" &&
+        products.price === "" &&
+        products.topic === "" &&
+        products.university === "" &&
+        products.title === ""
       )
     ) {
       fetch("https://stoodle.bhsi.xyz/api/books", {
@@ -90,9 +77,7 @@ export const CreateProducts = () => {
         setDefaultState();
         console.log("Product added");
       });
-    } else {
-      alert.show("Please fill out the required fields");
-    }*/
+    }
   };
 
   return (

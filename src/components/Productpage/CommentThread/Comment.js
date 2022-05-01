@@ -77,12 +77,13 @@ const Comment = ({
                         ? (
                             <form>
                                 <input
+                                    name="editingInput"
                                     type="text"
                                     defaultValue={comment.CommentText}
                                     onChange={handleEditComment}
                                 >
                                 </input>
-                            <IconButton style={{width: 50}} onClick={() => handleEditClick()}><Check/></IconButton>
+                            <IconButton name="confirm" style={{width: 50}} onClick={() => handleEditClick()}><Check/></IconButton>
                             <IconButton style={{width: 50}} onClick={() => setIsEditingComment(false)}><CloseIcon/></IconButton>
                             </form>
                         ) : (

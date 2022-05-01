@@ -162,6 +162,7 @@ export const CommentThread = () => {
                     ? (
                         <form className="submit-comment-form">
                             <input
+                                name="commentInput"
                                 type="text"
                                 value={comment.CommentText}
                                 onChange={handleComment}
@@ -169,6 +170,7 @@ export const CommentThread = () => {
                             </input>
                             <Button 
                                 className="comment-submit-button"
+                                id="commentSub"
                                 style={{
                                     backgroundColor: "rgb(45, 133, 204)", 
                                     fontColor: "white",
