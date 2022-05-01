@@ -11,6 +11,7 @@ import FavoriteButton from '../components/Productpage/FavoriteButton.js';
 import ArrowBackButton from '../components/Productpage/ArrowBackButton.js';
 import { useParams } from 'react-router-dom';
 import Divider from '@mui/material/Divider';
+import CommentThread from '../components/Productpage/CommentThread/CommentThread.js';
 
 
 function ProductPage() {
@@ -56,24 +57,25 @@ function ProductPage() {
         <>
         {selectedBookData.map((book) => {     
                 return (
-                    <div style={{display: 'flex', justifyContent: 'center'}}>  
-                        <div className="left-div">
+                    <div className="productContainer">  
+                        <div className="productCardView">
                             <Card style={{
                                 width: 550,
                                 height: 660, 
-                                backgroundColor: "lightgray",
+                                backgroundColor: "white",
+                                border: "2px solid rgb(45, 133, 204)",
                                 margin: 10,
                                 }}>
                                 <CardContent>
                                     <ArrowBackButton/>
                                     <FavoriteButton isFavClicked={isFavClicked} handleFavClick={handleFavClick}/>
-                                    <div style={{display: 'flex', justifyContent: 'Center'}}>
+                                    <div className="productImageDiv">
                                         <ItemImage book={book}/>
                                     </div>
                                     <Divider style={{margin: 10,}}/>  
                                     <h2>{book.Title}</h2> 
                                     <h3>Author: {book.Author}</h3>
-                                    <h3 id='University' style={{float: 'right'}}><LocationOnOutlinedIcon/>{book.University}</h3>                                     
+                                    <h3 className="productUni"><LocationOnOutlinedIcon/>{book.University}</h3>                                     
                                 </CardContent>
                             </Card>
                         </div>
@@ -81,8 +83,9 @@ function ProductPage() {
                             <ItemTitle item={book}/>
                             <ItemDescription item={book}/>
                             <Divider/>
-                            <h3 id='price'>Pris: {book.Price}</h3>
+                            <h3>Pris: {book.Price} DKK</h3>
                             <Divider/>
+                            <CommentThread/>
                         </div>  
                     </div>
                 );

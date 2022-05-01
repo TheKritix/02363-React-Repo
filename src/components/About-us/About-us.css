@@ -1,0 +1,43 @@
+.about-us {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+}
+
+.about-us-master {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px,2fr));
+    
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+.description {
+    text-align: justify 
+}
+
+.logoimg {
+    height: 350px
+}
+
+.title {
+    border-bottom: 1px solid rgb(99, 99, 99);
+}
+
+/*@media from https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+@media only screen and (max-width: 850px) {
+    .logoimg {
+        display:none;
+    }
+
+    .about-us-master {
+        display: block;
+        grid-gap: 2rem;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+}

@@ -1,7 +1,7 @@
 .SideMenu {
     position: relative;
-    width: 300px;
-    height: 400px;
+    min-width: 300px;
+    height: 250px;
     margin: 20px;
     border: 1px solid #bebebe;
     box-sizing: border-box;
@@ -10,7 +10,6 @@
 
 div.SideMenu {
     position: -webkit-sticky;
-    /* Safari */
     position: sticky;
     top: 20px;
 }
@@ -19,7 +18,25 @@ div.SideMenu {
     position: relative;
     height: auto;
     width: 75rem;
+    min-width: 75rem;
+    max-width: 75rem;
     margin-top: 1.3rem;
+    margin-left: 74px;
+}
+
+.bookContainer {
+    width: 75rem;
+    min-width: 75rem;
+    max-width: 75rem;
+}
+
+.card-item {
+    max-height: 500px;
+    max-width: 300px;
+}
+
+.content {
+    line-height: 0;
 }
 
 .item-image {
@@ -35,9 +52,6 @@ div.SideMenu {
     display: flex;
 }
 
-
-
-
 #priceMin {
     position: absolute;
     width: 100px;
@@ -50,7 +64,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -104,7 +117,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -142,7 +154,6 @@ div.SideMenu {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -172,14 +183,13 @@ div.SideMenu {
     width: 47px;
     height: 24px;
     left: 10px;
-    top: 218px;
+    top: 140px;
 
     /* UI / UI Text 14 Semi Bold */
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
 
     /* identical to box height, or 171% */
     letter-spacing: -0.006em;
@@ -193,7 +203,7 @@ div.SideMenu {
     width: 276px;
     height: 32px;
     left: 10px;
-    top: 256px;
+    top: 176px;
 
     /* Black & White / White */
     background: #FFFFFF;
@@ -240,3 +250,20 @@ div.SideMenu {
     box-sizing: border-box;
     border-radius: 6px;
 }
+
+@media only screen and (max-width: 1150px) {
+
+    .SideMenu {
+        display: none;
+    }
+    
+    .gridBox {
+        position: relative;
+        height: auto;
+        width: 75rem;
+        min-width: 75rem;
+        max-width: 75rem;
+        margin-top: 1.3rem;
+    }
+
+  }

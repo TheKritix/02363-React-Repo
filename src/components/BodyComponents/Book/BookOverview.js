@@ -8,9 +8,7 @@ export const BookOverview = () => {
   const [priceMin, setPriceMin] = useState(0);
   const [priceMax, setPriceMax] = useState(2000);
   const [title, setTitle] = useState("");
-  const [university, setUniversity] = useState("THIS DOES NOTHING");
   const [author, setAuthor] = useState("");
-  const [year, setYear] = useState("");
 
   //Used general idea from https://stackoverflow.com/questions/49023587/react-fetch-json-data-from-url-and-display-it
   const [bookData, setBookData] = useState([]);
@@ -57,23 +55,11 @@ export const BookOverview = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <p id="university">University: </p>
-        <input
-          id="universityInput"
-          value={university}
-          onChange={(e) => setUniversity(e.target.value)}
-        />
         <p id="author">Author: </p>
         <input
           id="authorInput"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        />
-        <p id="year">Year: </p>
-        <input
-          id="yearInput"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
         />
       </div>
       <div className="gridBox">
@@ -89,11 +75,11 @@ export const BookOverview = () => {
             .filter(item => item.Price <= priceMax)
             .map((item, index) => {
               return (
-                <Grid item xs={5} md={3} key={index}>
+                <Grid item xs={6} md={3} key={index} spacing = {0}>
                   <Link to={`/productpage/${item.Book_Id}`}>
                     <div className="card-item">
                       <div className="img-div">
-                        <img className="item-image" crossorigin="anonymous" alt="bookimage" src={item.Image}></img>
+                        <img className="item-image" crossOrigin="anonymous" alt="bookimage" src={item.Image}></img>
                       </div>
                       <div className="content">
                         <h5>{item.Title}</h5>
