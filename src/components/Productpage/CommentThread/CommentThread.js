@@ -6,7 +6,7 @@ import './Comment.css';
 import InsertCommentIcon from '@mui/icons-material/InsertComment';
 import Button from "@material-ui/core/Button";
 
-
+//Used for inspiration: https://github.com/monsterlessonsacademy/monsterlessonsacademy/tree/144-react-comments/src
 export const CommentThread = () => {
 
     const { Book_Id  } = useParams();
@@ -190,10 +190,8 @@ export const CommentThread = () => {
                             <Comment
                             key={comment.CommentId}
                             comment={comment}
-                            //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
                             deleteComment={deleteComment}
                             editComment={editComment}
-                            CommentId={comment.CommentId}
                             userId={userId}
                             />
                         ))
