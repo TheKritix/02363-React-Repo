@@ -1,7 +1,7 @@
 .SideMenu {
     position: relative;
     min-width: 300px;
-    height: 400px;
+    height: 250px;
     margin: 20px;
     border: 1px solid #bebebe;
     box-sizing: border-box;
@@ -183,7 +183,7 @@ div.SideMenu {
     width: 47px;
     height: 24px;
     left: 10px;
-    top: 218px;
+    top: 140px;
 
     /* UI / UI Text 14 Semi Bold */
     font-family: Arial, Helvetica, sans-serif;
@@ -203,7 +203,7 @@ div.SideMenu {
     width: 276px;
     height: 32px;
     left: 10px;
-    top: 256px;
+    top: 176px;
 
     /* Black & White / White */
     background: #FFFFFF;
