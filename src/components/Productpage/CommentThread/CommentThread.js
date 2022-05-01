@@ -131,7 +131,7 @@ export const CommentThread = () => {
     }
 
     const fetchUsername = () => {
-        fetch(`http://localhost:3001/api/userinfo/${userId}`, {
+        fetch(`https://stoodle.bhsi.xyz/api/userinfo/${userId}`, {
           headers: {
             "content-type": "application/json",
             Accept: "application/json",
