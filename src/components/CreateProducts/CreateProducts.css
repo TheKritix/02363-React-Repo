@@ -1,3 +1,4 @@
+
 .createProducts {
   min-height: 50vh;
   display: flex;
@@ -118,7 +119,7 @@ input[type="file"] {
   margin-top:2px;
   border-radius: 40px;
   border: 1px solid rgb(45, 133, 204);
-  color: rgb(45, 133, 204);
+color: rgb(45, 133, 204);
     
 }
 
