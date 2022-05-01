@@ -226,15 +226,6 @@ export const Profile = () => {
             ></PopUp>
           )}
         </div>
-        <br />
-
-        <div className="logout">
-        
-        <button Size="small" onClick={logout} href="/" >
-          Logout
-        </button>
-        
-        </div> 
       </div>
     
       
