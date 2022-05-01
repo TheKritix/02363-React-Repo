@@ -94,8 +94,7 @@ export const Topbar = () => {
             size="small"
             style={{ width: 80 }}
             className="topbar-links"
-            component={Link}
-            to="/favoritpage"
+           
           >
             <Favorite id="favorit" className="icon"></Favorite> Favorites
           </IconButton>
