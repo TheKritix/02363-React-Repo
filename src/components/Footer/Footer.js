@@ -13,17 +13,17 @@ class Footer extends Component {
               <ul className="footer-ul">
                 <li className="list-item">
                   <Link className="about-us" to="/about-us">
-                    <text className="about-us text">About us</text>
+                    About us
                   </Link>
                 </li>
                 <li className="list-item">
                   <Link className="tos" to="/tos">
-                    <text className="tos-text">Terms of Service</text>
+                    Terms of Service
                   </Link>
                 </li>
                 <li className="list-item">
                 <Link className="tradecon" to="/tradecondition">
-                    <text className="tradecon-text">Trade Condition</text>
+                    Trade Condition
                   </Link>
                 </li>
                 <li className="list-item">PLACEHOLDER</li>
@@ -39,7 +39,7 @@ class Footer extends Component {
               </ul>
             </article>
             <article className="footer-article">
-              <h2 className="footer-title">MICHELANOUS</h2>
+              <h2 className="footer-title">MICHELLINAOUS</h2>
               <ul className="footer-ul">
                 <li className="list-item">PLACEHOLDER</li>
                 <li className="list-item">PLACEHOLDER</li>

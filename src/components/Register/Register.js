@@ -85,7 +85,7 @@ export const Register = () => {
           type="password"
           name="password"
           placeholder="Password"
-          minlength="8"
+          minLength="8"
           value={register.password}
           onChange={handleRegistration}
           required

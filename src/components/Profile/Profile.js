@@ -1,9 +1,19 @@
 import React, { Component, useState, useEffect } from "react";
 import "./Profile.css";
 import profileImg from "./profileIcon.png";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import PopUp from "../PopUp/PopUp";
+import { color } from "@mui/system";
+import { IconButton } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+
+
+
 
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
@@ -125,7 +135,8 @@ export const Profile = () => {
           <Button
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc", textTransform: 'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             component={Link}
             to="/sell"
           >
@@ -136,7 +147,8 @@ export const Profile = () => {
             id="EditProfile"
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc" , textTransform:'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             onClick={togglePopup}
           >
             Edit profile
@@ -186,7 +198,7 @@ export const Profile = () => {
                       placeholder="City"
                     />
                     <input
-                      type="postcode"
+                      type="postalcode"
                       name="Postalcode"
                       onChange={handleChangeUserInfo}
                       value={updatedInfo.Postalcode}
@@ -209,22 +221,13 @@ export const Profile = () => {
                     placeholder="University"
                   />
                   <br />
-                  <button>Confirm changes</button>
+                  <button id= "confirmBtn">Confirm changes</button>
                 </form>
               }
               handleClose={togglePopup}
             ></PopUp>
           )}
         </div>
-        <br />
-
-        <div className="logout">
-        
-        <button Size="small" onClick={logout} href="/" >
-          Logout
-        </button>
-        
-        </div> 
       </div>
     
       
@@ -233,8 +236,3 @@ export const Profile = () => {
 };
 
 export default Profile;
-
-/* <CameraAltIcon
-              className="cameraIcon"
-              style={{ fontSize: 30, left: 200 }}
-            ></CameraAltIcon>*/

@@ -2,132 +2,147 @@
     display: flex;
     list-style: none;
     font-family: Inter;
-    border-bottom: 1px solid;
     height: 250px;
-    border-color: hsl(212, 92%, 61%, 25%);
     align-items: center;
-    width: 98%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .profilList {
-    column-count: 2;
-    column-gap: 80px;
-    margin-top: 1em;
-    margin-top: 0ch;
-    line-height: 3px;
-    padding-left: 100px;
-  }
-  
-  #breakitem {
-    padding-top: 18px;
-  }
-  
-  .divIcon {
-    padding-top: 20px;
-  }
-  
-  .profiletext {
-    border: 1px solid;
-    border-color: hsl(212, 92%, 61%, 25%);
-  }
-  
-  .profileImg {
-  }
-  
-  .cameraIcon {
-    position: absolute;
-    right: 30%;
-    top: 37%;
-  }
-  
-  .profileInfo {
-  }
-  
-  .container {
-    margin-left: auto;
-    
-  }
-  
-  .buttons {
-    display: flex;
-  }
-  
-  #EditProfile {
-    margin-left: 30px;
-  }
-  .profilBtn {
-    background-color: rgb(255, 255, 255);
-    width: 200px;
-    padding: 10px;
-    font-size: 18px;
-    text-align: left;
-    border-radius: 40px;
-    margin-top: 25px;
-  }
-  
-  .raiting {
-    color: rgb(244, 116, 44, 100%);
-    padding-left: 270px;
-  }
-  
-  .group {
-    display: flex;
-  }
+    width: 100%;
+    padding-left: 30px; 
+    max-width: 90em;
+}
 
-  .formdiv{
-    z-index: 100;
-  }
+.profilList {
+  column-count: 2;
+  column-gap: 80px;
+  margin-top: 1em;
+  margin-top: 0ch;
+  line-height: 3px;
+  padding-left: 100px;
+}
+
+.column{
+  width: 50%;
+  flex:auto;
+  font-weight: 250;
+   
+}
+
+#breakitem {
+  padding-top: 18px;
+}
+
+.infoContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.divIcon {
+  padding-top: 20px;
+}
+
+.profiletext {
+  border: 1px solid;
+  border-color: hsl(212, 92%, 61%, 25%);
+}
+
+.profileImg {
+  position: relative;
+}
+
+.cameraIcon {
+  position: absolute;
+  right: 30%;
+  top: 37%;
+}
+
+.profileInfo {
+}
+
+.container {
+  margin-left: 250px;
  
-  input[type="university"],
-  input[type="country"] {
-    padding: 15px;
-    width: 300px;
-    margin-top: 15px;
-  }
+}
 
-  input[type="phonenumber"] {
-    padding: 15px;
-    width: 200px;
-    margin-top: 15px;
+.buttons {
+  display: flex;
+}
 
-  }
-  
-  input[type="firstname"] {
-    width: 150px;
-    padding: 15px;
-    margin-right: 15px;
-  }
-  
-  input [type="lastname"] {
-    padding: 15px;
-    width: 150px;
-  }
-  
-  input[type="address"] {
-    padding: 15px;
-    width: 500px;
-    margin-top: 15px;
-  }
-  
-  input[type="postcode"] {
-    padding: 15px;
-    width: 150px;
-    margin-top: 15px;
-  }
-  
-  input[type="city"] {
-    width: 400px;
-    padding: 15px;
-    margin-top: 15px;
-    margin-right: 15px;
-  }
-  
-  #editHeader {
-    text-decoration: underline;
-  }
-  
-  #confirmBtn {
-    margin-top: 15px;
-  }
+#EditProfile {
+  margin-left: 30px;
+}
+.profilBtn {
+  background-color: rgb(255, 255, 255);
+  width: 200px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 40px;
+  margin-top: 25px;
+}
+
+.formdiv{
+  z-index: 100;
+}
+
+
+input[type="university"],
+input[type="country"] {
+  padding: 15px;
+  width: 300px;
+  margin-top: 15px;
+  height: 50px;
+}
+
+input[type="phonenumber"] {
+  padding: 15px;
+  width: 200px;
+  margin-top: 15px;
+  height: 50px;
+
+}
+
+input[type="firstname"], input [type="lastname"] {
+  width: 150px;
+  padding: 15px;
+  margin-right: 15px;
+  height: 50px;
+}
+
+
+input[type="address"] {
+  padding: 15px;
+  width: 500px;
+  margin-top: 15px;
+  height: 50px;
+  margin-left: 12px;
+}
+
+input[type="postcode"] {
+  padding: 15px;
+  width: 150px;
+  margin-top: 15px;
+  height: 50px;
+}
+
+input[type="city"] {
+  width: 400px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-right: 15px;
+  height: 50px;
+}
+
+#editHeader {
+  text-decoration: underline;
+}
+
+#confirmBtn {
+  margin-top: 15px;
+}
+
+#confirmBtn:hover {
+  background-color: rgb(240, 248, 255);
+  transition: 0.7s;
+  color: rgb(45, 133, 204);
+}
+
+
+

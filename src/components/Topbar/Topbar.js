@@ -9,9 +9,11 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { Favorite } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
-
+import { useNavigate} from "react-router-dom"
 
 export const Topbar = () => {
+  const navigate = useNavigate();
+
   const [loginDest, setLoginDest] = useState("/loginpage");
   const [login, setLogin] = useState([
     {
@@ -64,10 +66,10 @@ export const Topbar = () => {
       </div>
       <div className="search-div">
         <TextField
-          alignItems
           className="search"
           size="small"
           placeholder="Search..."
+          onClick={() => {navigate("/buy")}}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -83,11 +85,10 @@ export const Topbar = () => {
             size="small"
             style={{ width: 140 }}
             className="topbar-links"
-            onClick=""
           >
             {" "}
             <NotificationsNoneIcon className="icon"></NotificationsNoneIcon>
-            <text>Notifications</text>
+            Notifications
           </IconButton>
           <IconButton
             size="small"

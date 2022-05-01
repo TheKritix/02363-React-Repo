@@ -24,6 +24,12 @@ div.SideMenu {
     margin-left: 74px;
 }
 
+.bookContainer {
+    width: 75rem;
+    min-width: 75rem;
+    max-width: 75rem;
+}
+
 .card-item {
     max-height: 500px;
     max-width: 300px;

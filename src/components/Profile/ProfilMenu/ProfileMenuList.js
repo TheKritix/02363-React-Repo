@@ -1,5 +1,3 @@
-
-
 export const ProfileMenuList = [
     {
     name: 'My posts',
@@ -18,13 +16,13 @@ export const ProfileMenuList = [
 },
 
 {
-    name: 'Privacy policey',
-    url: '#',
+    name: 'Terms of Service',
+    url: 'tos',
     cname: 'profile-links'
 },
 {
-    name: 'Trade conditions',
-    url: '#',
+    name: 'Trade Conditions',
+    url: '/tradecondition',
     cname: 'profile-links'
 }
 ]
