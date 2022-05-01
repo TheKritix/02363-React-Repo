@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "./Register.css";
 import { useState } from "react";
+import { useNavigate} from "react-router-dom";
 /* Inspiration for forms: https://www.w3schools.com/html/html_form_input_types.asp
  * 
  * 
  */
 export const Register = () => {
+
+  const navigate = useNavigate();
+
   const [register, setRegister] = useState([
     {
       firstname: "",
@@ -35,7 +39,7 @@ export const Register = () => {
     if (
       !(registrationObject.email === "" && registrationObject.password === "")
     ) {
-      fetch("http://localhost:3001/api/register", {
+      fetch("https://stoodle.bhsi.xyz/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
@@ -48,6 +52,7 @@ export const Register = () => {
         }),
       }).then(() => {
         console.log("New user added");
+        navigate("/loginpage")
       });
     }
   };

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import "./MyPost.css";
 import PopUp from "../PopUp/PopUp";
 
-export const MyPost = () => {
+export const  MyPost = () => {
   const userId = window.sessionStorage.getItem("userId");
 
   const [bookData, setBookData] = useState([]);
