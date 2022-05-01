@@ -88,7 +88,7 @@ export const MyPost = () => {
       book_id: item.Book_Id,
     };
     console.log(bookObject);
-    fetch(`http://localhost:3001/api/updatebook`, {
+    fetch(`https://stoodle.bhsi.xyz/api/updatebook`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
