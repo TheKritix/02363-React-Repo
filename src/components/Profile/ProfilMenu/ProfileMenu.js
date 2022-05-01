@@ -21,7 +21,7 @@ export const profileMenu  = () => {
             
             {ProfileMenuList.map((item,index)=>{
                 return(
-                    <li > 
+                    <li key={index}> 
                         <a className={item.cname} href={item.url}> {item.name} </a>
                         
                     </li>
