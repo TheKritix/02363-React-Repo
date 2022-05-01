@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./Register.css";
 import { useState } from "react";
-
+/* Inspiration for forms: https://www.w3schools.com/html/html_form_input_types.asp
+ * 
+ * 
+ */
 export const Register = () => {
   const [register, setRegister] = useState([
     {
