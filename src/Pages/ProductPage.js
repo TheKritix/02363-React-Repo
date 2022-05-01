@@ -65,7 +65,6 @@ function ProductPage() {
                                 backgroundColor: "white",
                                 border: "2px solid rgb(45, 133, 204)",
                                 margin: 10,
-                                position: 'sticky',
                                 }}>
                                 <CardContent>
                                     <ArrowBackButton/>

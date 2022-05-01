@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import Comment from "./Comment.js";
 import './Comment.css';
+import InsertCommentIcon from '@mui/icons-material/InsertComment';
+import Button from "@material-ui/core/Button";
+
 
 export const CommentThread = () => {
 
@@ -154,35 +157,47 @@ export const CommentThread = () => {
     return (
         <div className="commentList">
             <h3 className="commentList-title">Comments</h3>
-            {userLoggedIn
-            ? (
-                <form className="submitCommentForm" onSubmit={submitComment}>
-                <textarea
-                    type="text"
-                    value={comment.CommentText}
-                    onChange={handleComment}
-                >
-                </textarea>
-                <button className="comment-submit-button">Comment!</button>
-            </form>
-            )
-            : (
-                <div className="empty-div-comment"/>
-            )
-            }
-            <div className="comments-container">
-                {fetchedComments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
-                    <Comment
-                    key={comment.CommentId}
-                    comment={comment}
-                    //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
-                    deleteComment={deleteComment}
-                    editComment={editComment}
-                    CommentId={comment.CommentId}
-                    userId={userId}
-                    />
-                ))
-            }
+                <div className="comment-form-parent">
+                    {userLoggedIn
+                    ? (
+                        <form className="submit-comment-form">
+                            <input
+                                type="text"
+                                value={comment.CommentText}
+                                onChange={handleComment}
+                            >
+                            </input>
+                            <Button 
+                                className="comment-submit-button"
+                                style={{
+                                    backgroundColor: "rgb(45, 133, 204)", 
+                                    fontColor: "white",
+                                    width: 50,
+                                    float: 'right',
+                                    marginLeft: 8,
+                                }}
+                                onClick={submitComment}
+                            ><InsertCommentIcon style={{color: "white"}}/></Button>
+                        </form>
+                    )
+                    : (
+                        <div className="empty-div-comment"/>
+                    )
+                    }
+                </div>
+                    <div className="comments-container">
+                        {fetchedComments.filter((comments) => comments.Book_Id === threadId).map((comment) => (
+                            <Comment
+                            key={comment.CommentId}
+                            comment={comment}
+                            //replies={fetchReplies(comments.filter(item => item.parentId !== null).CommentId)}
+                            deleteComment={deleteComment}
+                            editComment={editComment}
+                            CommentId={comment.CommentId}
+                            userId={userId}
+                            />
+                        ))
+                    }
             </div>
         </div>
     );

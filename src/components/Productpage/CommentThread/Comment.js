@@ -76,11 +76,12 @@ const Comment = ({
                         {isEditingComment
                         ? (
                             <form>
-                                <textarea
+                                <input
                                     type="text"
+                                    defaultValue={comment.CommentText}
                                     onChange={handleEditComment}
                                 >
-                            </textarea>
+                                </input>
                             <IconButton style={{width: 50}} onClick={() => handleEditClick()}><Check/></IconButton>
                             <IconButton style={{width: 50}} onClick={() => setIsEditingComment(false)}><CloseIcon/></IconButton>
                             </form>
