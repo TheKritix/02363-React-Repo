@@ -7,7 +7,7 @@ import { useState } from "react";
 import { SettingsBackupRestoreOutlined } from "@mui/icons-material";
 import { Link, useNavigate } from 'react-router-dom'
 /*inspiration for line with text: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
- *https://www.freecodecamp.org/news/how-to-use-react-icons/
+ *
  *Inspiration to login token: https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications?fbclid=IwAR2y4l2yBvpOauFUEiDdHZho_a-fYX0bwlhNwei_j4iIm-fq3EVRsf3vJ5s
  */
 
