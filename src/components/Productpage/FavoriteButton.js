@@ -10,14 +10,15 @@ function FavoriteButton({ isFavClicked, handleFavClick }) {
         {isFavClicked
         ? (
           <IconButton  
-            style={{float: 'right'}}
+            className="favBtn"
+            style={{float: 'right', width: 50}}
             onClick={() => handleFavClick()}>
               <FavoriteIcon className="FavActive"/>
           </IconButton>
         )
         : (
           <IconButton  
-            style={{float: 'right'}}
+            style={{float: 'right',  width: 50}}
             onClick={() => handleFavClick()}>
               <FavoriteBorder className="FavInactive"/>
           </IconButton>

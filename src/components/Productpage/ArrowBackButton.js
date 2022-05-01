@@ -7,7 +7,7 @@ class ArrowBackButton extends Component {
   render() {
     return (
       <Link to={'/buy'}>
-        <IconButton>
+        <IconButton className="abBtn" style={{width: 50}}>
             <ArrowBackRoundedIcon/>
         </IconButton>
       </Link>
