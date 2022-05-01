@@ -5,7 +5,7 @@ import { Delete, Edit } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 import "./MyPost.css";
 
-export const MyPost = () => {
+export const  MyPost = () => {
   const userId = window.sessionStorage.getItem("userId");
 
   const [bookData, setBookData] = useState([]);
