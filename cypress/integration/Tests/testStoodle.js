@@ -33,12 +33,11 @@ describe('example to-do app', () => {
         cy.get('input[id=pMax]').type('200',{force: true})
         cy.contains('The Theory of Moral Sentiments').parent().click()
     })
-    it('login then go to profile', () => {
+    it('log in to account', () => {
         cy.contains('Login').click()
         cy.get('input[name=email]').type(email)
         cy.get('input[name=password]').type(password)
         cy.get('.inputLogin').get('form').submit()
-        cy.contains('Profile').click()
     })
 
     it('access profile, then logout', () => {
