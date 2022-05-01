@@ -83,7 +83,7 @@ function ProductPage() {
                             <ItemTitle item={book}/>
                             <ItemDescription item={book}/>
                             <Divider/>
-                            <h3>Pris: {book.Price}</h3>
+                            <h3>Pris: {book.Price} DKK</h3>
                             <Divider/>
                             <CommentThread/>
                         </div>  
