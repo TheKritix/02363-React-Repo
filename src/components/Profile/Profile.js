@@ -23,7 +23,7 @@ export const Profile = () => {
   
 
   const retriveUserInfo = () => {
-    fetch(`http://localhost:3001/api/userinfo/${userId}`, {
+    fetch(`https://stoodle.bhsi.xyz/api/userinfo/${userId}`, {
       headers: {
         "content-type": "application/json",
         Accept: "application/json",
@@ -85,7 +85,7 @@ export const Profile = () => {
       Country: updatedInfo.Country,
       User_Id: userId,
     };
-    fetch(`http://localhost:3001/api/updateuser`, {
+    fetch(`https://stoodle.bhsi.xyz/api/updateuser`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
