@@ -101,15 +101,14 @@ export const Profile = () => {
             <ul key={index} className="profilList">
               <div className="column" >
               <h5>{item.Firstname}</h5>
-              <h5>{item.Address}</h5>
-              <h5>{item.Postalcode}</h5>
+              <h5>{item.Address},</h5>
+              <h5>{item.City},</h5>
               <h5>{item.EMAIL}</h5>
               <h5>{item.Phonenumber}</h5>
               </div>
               <div className="column">
               <h5>{item.Lastname}</h5>
-              <br/>
-              <h5>{item.City},</h5>
+              <h5>{item.Postalcode}</h5>
               <h5>{item.Country}</h5>
               <h5>{item.University}</h5>
               </div>

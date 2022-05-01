@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Register.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
   const [register, setRegister] = useState([
@@ -49,6 +50,7 @@ export const Register = () => {
     }
   };
 
+
   return (
     <div className="registerInput">
       <h1 id="headlineRegister">Register</h1>
@@ -91,7 +93,9 @@ export const Register = () => {
           required
         />
         <br />
-        <input type="submit" value="Register" />
+        
+        <input type="submit" value="Register" onClick={checkInput}/>
+            
       </form>
     </div>
   );
