@@ -1,13 +1,12 @@
 .profileLayout {
-  display: flex;
-  list-style: none;
-  font-family: Inter;
-  border-bottom: 1px solid;
-  height: 250px;
-  border-color: hsl(212, 92%, 61%, 25%);
-  align-items: center;
-  width: 100%;
-  padding-left: 30px;
+    display: flex;
+    list-style: none;
+    font-family: Inter;
+    height: 250px;
+    align-items: center;
+    width: 100%;
+    padding-left: 30px; 
+    max-width: 90em;
 }
 
 .profilList {
@@ -19,8 +18,20 @@
   padding-left: 100px;
 }
 
+.column{
+  width: 50%;
+  flex:auto;
+  font-weight: 250;
+   
+}
+
 #breakitem {
   padding-top: 18px;
+}
+
+.infoContainer {
+  display: flex;
+  margin-left: 20px;
 }
 
 .divIcon {
@@ -33,6 +44,7 @@
 }
 
 .profileImg {
+  position: relative;
 }
 
 .cameraIcon {
@@ -45,7 +57,8 @@
 }
 
 .container {
-  margin-left: 400px;
+  margin-left: 250px;
+ 
 }
 
 .buttons {
@@ -65,47 +78,48 @@
   margin-top: 25px;
 }
 
-
-
-.group {
-  display: flex;
+.formdiv{
+  z-index: 100;
 }
+
 
 input[type="university"],
 input[type="country"] {
   padding: 15px;
   width: 300px;
   margin-top: 15px;
+  height: 50px;
 }
 
 input[type="phonenumber"] {
   padding: 15px;
   width: 200px;
   margin-top: 15px;
+  height: 50px;
 
 }
 
-input[type="firstname"] {
+input[type="firstname"], input [type="lastname"] {
   width: 150px;
   padding: 15px;
   margin-right: 15px;
+  height: 50px;
 }
 
-input [type="lastname"] {
-  padding: 15px;
-  width: 150px;
-}
 
 input[type="address"] {
   padding: 15px;
   width: 500px;
   margin-top: 15px;
+  height: 50px;
+  margin-left: 12px;
 }
 
-input[type="postalcode"] {
+input[type="postcode"] {
   padding: 15px;
   width: 150px;
   margin-top: 15px;
+  height: 50px;
 }
 
 input[type="city"] {
@@ -113,6 +127,7 @@ input[type="city"] {
   padding: 15px;
   margin-top: 15px;
   margin-right: 15px;
+  height: 50px;
 }
 
 #editHeader {
@@ -122,3 +137,12 @@ input[type="city"] {
 #confirmBtn {
   margin-top: 15px;
 }
+
+#confirmBtn:hover {
+  background-color: rgb(240, 248, 255);
+  transition: 0.7s;
+  color: rgb(45, 133, 204);
+}
+
+
+

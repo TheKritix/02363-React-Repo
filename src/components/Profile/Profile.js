@@ -135,7 +135,8 @@ export const Profile = () => {
           <Button
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc", textTransform: 'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             component={Link}
             to="/sell"
           >
@@ -146,7 +147,8 @@ export const Profile = () => {
             id="EditProfile"
             className="profilBtn"
             variant="outlined"
-            style={{ borderRadius: 40, height: 44 }}
+            style={{ borderRadius: 40, height: 44, color: "#2d85cc" , textTransform:'none'}}
+            sx={{ fontFamily: "Inter", fontSize: 17 }}
             onClick={togglePopup}
           >
             Edit profile
@@ -219,7 +221,7 @@ export const Profile = () => {
                     placeholder="University"
                   />
                   <br />
-                  <button>Confirm changes</button>
+                  <button id= "confirmBtn">Confirm changes</button>
                 </form>
               }
               handleClose={togglePopup}
