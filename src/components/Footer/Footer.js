@@ -39,7 +39,7 @@ class Footer extends Component {
               </ul>
             </article>
             <article className="footer-article">
-              <h2 className="footer-title">MICHELANOUS</h2>
+              <h2 className="footer-title">MICHELLINAOUS</h2>
               <ul className="footer-ul">
                 <li className="list-item">PLACEHOLDER</li>
                 <li className="list-item">PLACEHOLDER</li>
