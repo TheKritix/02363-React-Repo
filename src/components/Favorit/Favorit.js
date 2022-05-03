@@ -8,6 +8,9 @@ import { BookItem } from "../BodyComponents/Book/BookItem";
 import "./Favorit.css";
 import { Favorite, FavoriteBorderTwoTone } from "@mui/icons-material";
 
+// The favorit componenet is not implmented correctly yet. It just takes and Maps a JSON file so we could get the visualization of how the favoritpage would look in the next itteration. 
+
+
 class Favorit extends Component {
   render() {
     return (

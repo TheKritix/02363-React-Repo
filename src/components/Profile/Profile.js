@@ -15,10 +15,12 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 
 
+
 export const Profile = () => {
   const userId = window.sessionStorage.getItem("userId");
   console.log(userId);
 
+  // Hook used for setting the statevarible userInfo
   const [userInfo, setUserInfo] = useState([]);
   
 
@@ -61,6 +63,7 @@ export const Profile = () => {
     setisOpen(!isOpen);
   };
 
+    // Hook used for setting the statevarible UpdateInfo
   const [updatedInfo, setUpdatedInfo] = useState([
     {
       Firstname: "",
@@ -72,6 +75,8 @@ export const Profile = () => {
       Country: "",
     },
   ]);
+
+    // Creates and object with all the updated information  and sends it with the Fetch requiest to the API that handles the update in datbase.
 
   const sumbitUpdatedUserInfo = (e) => {
     e.preventDefault();

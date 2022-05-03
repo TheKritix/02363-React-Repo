@@ -11,6 +11,7 @@ import { Link, useNavigate } from 'react-router-dom'
  *Inspiration to login token: https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications?fbclid=IwAR2y4l2yBvpOauFUEiDdHZho_a-fYX0bwlhNwei_j4iIm-fq3EVRsf3vJ5s
  */
 
+  // Fetch request that sends the users Email and password to the database to check if a user exists
  async function loginUser(credentials) {
      return fetch("https://stoodle.bhsi.xyz/api/login", {
          method: 'POST',

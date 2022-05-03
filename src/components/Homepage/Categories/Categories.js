@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, Component } from 'react';
+import React, {Component } from 'react';
 import {CategoryItems} from './CategoryItems';
 import './Categories.css'
 
@@ -36,45 +36,6 @@ class Categoies extends Component {
     }
 
 }
-    const useAnimationFrame = callback => {
-        const requestRef = useRef();
-      
-        const animate = () => {
-          callback();
-          requestRef.current = requestAnimationFrame(animate);
-        };
-      
-        useEffect(() => {
-          requestRef.current = requestAnimationFrame(animate);
-          return () => cancelAnimationFrame(requestRef.current);
-         
-        }, []);
-      };
 
-      const CANVAS_WIDTH = window.innerWidth;
-      const SCROLL_SPEED = 0.3;
-      
-      function Bubble({ content, color, x, y }) {
-        const [position, setPosition] = useState(x);
-      
-        useAnimationFrame(() =>
-          setPosition(prevPosition => {
-            const newPosition = prevPosition - SCROLL_SPEED;
-      
-            return newPosition < -200 ? CANVAS_WIDTH : newPosition;
-          })
-        );
-      
-        return (
-          <div
-            style={{
-              transform: `translate(${position}px, ${y}px)`
-            }}
-            className={`hurdles-node hurdles-node5 hurdles-node hurdles-node--${color}`}
-          >
-            {content}
-          </div>
-        );
-        }
 
 export default Categoies;

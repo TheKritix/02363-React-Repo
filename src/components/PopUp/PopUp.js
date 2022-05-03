@@ -1,6 +1,7 @@
 import React from 'react';
 import './PopUp.css';
 
+// Pop up componenets that is used  in profilpage and ind Mypost componenet. 
 const PopUp = props => {
     return (
         <div className="popupBox">

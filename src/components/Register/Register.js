@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import "./Register.css";
 import { useState } from "react";
 import { useNavigate} from "react-router-dom";
-/* Inspiration for forms: https://www.w3schools.com/html/html_form_input_types.asp
- * 
- * 
- */
+/* Inspiration for forms: https://www.w3schools.com/html/html_form_input_types.asp*/
+
 export const Register = () => {
 
   const navigate = useNavigate();
@@ -19,6 +17,7 @@ export const Register = () => {
     },
   ]);
 
+  // sets the Register paramter to the values in the form
   const handleRegistration = (e) => {
     setRegister({
       ...register,
@@ -26,6 +25,7 @@ export const Register = () => {
     });
   };
 
+  // creates an object with the registrations values that the user has typed in the form 
   const submitRegistration = (e) => {
     e.preventDefault();
     const registrationObject = {
@@ -36,6 +36,8 @@ export const Register = () => {
     };
     
     console.log(registrationObject);
+
+    // If the email and password has been entered then the API creating a user in the database will be called
     if (
       !(registrationObject.email === "" && registrationObject.password === "")
     ) {
