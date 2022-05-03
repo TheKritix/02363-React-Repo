@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import "./ToS.css"
 
+//Source: https://policymaker.io/
+
 class ToS extends Component {
 render() {
 return (
