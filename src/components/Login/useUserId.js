@@ -3,6 +3,8 @@ import { useState } from "react";
 /*Inspiration to comming from: https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications?fbclid=IwAR2y4l2yBvpOauFUEiDdHZho_a-fYX0bwlhNwei_j4iIm-fq3EVRsf3vJ5s
  */
 
+//Source: https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications?fbclid=IwAR2y4l2yBvpOauFUEiDdHZho_a-fYX0bwlhNwei_j4iIm-fq3EVRsf3vJ5s
+
 export default function useUserId() {
 
     const getUserId = () => {
